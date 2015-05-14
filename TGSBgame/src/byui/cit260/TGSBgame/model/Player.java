@@ -16,7 +16,7 @@ public class Player implements Serializable{
     
     //class instance variables
     private String name;
-    private String atribute;
+    private String attribute;
 
     public Player() {
     }
@@ -32,23 +32,23 @@ public class Player implements Serializable{
     }
 
     public String getAtributes() {
-        return atribute;
+        return attribute;
     }
 
-    public void setAtributes(String atributes) {
-        this.atribute = atributes;
+    public void setAtributes(String attributes) {
+        this.attribute = attributes;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", atributes=" + atribute + '}';
+        return "Player{" + "name=" + name + ", attribute=" + attribute + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + Objects.hashCode(this.atribute);
+        hash = 97 * hash + Objects.hashCode(this.attribute);
         return hash;
     }
 
@@ -64,11 +64,12 @@ public class Player implements Serializable{
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.atribute, other.atribute)) {
+        if (!Objects.equals(this.attribute, other.attribute)) {
             return false;
         }
         return true;
     }
+    
     
     
 }
