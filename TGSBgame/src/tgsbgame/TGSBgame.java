@@ -59,7 +59,49 @@ public class TGSBgame {
         
         String friendInfo = friendOne.toString();
         System.out.println(friendInfo);
-              
+        
+        Scene sceneOne = new Scene();
+        
+        sceneOne.setDescription("Follow the personage in red");
+        sceneOne.setSymbol("&");       
+        
+        String sceneInfo = sceneOne.toString();
+        System.out.println(sceneInfo);
+        
+        Map mapOne = new Map();
+        
+        mapOne.setRowCount(7);
+        mapOne.setColumnCount(5);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
+        
+        Location locationOne = new Location();
+        
+        locationOne.setRow(1);
+        locationOne.setColumn(2);
+        
+        String locationInfo = locationOne.toString();
+        System.out.println(locationInfo);
+        
+        Game gameOne = new Game();
+        
+        gameOne.setPlayer("Camila");
+        gameOne.setActors(3);
+        gameOne.setAttribute("faith");
+        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
+        
+        Challenges challengesX = new Challenges();
+        
+        challengesX.setType("Doubt");
+        challengesX.setAmmount(4);
+        
+        String challengesInfo = challengesX.toString();
+        System.out.println(challengesInfo);
+        
+        
     }
     
 }
