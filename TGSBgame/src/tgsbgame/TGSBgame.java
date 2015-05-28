@@ -76,11 +76,8 @@ public class TGSBgame {
         String mapInfo = mapOne.toString();
         System.out.println(mapInfo);
         
-        Location locationOne = new Location();
-        
-        locationOne.setRow(1);
-        locationOne.setColumn(2);
-        
+        Location locationOne = new Location(1,2);
+                
         String locationInfo = locationOne.toString();
         System.out.println(locationInfo);
         
@@ -100,7 +97,11 @@ public class TGSBgame {
         
         String challengesInfo = challengesX.toString();
         System.out.println(challengesInfo);
+
+        //test code
+        ChallengesControl challengeOne = new ChallengesControl(35);
         
+        System.out.println(challengeOne.getChallenge(6));
         
     }
     
