@@ -64,7 +64,17 @@ public class TGSBgame {
         ChallengesControl challengeOne = new ChallengesControl(35);
         
         System.out.println(challengeOne.getChallenge(6));
-                 
+        
+        
+        /*Location locationOne = new Location (30);
+        
+        locationOne.setRow(3);
+        locationOne.setColumn(6);
+        
+        String locationName = locationOne.toString();
+        System.out.println(locationInfo);*/
+        
+        
     }
     
 }
