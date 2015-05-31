@@ -13,12 +13,16 @@ import java.io.Serializable;
  */
 public class GameControl implements Serializable{
     
-    private String startNewGame;
-    private String saveGame;
-    private String retriveGame;
-    private String initializeMap;
-    private String createNewPlayer;
+    public static void startNewGame(Player player){
+        player.setFruits(10);    
     
+    }
     
+    public static void initializeMap(Map map){
+        map.setColumnCount(1);
+        map.setRowCount(1);
     
+    }
+    
+          
 }

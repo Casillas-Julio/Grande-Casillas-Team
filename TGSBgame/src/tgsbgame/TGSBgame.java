@@ -21,6 +21,7 @@ public class TGSBgame {
         
         playerOne.setName("Camila");
         playerOne.setAtributes("Faith");
+        GameControl.startNewGame(playerOne);
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
@@ -62,6 +63,9 @@ public class TGSBgame {
         
         //test code
         ChallengesControl challengeOne = new ChallengesControl(35);
+        System.out.println(challengeOne.getChallenge(6));
+        
+        Scene sceneOne = new Scene();
         
         sceneOne.setDescription("Follow the personage in red");
         sceneOne.setSymbol("&");       
@@ -99,11 +103,6 @@ public class TGSBgame {
         String challengesInfo = challengesX.toString();
         System.out.println(challengesInfo);
 
-        //test code
-        ChallengesControl challengeOne = new ChallengesControl(35);
-        
-        System.out.println(challengeOne.getChallenge(6));
-        
     }
     
 }

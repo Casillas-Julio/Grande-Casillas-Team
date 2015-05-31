@@ -17,6 +17,15 @@ public class Player implements Serializable{
     //class instance variables
     private String name;
     private String attribute;
+    private int fruits;
+
+    public int getFruits() {
+        return fruits;
+    }
+
+    public void setFruits(int fruits) {
+        this.fruits = fruits;
+    }
 
     public Player() {
     }
@@ -41,14 +50,15 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", attribute=" + attribute + '}';
+        return "Player{" + "name=" + name + ", attribute=" + attribute + ", fruits=" + fruits + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + Objects.hashCode(this.attribute);
+        int hash = 7;
+        hash = 13 * hash + Objects.hashCode(this.name);
+        hash = 13 * hash + Objects.hashCode(this.attribute);
+        hash = 13 * hash + this.fruits;
         return hash;
     }
 
@@ -67,9 +77,13 @@ public class Player implements Serializable{
         if (!Objects.equals(this.attribute, other.attribute)) {
             return false;
         }
+        if (this.fruits != other.fruits) {
+            return false;
+        }
         return true;
     }
-    
+
+
     
     
 }
