@@ -15,8 +15,8 @@ import java.util.Objects;
 public class Player implements Serializable{
     
     //class instance variables
-    private String name;
-    private String attribute;
+    public String name;
+    public String attribute;
     private int fruits;
 
     public int getFruits() {
@@ -81,6 +81,14 @@ public class Player implements Serializable{
             return false;
         }
         return true;
+    }
+
+    void setName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setAttribute() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 

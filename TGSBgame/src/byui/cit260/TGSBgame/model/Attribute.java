@@ -68,6 +68,10 @@ public class Attribute implements Serializable{
         return true;
     }
 
+    void setRowCount(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
 }
