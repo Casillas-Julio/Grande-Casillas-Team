@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.TGSBgame.model;
+package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Player;
 import java.io.Serializable;
 
 /**
@@ -12,14 +13,11 @@ import java.io.Serializable;
  * @author Dragon's
  */
 public class PlayerControl implements Serializable {
+    private static Object playerName;
     
-    public static void name(Player name){
-        name.setName();    
-    
-    }
-    
-    public static void attribute(Player attribute){
-        attribute.setAttribute();
+    public static void playerName(Player playerName){
+        playerName.setPlayerName();    
     
     }
+
 }

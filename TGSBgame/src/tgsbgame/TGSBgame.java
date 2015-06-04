@@ -5,6 +5,9 @@
  */
 package tgsbgame;
 
+import byui.cit260.TGSBgame.view.StartProgramView;
+import byui.cit260.TGSBgame.control.ChallengesControl;
+import byui.cit260.TGSBgame.control.GameControl;
 import byui.cit260.TGSBgame.model.*;
 
 /**
@@ -102,7 +105,12 @@ public class TGSBgame {
         
         String challengesInfo = challengesX.toString();
         System.out.println(challengesInfo);
-
+        
+      //  public static void main(String[] args){
+            //Create StartProgramView start the program
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.startProgram();
+        
     }
     
 }

@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.model;
 
+import byui.cit260.TGSBgame.control.ChallengesControl;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
