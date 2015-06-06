@@ -16,7 +16,6 @@ public class Player implements Serializable{
     
     //class instance variables
     public String name;
-    public String attribute;
     private int fruits;
 
     public int getFruits() {
@@ -30,8 +29,6 @@ public class Player implements Serializable{
     public Player() {
     }
     
-    
-
     public String getName() {
         return name;
     }
@@ -40,24 +37,16 @@ public class Player implements Serializable{
         this.name = name;
     }
 
-    public String getAtributes() {
-        return attribute;
-    }
-
-    public void setAtributes(String attributes) {
-        this.attribute = attributes;
-    }
-
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", attribute=" + attribute + ", fruits=" + fruits + '}';
+        return "Player{" + "name=" + name + ", fruits=" + fruits + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 13 * hash + Objects.hashCode(this.name);
-        hash = 13 * hash + Objects.hashCode(this.attribute);
+        //hash = 13 * hash + Objects.hashCode(this.attribute);
         hash = 13 * hash + this.fruits;
         return hash;
     }
@@ -71,12 +60,11 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
+        
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.attribute, other.attribute)) {
-            return false;
-        }
+        
         if (this.fruits != other.fruits) {
             return false;
         }
@@ -84,10 +72,6 @@ public class Player implements Serializable{
     }
 
     void setName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setAttribute() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

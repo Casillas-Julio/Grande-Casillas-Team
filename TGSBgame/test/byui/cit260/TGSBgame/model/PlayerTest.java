@@ -65,33 +65,6 @@ public class PlayerTest {
     }
 
     /**
-     * Test of getAtributes method, of class Player.
-     */
-    @Test
-    public void testGetAtributes() {
-        System.out.println("getAtributes");
-        Player instance = new Player();
-        String expResult = "";
-        String result = instance.getAtributes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setAtributes method, of class Player.
-     */
-    @Test
-    public void testSetAtributes() {
-        System.out.println("setAtributes");
-        String attributes = "";
-        Player instance = new Player();
-        instance.setAtributes(attributes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of toString method, of class Player.
      */
     @Test

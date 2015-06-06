@@ -8,6 +8,7 @@ package byui.cit260.TGSBgame.control;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import java.io.Serializable;
+import static tgsbgame.TGSBgame.player;
 
 /**
  *
@@ -16,7 +17,8 @@ import java.io.Serializable;
 public class GameControl implements Serializable{
     
     public static void startNewGame(Player player){
-        player.setFruits(10);    
+        player.setFruits(10);
+        System.out.println("\n*** startNewGame stub function called ***");
     
     }
     
@@ -26,5 +28,4 @@ public class GameControl implements Serializable{
     
     }
     
-          
 }

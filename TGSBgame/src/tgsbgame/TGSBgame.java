@@ -33,7 +33,7 @@ public class TGSBgame {
     }
 
     private static Game currentGame = null;
-    private static Player player = null;
+    public static Player player = null;
     /**
      * @param args the command line arguments
      */
@@ -41,7 +41,6 @@ public class TGSBgame {
         Player playerOne = new Player ();
         
         playerOne.setName("Camila");
-        playerOne.setAtributes("Faith");
         GameControl.startNewGame(playerOne);
         
         String playerInfo = playerOne.toString();
@@ -124,10 +123,8 @@ public class TGSBgame {
         String challengesInfo = challengesX.toString();
         System.out.println(challengesInfo);
         
-      //  public static void main(String[] args){
-            //Create StartProgramView start the program
-            StartProgramView startProgramView = new StartProgramView();
-            startProgramView.startProgram();
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
         
         
         

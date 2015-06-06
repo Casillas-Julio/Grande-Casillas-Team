@@ -5,7 +5,7 @@
  */
 package byui.cit260.TGSBgame.view;
 
-import byui.cit260.TGSBgame.model.Player;
+import byui.cit260.TGSBgame.model.*;
 import java.util.Scanner;
 import byui.cit260.TGSBgame.control.ProgramControl;
 
@@ -16,7 +16,14 @@ import byui.cit260.TGSBgame.control.ProgramControl;
  */
 
 public class StartProgramView {
-    
+//  BEGIN
+//      Display the banner screen
+//      Get the player name
+//      Create a new player
+//      Display a customized welcome message
+//      Display the main menu
+//  END
+                
     public StartProgramView() {
     }
     public void startProgram() {
