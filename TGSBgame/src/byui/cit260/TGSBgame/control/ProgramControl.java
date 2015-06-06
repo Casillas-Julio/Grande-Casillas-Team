@@ -6,6 +6,7 @@
 package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.model.Player;
+import tgsbgame.TGSBgame;
 
 /**
  *
@@ -13,11 +14,19 @@ import byui.cit260.TGSBgame.model.Player;
  */
 public class ProgramControl {
 
-    static Player createPlayer(String playerName) {
-        System.out.println("\n**** createPlayer fuction called ****");
-        return null;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static Player createPlayer(String name) {
     
+        if (name==null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        TGSBgame.setPlayer(player); //save the player
+        
+        return player;
+        
     }
     
 }

@@ -10,14 +10,7 @@ import java.util.Scanner;
 import byui.cit260.TGSBgame.control.ProgramControl;
 
 /**
- *   startProgram(): void
- BEGIN
- Display the banner screen
- Get the players name
- Create a new player
- DISPLAY a customized welcome message
- DISPLAY the main menu
-END 
+ *   startProgram(): void 
  *
  * @author Dragon's
  */
@@ -36,11 +29,13 @@ public class StartProgramView {
         
         //Create and save the player object
         Player player = ProgramControl.createPlayer(playerName);
-        
-        
+                
         //Display a personalized welcome message
+        this.displayWelcomeMessage(player);
         
         //Display the Main menu
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
     }
 
     private void displayBanner() {
@@ -105,6 +100,11 @@ public class StartProgramView {
         return null;
     }
     
-    
+    public void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n============================================");
+        System.out.println("\tWelcome to the game " + player.getName());
+        System.out.println("\tEnjoy the game!");
+        System.out.println("================================================");
+    }
     
 }

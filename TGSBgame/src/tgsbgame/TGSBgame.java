@@ -16,6 +16,24 @@ import byui.cit260.TGSBgame.model.*;
  */
 public class TGSBgame {
 
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        TGSBgame.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        TGSBgame.player = player;
+    }
+
+    private static Game currentGame = null;
+    private static Player player = null;
     /**
      * @param args the command line arguments
      */
@@ -110,6 +128,8 @@ public class TGSBgame {
             //Create StartProgramView start the program
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.startProgram();
+        
+        
         
     }
     
