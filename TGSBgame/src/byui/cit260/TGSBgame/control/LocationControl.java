@@ -19,8 +19,6 @@ public class LocationControl {
     //class variables
      public int location;
 
-    //class variables
-    private int location;
 
     public int getLocation() {
         return location;
