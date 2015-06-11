@@ -156,8 +156,5 @@ public class HelpMenuView {
         }
     }
 
-    private void displayGetHelp() {
-        GetHelpFromFriend gameMenu = new GetHelpFromFriend();
-        gameMenu.displayMenu();
-    }
+    
 }

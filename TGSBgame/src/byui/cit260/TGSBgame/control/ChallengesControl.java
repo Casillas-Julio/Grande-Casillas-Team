@@ -19,7 +19,7 @@ public class ChallengesControl implements Serializable{
         {"doubt", "iniquity" ,"addictions", "ignorance", "dishonesty", 
          "deception", "pride", "unemployment", "peer pressure", "sickeness",
          "rebelion", "fear", "greed", "loneliness", "betrayal",
-         "power", "poverty", "loss"};
+         "power", "poverty", "loss","fun"};
     private int numLocations;
     private Random rand; 
 

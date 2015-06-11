@@ -104,4 +104,9 @@ public class MainMenuView {
         HelpMenuView gameMenu = new HelpMenuView();
         gameMenu.displayMenu();
     }
+    
+    private void displayGetHelp() {
+        GetHelpFromFriend gameMenu = new GetHelpFromFriend();
+        gameMenu.displayMenu();
+    }
 }
