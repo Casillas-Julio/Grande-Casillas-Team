@@ -14,40 +14,35 @@ import java.io.Serializable;
 public class Map implements Serializable {
 
     // class instance variables
-    private double rowCount;
-    private double columnCount;
+    private int rowCount;
+    private int columnCount;
 
-    public Map() {
-    }
-    
-    
-
-    public double getRowCount() {
+    public int getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(double rowCount) {
+    public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
 
-    public double getColumnCount() {
+    public int getColumnCount() {
         return columnCount;
     }
 
-    public void setColumnCount(double columnCount) {
+    public void setColumnCount(int columnCount) {
+        this.columnCount = columnCount;
+    }
+
+    public Map(int rowCount, int columnCount) {
+        this.rowCount = rowCount;
         this.columnCount = columnCount;
     }
 
     @Override
-    public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
-    }
-
-    @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.rowCount) ^ (Double.doubleToLongBits(this.rowCount) >>> 32));
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.columnCount) ^ (Double.doubleToLongBits(this.columnCount) >>> 32));
+        int hash = 7;
+        hash = 89 * hash + this.rowCount;
+        hash = 89 * hash + this.columnCount;
         return hash;
     }
 
@@ -60,16 +55,20 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (Double.doubleToLongBits(this.rowCount) != Double.doubleToLongBits(other.rowCount)) {
+        if (this.rowCount != other.rowCount) {
             return false;
         }
-        if (Double.doubleToLongBits(this.columnCount) != Double.doubleToLongBits(other.columnCount)) {
+        if (this.columnCount != other.columnCount) {
             return false;
         }
         return true;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+    }
+
     
 }
 

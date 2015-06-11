@@ -9,6 +9,7 @@ import byui.cit260.TGSBgame.view.StartProgramView;
 import byui.cit260.TGSBgame.control.ChallengesControl;
 import byui.cit260.TGSBgame.control.GameControl;
 import byui.cit260.TGSBgame.model.*;
+import byui.cit260.TGSBgame.view.*;
 
 /**
  *
@@ -93,13 +94,14 @@ public class TGSBgame {
         String sceneInfo = sceneOne.toString();
         System.out.println(sceneInfo);
         
-        Map mapOne = new Map();
-        
-        mapOne.setRowCount(7);
-        mapOne.setColumnCount(5);
+        Map mapOne;
+        mapOne = new Map(1,5);
         
         String mapInfo = mapOne.toString();
         System.out.println(mapInfo);
+                
+        LocationView locationView = new LocationView();
+        locationView.display(mapOne);
         
         Location locationOne = new Location(1,2);
                 
@@ -126,8 +128,7 @@ public class TGSBgame {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
         
-        
-        
+
     }
     
 }

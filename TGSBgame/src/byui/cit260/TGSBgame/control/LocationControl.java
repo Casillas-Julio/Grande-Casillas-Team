@@ -10,22 +10,23 @@ package byui.cit260.TGSBgame.control;
  * @author Adriana
  */
 public class LocationControl {
-    
-    //class variables
-    public int location;
 
-    public int location(int row, int column){
-        
-        if (row >= 1 && column >= 1){
-            if (row <= 5 & column <= 7){
-                location = (5 * row)-(5 - column);
-                return location;
-            }
-            else {
-                return -1; 
-            }
-        } 
-        return 0;
-    
+    //class variables
+    private int location;
+
+    public int getLocation() {
+        return location;
+    }
+    //returns 0 on success, -1 on failure
+    public int setLocation(int row, int column) {
+
+        int newLocation = (5 * row) - (5 - column);
+
+        if (newLocation < 1 || newLocation > 35) {
+            return -1;
+        } else {
+            location = newLocation;
+            return 0;
+        }
     }
 }

@@ -62,7 +62,7 @@ public class GetHelpFromFriend {
             + "\norder to choose others that are better  "
             + "\nor best because they develop faith in   "
             + "\nTHE Lord Jesus Christ and strengthen    "
-            + "\nour families.”"
+            + "\nour families.”                          "
             + "\n----------------------------------------";
     
     private final String FRIENDS = "\n"
