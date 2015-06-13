@@ -92,21 +92,22 @@ public class LocationView {
         location = locationControl.getLocation();
         // display description for location
        
-        if (location <=0){
-            System.out.println("You are out of New York");
-        }
-        if (location >=36) {
-            System.out.println("You're out of this world!");
-        }
         if (location == 1){
             System.out.println(JFK);
         }
         else if (location == 2){
             System.out.println(TIMESQUARE);
         }
- //       else {
- //           System.out.println("\n*** Invalid location ***");
- //       }
+        
+        /* if (location <= 0) {
+            System.out.println("You are out of New York");
+        }
+        if (location >=36) {
+            System.out.println("You're out of this world!");
+        }*/
+        else{  
+          System.out.println("\n*** You're out of this world! ***");
+        }
     }
     //we may not need this
     public int getInput() {
@@ -123,7 +124,7 @@ public class LocationView {
         column = loc.nextInt ();
         
         if (row >= 1 || row <= 35 ){
-            if (column >=1 || column <= 35) {
+            if(column >=1 || column <= 35) {
             location = (5 * row) - (5 - column);
                 
             }
