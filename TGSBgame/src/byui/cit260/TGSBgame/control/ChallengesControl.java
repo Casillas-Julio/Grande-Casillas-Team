@@ -27,6 +27,10 @@ public class ChallengesControl implements Serializable{
         rand = new Random(System.currentTimeMillis());
         this.numLocations = numLocations;
     }
+
+    public ChallengesControl() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public String getChallenge(int location){
         int whichEntry;

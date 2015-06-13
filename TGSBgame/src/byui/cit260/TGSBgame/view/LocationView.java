@@ -91,30 +91,52 @@ public class LocationView {
         locationControl.setLocation(map.getRowCount(), map.getColumnCount());
         location = locationControl.getLocation();
         // display description for location
+       
+        if (location <=0){
+            System.out.println("You are out of New York");
+        }
+        if (location >=36) {
+            System.out.println("You're out of this world!");
+        }
         if (location == 1){
             System.out.println(JFK);
         }
         else if (location == 2){
             System.out.println(TIMESQUARE);
         }
-        else {
-            System.out.println("\n*** Invalid location ***");
-        }
+ //       else {
+ //           System.out.println("\n*** Invalid location ***");
+ //       }
     }
     //we may not need this
-    public String getInput() {
-        String input;
-        Scanner keyboard = new Scanner(System.in); //keyboard input screen
+    public int getInput() {
+        int location=0;
+        int row;
+        int column;
+        
+        Scanner loc = new Scanner(System.in); //keyboard input screen
 
         // prompt for the input from the player selection
-        System.out.println("Enter choice.");
+        System.out.println("Enter row.");
+        row = loc.nextInt();
+        System.out.println("Enter column.");
+        column = loc.nextInt ();
+        
+        if (row >= 1 || row <= 35 ){
+            if (column >=1 || column <= 35) {
+            location = (5 * row) - (5 - column);
+                
+            }
+            else {
+                return 0;
+            }
+            
+        }
+        else {
+            return 0;
+        }
 
-        //get the selection from the keyboard
-        input = keyboard.nextLine();
-        input = input.trim();
-        input = input.toUpperCase();
-
-        return input; // Return Name
+        return location; // Return map position
     }
 
 }

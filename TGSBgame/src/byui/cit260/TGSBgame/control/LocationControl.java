@@ -32,6 +32,8 @@ public class LocationControl {
             return -1;
         } else {
             location = newLocation;
+            
+            
             return 0;
         }
     }
