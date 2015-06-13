@@ -117,29 +117,4 @@ public class LocationView {
         return input; // Return Name
     }
 
-//public void doAction(char choice) {
-
-//        switch (choice) {
-//            case 'H':// H - Holy Ghost
-//                System.out.println(HOLYGHOST);
-//                break;
-//            case 'L': //L - Leaders
-//                System.out.println(LEADERS);
-//                break;
-//            case 'M': // M - Family Member
-//                System.out.println(FAMILY);
-//                break;
-//            case 'F': // F - Friends
-//                System.out.println(FRIENDS);
-//                break;
-//            case 'P': // P - Prayer
-//                System.out.println(PRAYER);
-//                return;
-//            case 'R': // Return to MAIN MENU
-//                return;
-//            default:
-//                System.out.println("\n*** Invalid selection *** Try again!");
-//                break;
-//        }
-//    }
 }

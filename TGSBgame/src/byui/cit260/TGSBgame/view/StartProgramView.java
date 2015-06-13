@@ -49,7 +49,7 @@ public class StartProgramView {
         System.out.println("\n************************************************");
         
         System.out.println("*                                              *"
-                         + "\n* This is THE GREAT AND SPACIOUS BUILDING      *"
+                         + "\n* This is THE GREAT AND SPACIOUS BUILDING game.*"
                          + "\n* This game is an example of what we face in   *"
                          + "\n* life. In this trip to New York, where your   *"
                          + "\n* goal is to reach the temple, and renew your  *"
