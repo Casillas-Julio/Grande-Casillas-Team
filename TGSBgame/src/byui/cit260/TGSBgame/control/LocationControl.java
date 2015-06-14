@@ -17,13 +17,14 @@ public class LocationControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     //class variables
-     public int location;
-
+    public int location;
 
     public int getLocation() {
         return location;
     }
+
     //returns 0 on success, -1 on failure
+
     public int setLocation(int row, int column) {
 
         int newLocation = (5 * row) - (5 - column);
@@ -32,8 +33,6 @@ public class LocationControl {
             return -1;
         } else {
             location = newLocation;
-            
-            
             return 0;
         }
     }

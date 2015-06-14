@@ -4,24 +4,24 @@
  * and open the template in the editor.
  */
 package byui.cit260.TGSBgame.view;
+
 import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.model.Map;
 import java.util.Scanner;
 
 /**
  *
- * @author Adriana
- *  Display the following locations description
+ * @author Adriana Display the following locations description
  */
 public class LocationView {
 
     private LocationControl locationControl;
-    
+
     public LocationView() {
-        
-       locationControl = new LocationControl();
+
+        locationControl = new LocationControl();
     }
-    
+
     private final String JFK = "\n"
             + "\n--------------------------------------------------"
             + "\n| JFK Airport                                    |"
@@ -38,7 +38,7 @@ public class LocationView {
             + "\nout to your hotel. A person next to you engages in"
             + "\na conversation."
             + "\n--------------------------------------------------";
-    
+
     private final String TIMESQUARE = "\n"
             + "\n----------------------------------------------------"
             + "\n| Time Square                                      |"
@@ -55,28 +55,28 @@ public class LocationView {
             + "\nall in as you do. As you watch people passing by, a "
             + "\nperson stops by your side and starts a conversation."
             + "\n----------------------------------------------------";
-    
+
     private final String CENTRALPARK = "\n"
             + "\n----------------------------------------"
             + "\n| Central Park                         |"
             + "\n----------------------------------------"
             + "\n"
             + "\n----------------------------------------";
-    
+
     private final String SUBWAY = "\n"
             + "\n----------------------------------------"
             + "\n| NYC Subway                            |"
             + "\n----------------------------------------"
             + "\n"
             + "\n----------------------------------------";
-    
+
     private final String CHINATOWN = "\n"
             + "\n------------------------------------------"
             + "\n| Chinatown                               |"
             + "\n------------------------------------------"
             + "\n"
             + "\n------------------------------------------";
-    
+
     private final String TEMPLE = "\n"
             + "\n--------------------------------------"
             + "\n| Manhathan Temple                   |"
@@ -86,54 +86,45 @@ public class LocationView {
 
     public void display(Map map) {
         int location;
-        
+
         // get location
         locationControl.setLocation(map.getRowCount(), map.getColumnCount());
         location = locationControl.getLocation();
         // display description for location
-       
-        if (location == 1){
+
+        if (location == 1) {
             System.out.println(JFK);
-        }
-        else if (location == 2){
+        } else if (location == 2) {
             System.out.println(TIMESQUARE);
-        }
-        
-        /* if (location <= 0) {
-            System.out.println("You are out of New York");
-        }
-        if (location >=36) {
-            System.out.println("You're out of this world!");
-        }*/
-        else{  
-          System.out.println("\n*** You're out of this world! ***");
+        } else {
+            System.out.println("\n*** You're out of this world! ***");
         }
     }
+
     //we may not need this
+
     public int getInput() {
-        int location=0;
+        int location = 0;
         int row;
         int column;
-        
+
         Scanner loc = new Scanner(System.in); //keyboard input screen
 
         // prompt for the input from the player selection
         System.out.println("Enter row.");
         row = loc.nextInt();
         System.out.println("Enter column.");
-        column = loc.nextInt ();
-        
-        if (row >= 1 || row <= 35 ){
-            if(column >=1 || column <= 35) {
-            location = (5 * row) - (5 - column);
-                
-            }
-            else {
+        column = loc.nextInt();
+
+        if (row >= 1 || row <= 35) {
+            if (column >= 1 || column <= 35) {
+                location = (5 * row) - (5 - column);
+
+            } else {
                 return 0;
             }
-            
-        }
-        else {
+
+        } else {
             return 0;
         }
 
