@@ -98,13 +98,36 @@ public class LocationView {
         else if (location == 2){
             System.out.println(TIMESQUARE);
         }
-        
-        /* if (location <= 0) {
-            System.out.println("You are out of New York");
+        else if (location == 3){
+            System.out.println(CENTRALPARK);
         }
-        if (location >=36) {
-            System.out.println("You're out of this world!");
-        }*/
+        else if (location == 4){
+            System.out.println(SUBWAY);
+        }
+        else if (location == 5){
+            System.out.println(CHINATOWN);
+        }
+        else if (location == 6){
+            System.out.println("lOCATION 6");
+        }
+        else if (location == 7){
+            System.out.println("lOCATION 7");
+        }
+        else if (location == 8){
+            System.out.println("lOCATION 8");
+        }
+        else if (location == 9){
+            System.out.println("lOCATION 9");
+        }
+        else if (location == 10){
+            System.out.println("lOCATION 10");
+        }
+        else if (location == 11){
+            System.out.println("lOCATION 11");
+        }
+        else if (location == 12 || location <=35){
+            System.out.println("location " + location);
+        }
         else{  
           System.out.println("\n*** You're out of this world! ***");
         }
@@ -123,8 +146,8 @@ public class LocationView {
         System.out.println("Enter column.");
         column = loc.nextInt ();
         
-        if (row >= 1 || row <= 35 ){
-            if(column >=1 || column <= 35) {
+        if (row >= 1 || row <= 5 ){
+            if(column >=1 || column <= 7) {
             location = (5 * row) - (5 - column);
                 
             }

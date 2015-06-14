@@ -95,7 +95,16 @@ public class TGSBgame {
         System.out.println(sceneInfo);
         
         Map mapOne;
-        mapOne = new Map(1,5);
+        Map mapTwo;
+        Map mapThree;
+        Map mapFour;
+        Map mapFive;
+        mapOne = new Map(1,3);
+        mapTwo = new Map(1,5);
+        mapThree = new Map(3,2);
+        mapFour = new Map(24,20000);
+        mapFive = new Map(-1,0);
+        
         
         String mapInfo = mapOne.toString();
         System.out.println(mapInfo);
