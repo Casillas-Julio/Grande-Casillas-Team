@@ -11,57 +11,27 @@ import java.util.Scanner;
  *
  * @author Dragon's
  */
-public class MainMenuView {
-//  BEGIN
-//    DO
-    //      Display the Main Menu
-    //      Get the player's selection
-    //      Perform action associated with selection
-//    WHILE the letter "E" for exit has not been selected
-//  END
+public class MainMenuView extends View {
     
-    private final String MENU = "\n"
-            + "\n--------------------------------------"
+    public MainMenuView() {
+        super("\n--------------------------------------"
             + "\n| Main Menu                          |"
-            + "\n--------------------------------------"
-            + "\nG - Start game"
-            + "\nH - Show Help menu"
-            + "\nS - Save game"
-            + "\nE - Exit game"
-            + "\n--------------------------------------";
-        
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);//display the main menu
-            
-            String input = this.getInput();// get the user's selection
-            selection = input.charAt(0);// get first character of string
-            
-            this.doAction(selection);//do action selection
-            
-        } while (selection != 'E'); // an selection is not"Exit
+            + "\n--------------------------------------"               
+            + "\nN - Start Game"
+            + "\nG - Start Existing Game"
+            + "\nH - Show Help Menu"
+            + "\nS - Save Game"
+            + "\nE - Exit Game"
+            + "\n--------------------------------------");
     }
+    @Override    
+    public boolean doAction(Object obj) {
         
-    public String getInput() {
-        String input;
-        Scanner keyboard = new Scanner(System.in); //keyboard input screen
-
-            // prompt for the input from the player selection
-            System.out.println("Select your next action from MENU.");
-
-            //get the selection from the keyboard
-            input = keyboard.nextLine();
-            input = input.trim();
-            input = input.toUpperCase();
-            
-        return input; // Return Name
-    }
+        String value = (String) obj;
         
-    public void doAction(char choice) {
-            
+        value = value.toUpperCase();// convert to all upper case
+        char choice = value.charAt(0);// get first character entered
+
         switch (choice) {
             case 'N':// create and start a new game
                 this.startNewGame();
@@ -76,11 +46,13 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             case 'E': // exit the program
-                return;
+               return false;
+                //this.exitGame();
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
+        return true;    
     }
     
     private void startNewGame() {
@@ -89,24 +61,20 @@ public class MainMenuView {
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();        
+        gameMenu.display();        
     }
     
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
     }
     
+    private void displayHelpMenu() {
+        HelpMenuView gameMenu = new HelpMenuView();
+        gameMenu.display();
+    }
+    
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
     
-    private void displayHelpMenu() {
-        HelpMenuView gameMenu = new HelpMenuView();
-        gameMenu.displayMenu();
-    }
-    
-    private void displayGetHelp() {
-        GetHelpFromFriend gameMenu = new GetHelpFromFriend();
-        gameMenu.displayMenu();
-    }
 }

@@ -13,9 +13,10 @@ import java.util.Scanner;
  *
  * @author Dragon
  */
-public class GameMenuView {
+public class GameMenuView extends View{
     
-    private final String MENU = "\n"
+    public GameMenuView() {
+        super("\n"
             + "\n--------------------------------------"
             + "\n|            Game Menu               |"
             + "\n--------------------------------------"
@@ -23,8 +24,8 @@ public class GameMenuView {
             + "\nR - Return to Main Menu"
             + "\nH - Show Help Menu"
             + "\nD - Display Map"
-            + "\n--------------------------------------";
-    
+            + "\n--------------------------------------");
+    }    
     
     private final String displayMap = "\n"
             + "\n--------------------------------------"
@@ -42,37 +43,13 @@ public class GameMenuView {
             + "\n                                      "
             + "\n--------------------------------------";
     
-    public void displayMenu() {
-
-        char selection = ' ';
-        do {
-
-            System.out.println(MENU);//display the get help from friend menu
-
-            String input = this.getInput();// get the user's selection
-            selection = input.charAt(0);// get first character of string
-
-            this.doAction(selection);//do action selection
-
-        } while (selection != 'E'); // an selection is not"Exit
-    }
-
-    public String getInput() {
-        String input;
-        Scanner keyboard = new Scanner(System.in); //keyboard input screen
-
-        // prompt for the input from the player selection
-        System.out.println("Select your next action from MENU.");
-
-        //get the selection from the keyboard
-        input = keyboard.nextLine();
-        input = input.trim();
-        input = input.toUpperCase();
-
-        return input; // Return Name
-    }
-    
-    public void doAction(char choice) {
+    @Override  
+    public boolean doAction(Object obj) {
+        
+        String value = (String) obj;
+        
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
 
         switch (choice) {
             case 'M':// M - Move to the map location 
@@ -91,6 +68,7 @@ public class GameMenuView {
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
+    return true;
     }
     
      private void startLocationControl() {
@@ -99,7 +77,7 @@ public class GameMenuView {
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();        
+        gameMenu.display();        
     }
      
      private void startNewGame() {
@@ -108,11 +86,11 @@ public class GameMenuView {
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();        
+        gameMenu.display();        
     }
      
     private void displayHelpMenu() {
         HelpMenuView gameMenu = new HelpMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 }

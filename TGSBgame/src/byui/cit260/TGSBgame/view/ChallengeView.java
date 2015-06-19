@@ -18,7 +18,11 @@ public class ChallengeView {
         
             ChallengesControl ChallengesControl = new ChallengesControl();
     }
-    
+    //"doubt", "iniquity" ,"addictions", "ignorance", "dishonesty", 
+    //     "deception", "pride", "unemployment", "peer pressure", "sickeness",
+    //     "rebelion", "fear", "greed", "loneliness", "betrayal",
+    //     "power", "poverty", "loss","fun"
+        
     private final String doubt1 = "\n"
             + "\n--------------------------------------------------"
             + "\n|                  Doubt                         |"

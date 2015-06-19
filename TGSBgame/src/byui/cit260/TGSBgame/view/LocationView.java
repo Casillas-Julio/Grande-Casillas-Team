@@ -11,7 +11,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Adriana Display the following locations description
+ * @author Adriana
+ * Display the following locations description
  */
 public class LocationView {
 
@@ -94,8 +95,21 @@ public class LocationView {
 
         if (location == 1) {
             System.out.println(JFK);
+            
         } else if (location == 2) {
             System.out.println(TIMESQUARE);
+        }
+        else if (location == 3) {
+            System.out.println(CENTRALPARK);
+        }
+        else if (location == 4) {
+            System.out.println(SUBWAY);
+        }
+        else if (location == 5) {
+            System.out.println(CHINATOWN);
+        }
+        else if (location >= 6 || location <= 35) {
+            System.out.println("Location is" + location);
         } else {
             System.out.println("\n*** You're out of this world! ***");
         }
@@ -103,32 +117,32 @@ public class LocationView {
 
     //we may not need this
 
-    public int getInput() {
-        int location = 0;
-        int row;
-        int column;
-
-        Scanner loc = new Scanner(System.in); //keyboard input screen
-
-        // prompt for the input from the player selection
-        System.out.println("Enter row.");
-        row = loc.nextInt();
-        System.out.println("Enter column.");
-        column = loc.nextInt();
-
-        if (row >= 1 || row <= 35) {
-            if (column >= 1 || column <= 35) {
-                location = (5 * row) - (5 - column);
-
-            } else {
-                return 0;
-            }
-
-        } else {
-            return 0;
-        }
-
-        return location; // Return map position
-    }
+//    public int getInput() {
+//        int location = 0;
+//        int row;
+//        int column;
+//
+//        Scanner loc = new Scanner(System.in); //keyboard input screen
+//
+//        // prompt for the input from the player selection
+//        System.out.println("Enter row.");
+//        row = loc.nextInt();
+//        System.out.println("Enter column.");
+//        column = loc.nextInt();
+//
+//        if (row >= 1 || row <= 35) {
+//            if (column >= 1 || column <= 35) {
+//                location = (5 * row) - (5 - column);
+//
+//            } else {
+//                return 0;
+//            }
+//
+//        } else {
+//            return 0;
+//        }
+//
+//        return location; // Return map position
+//    }
 
 }

@@ -21,9 +21,10 @@ Display the following menu:
 	R - Return to MAIN MENU
 
  */
-public class HelpMenuView {
+public class HelpMenuView extends View{
 
-    private final String MENU = "\n"
+    public HelpMenuView() {
+        super("\n"
             + "\n--------------------------------------"
             + "\n| Help Menu                          |"
             + "\n--------------------------------------"
@@ -33,7 +34,8 @@ public class HelpMenuView {
             + "\nF - Explain fruits/attributes"
             + "\nC - Explain challenges"
             + "\nR - Return to MAIN MENU"
-            + "\n--------------------------------------";
+            + "\n--------------------------------------");
+    }
 
     private final String OVERVIEW = "\n"
             + "\n---------------------------------------"
@@ -100,37 +102,13 @@ public class HelpMenuView {
             + "\nhe/she loses the same amount of fruits."
             + "\n"
             + "\n---------------------------------------";
-    public void displayMenu() {
-
-        char selection = ' ';
-        do {
-
-            System.out.println(MENU);//display the help menu
-
-            String input = this.getInput();// get the user's selection
-            selection = input.charAt(0);// get first character of string
-
-            this.doAction(selection);//do action selection
-
-        } while (selection != 'E'); // an selection is not"Exit
-    }
-
-    public String getInput() {
-        String input;
-        Scanner keyboard = new Scanner(System.in); //keyboard input screen
-
-        // prompt for the input from the player selection
-        System.out.println("Select your next action from MENU.");
-
-        //get the selection from the keyboard
-        input = keyboard.nextLine();
-        input = input.trim();
-        input = input.toUpperCase();
-
-        return input; // Return Name
-    }
-
-    public void doAction(char choice) {
+    
+    public boolean doAction(Object obj) {
+        
+        String value = (String)obj;
+        
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
 
         switch (choice) {
             case 'O':// create an Overview of game
@@ -147,14 +125,13 @@ public class HelpMenuView {
                 break;
             case 'C': // Explain challenges
                 System.out.println(CHALLENGES);
-                return;
+                break;
             case 'R': // Return to MAIN MENU
-                return;
+                return true;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
+        return true;
     }
-
-    
 }

@@ -10,9 +10,10 @@ import java.util.Scanner;
  *
  * @author Dragon's
  */
-public class AnswersView {
+public class AnswersView extends View{
     
-    private final String ANSWERS = "\n"
+    public AnswersView() {
+        super("\n"
             + "\n--------------------------------------"
             + "\n|            Answers Menu            |"
             + "\n--------------------------------------"
@@ -21,39 +22,15 @@ public class AnswersView {
             + "\nG - Get Help from friend"
             + "\nR - You are Right"
             + "\nW - You are Wrong"
-            + "\n--------------------------------------";
+            + "\n--------------------------------------");
+    }
     
-    public void displayMenu() {
-
-        char selection = ' ';
-        do {
-
-            System.out.println(ANSWERS);//display the answers menu
-
-            String input = this.getInput();// get the user's selection
-            selection = input.charAt(0);// get first character of string
-
-            this.doAction(selection);//do action selection
-
-        } while (selection != 'E'); // an selection is not"Exit
-    }
-
-    public String getInput() {
-        String input;
-        Scanner keyboard = new Scanner(System.in); //keyboard input screen
-
-        // prompt for the input from the player selection
-        System.out.println("Select your next action from MENU.");
-
-        //get the selection from the keyboard
-        input = keyboard.nextLine();
-        input = input.trim();
-        input = input.toUpperCase();
-
-        return input; // Return Name
-    }
-
-    public void doAction(char choice) {
+    public boolean doAction(Object obj) {
+        
+        String value = (String) obj;
+        
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
 
         switch (choice) {
             case 'Y':// Y - Yes Please
@@ -70,10 +47,11 @@ public class AnswersView {
                 break;
             case 'W': // W - You are wrong
                 System.out.println("You are wrong");
-                return;
+                break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
+    return true;
     }
 }
