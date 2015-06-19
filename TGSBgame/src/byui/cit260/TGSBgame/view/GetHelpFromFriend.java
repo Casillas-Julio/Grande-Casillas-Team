@@ -87,7 +87,7 @@ public class GetHelpFromFriend extends View {
             + "\nyour full potential.                      "
             + "\n------------------------------------------";
 
-    
+    @Override
     public boolean doAction(Object obj) {
         
         String value = (String) obj;

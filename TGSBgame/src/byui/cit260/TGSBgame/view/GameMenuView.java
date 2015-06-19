@@ -68,7 +68,7 @@ public class GameMenuView extends View{
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
-    return true;
+        return true;
     }
     
      private void startLocationControl() {

@@ -115,34 +115,4 @@ public class LocationView {
         }
     }
 
-    //we may not need this
-
-//    public int getInput() {
-//        int location = 0;
-//        int row;
-//        int column;
-//
-//        Scanner loc = new Scanner(System.in); //keyboard input screen
-//
-//        // prompt for the input from the player selection
-//        System.out.println("Enter row.");
-//        row = loc.nextInt();
-//        System.out.println("Enter column.");
-//        column = loc.nextInt();
-//
-//        if (row >= 1 || row <= 35) {
-//            if (column >= 1 || column <= 35) {
-//                location = (5 * row) - (5 - column);
-//
-//            } else {
-//                return 0;
-//            }
-//
-//        } else {
-//            return 0;
-//        }
-//
-//        return location; // Return map position
-//    }
-
 }

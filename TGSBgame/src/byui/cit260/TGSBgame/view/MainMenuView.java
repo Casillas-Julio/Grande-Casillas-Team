@@ -24,6 +24,7 @@ public class MainMenuView extends View {
             + "\nE - Exit Game"
             + "\n--------------------------------------");
     }
+    
     @Override    
     public boolean doAction(Object obj) {
         
@@ -46,13 +47,13 @@ public class MainMenuView extends View {
                 this.saveGame();
                 break;
             case 'E': // exit the program
-               return false;
+               return true;
                 //this.exitGame();
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
-        return true;    
+        return false;    
     }
     
     private void startNewGame() {

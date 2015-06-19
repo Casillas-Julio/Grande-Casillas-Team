@@ -103,6 +103,7 @@ public class HelpMenuView extends View{
             + "\n"
             + "\n---------------------------------------";
     
+    @Override
     public boolean doAction(Object obj) {
         
         String value = (String)obj;
@@ -132,6 +133,6 @@ public class HelpMenuView extends View{
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
-        return true;
+        return false;
     }
 }
