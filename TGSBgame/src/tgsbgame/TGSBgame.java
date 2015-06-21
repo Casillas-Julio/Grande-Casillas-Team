@@ -17,6 +17,9 @@ import byui.cit260.TGSBgame.view.*;
  */
 public class TGSBgame {
 
+    private static Game currentGame = null;
+    public static Player player = null;
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -33,8 +36,6 @@ public class TGSBgame {
         TGSBgame.player = player;
     }
 
-    private static Game currentGame = null;
-    public static Player player = null;
     /**
      * @param args the command line arguments
      */
@@ -130,6 +131,27 @@ public class TGSBgame {
         
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
+
+        System.out.println("this is test code for calculating score. "
+                + "\nThis can be deleted when full game implemented.");
+        
+        int bonus;
+ 
+        System.out.println("Add 25 points");
+        bonus = GameControl.calculateScore(player, 25);
+        if (bonus > 0) {
+            BonusView bonusView = new BonusView();
+            bonusView.displayMessage(bonus);
+        }
+        System.out.println("Total score:" + player.getFruits());        
+        System.out.println("Add 15 points");
+        bonus = GameControl.calculateScore(player, 15);
+        if (bonus > 0) {
+            BonusView bonusView = new BonusView();
+            bonusView.displayMessage(bonus);
+        }
+        System.out.println("Total score:" + player.getFruits());        
+
     }
 
     public static Player getLocation() {

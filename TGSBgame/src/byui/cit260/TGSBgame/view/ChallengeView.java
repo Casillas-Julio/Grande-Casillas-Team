@@ -47,7 +47,7 @@ public class ChallengeView {
             
     private final String doubt5 = "\n"
             + "\n--------------------------------------------------"
-            + "\n How do you know you are going to a good one, or even if there's such a thing?"
+            + "\n How do you know you are going to a good church, or even if there's such a thing?"
             + "\n--------------------------------------------------";
     
     private final String doubt6 = "\n"
