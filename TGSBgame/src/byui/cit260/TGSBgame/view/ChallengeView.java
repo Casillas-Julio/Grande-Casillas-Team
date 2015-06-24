@@ -18,7 +18,11 @@ public class ChallengeView {
         
             ChallengesControl ChallengesControl = new ChallengesControl();
     }
-    
+    //"doubt", "iniquity" ,"addictions", "ignorance", "dishonesty", 
+    //     "deception", "pride", "unemployment", "peer pressure", "sickeness",
+    //     "rebelion", "fear", "greed", "loneliness", "betrayal",
+    //     "power", "poverty", "loss","fun"
+        
     private final String doubt1 = "\n"
             + "\n--------------------------------------------------"
             + "\n|                  Doubt                         |"
@@ -43,7 +47,7 @@ public class ChallengeView {
             
     private final String doubt5 = "\n"
             + "\n--------------------------------------------------"
-            + "\n How do you know you are going to a good one, or even if there's such a thing?"
+            + "\n How do you know you are going to a good church, or even if there's such a thing?"
             + "\n--------------------------------------------------";
     
     private final String doubt6 = "\n"

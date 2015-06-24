@@ -17,7 +17,10 @@ public class Player implements Serializable{
     //class instance variables
     public String name;
     private int fruits;
-
+    private boolean bonus20;
+    private boolean bonus40;
+    private boolean bonus60;
+    
     public int getFruits() {
         return fruits;
     }
@@ -26,7 +29,34 @@ public class Player implements Serializable{
         this.fruits = fruits;
     }
 
+    public boolean isBonus20() {
+        return bonus20;
+    }
+
+    public void setBonus20(boolean bonus20) {
+        this.bonus20 = bonus20;
+    }
+
+    public boolean isBonus40() {
+        return bonus40;
+    }
+
+    public void setBonus40(boolean bonus40) {
+        this.bonus40 = bonus40;
+    }
+
+    public boolean isBonus60() {
+        return bonus60;
+    }
+
+    public void setBonus60(boolean bonus60) {
+        this.bonus60 = bonus60;
+    }
+    
     public Player() {
+        this.bonus20 = false;
+        this.bonus40 = false;
+        this.bonus60 = false;
     }
     
     public String getName() {

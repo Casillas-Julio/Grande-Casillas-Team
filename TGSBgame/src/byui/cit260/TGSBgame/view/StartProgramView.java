@@ -41,15 +41,15 @@ public class StartProgramView {
         this.displayWelcomeMessage(player);
         
         //Display the Main menu
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
+        //MainMenuView mainMenuView = new MainMenuView();
+        //MainMenuView.display();
     }
 
     private void displayBanner() {
         System.out.println("\n************************************************");
         
         System.out.println("*                                              *"
-                         + "\n* This is THE GREAT AND SPACIOUS BUILDING      *"
+                         + "\n* This is THE GREAT AND SPACIOUS BUILDING game.*"
                          + "\n* This game is an example of what we face in   *"
                          + "\n* life. In this trip to New York, where your   *"
                          + "\n* goal is to reach the temple, and renew your  *"
@@ -108,10 +108,10 @@ public class StartProgramView {
     }
     
     public void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n============================================");
+        System.out.println("\n\n===============================================");
         System.out.println("\tWelcome to the game " + player.getName());
         System.out.println("\tEnjoy the game!");
-        System.out.println("================================================");
+        System.out.println("===============================================");
     }
     
 }
