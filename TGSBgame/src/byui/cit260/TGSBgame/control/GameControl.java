@@ -5,7 +5,6 @@
  */
 package byui.cit260.TGSBgame.control;
 
-import static byui.cit260.TGSBgame.control.BonusControl.calculateBonus;
 import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
