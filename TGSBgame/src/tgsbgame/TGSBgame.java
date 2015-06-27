@@ -40,49 +40,7 @@ public class TGSBgame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Player playerOne = new Player ();
-//        
-//        playerOne.setName("Camila");
-//        GameControl.startNewGame(playerOne);
-//        
-//        String playerInfo = playerOne.toString();
-//        System.out.println(playerInfo);
-//        
-//        Item itemOne = new Item ();
-//        
-//        itemOne.setRequiredAmount(2);
-//        itemOne.setQuantityInStock(15);
-//        
-//        String itemInfo = itemOne.toString();
-//        System.out.println(itemInfo);
-//        
-//        Actor actorOne = new Actor ();
-//        
-//        actorOne.setType("Friend");
-//                
-//        String actorInfo = actorOne.toString();
-//        System.out.println(actorInfo);
-//        
-//        Enemy enemyOne = new Enemy ();
-//        
-//        enemyOne.setName("Izabel");
-//        enemyOne.setRow(4);
-//        enemyOne.setColumn(6);
-//        enemyOne.setEnemyNo(2);
-//        
-//        String enemyInfo = enemyOne.toString();
-//        System.out.println(enemyInfo);
-//        
-//        Friend friendOne = new Friend();
-//        
-//        friendOne.setName("Mary");
-//        friendOne.setRow(4);
-//        friendOne.setColumn(5);
-//        friendOne.setFriendNo(3);
-//        
-//        String friendInfo = friendOne.toString();
-//        System.out.println(friendInfo);
-        
+    
         //test code
         ChallengesControl challengeOne = new ChallengesControl(35);
         System.out.println(challengeOne.getChallenge(6));
@@ -118,22 +76,7 @@ public class TGSBgame {
         String locationInfo = locationOne.toString();
         System.out.println(locationInfo);
         
-//        Game gameOne = new Game();
-//        
-//        gameOne.setPlayer("Camila");
-//        gameOne.setActors(3);
-//        gameOne.setAttribute("faith");
-//        
-//        String gameInfo = gameOne.toString();
-//        System.out.println(gameInfo);
-        
-        //Challenges challengesX = new Challenges();
-        
-        //challengesX.setType("Doubt");
-             
-     //   String challengesInfo = challengesX.toString();
-      //  System.out.println(challengesInfo);
-        
+      
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
         
@@ -158,9 +101,9 @@ public class TGSBgame {
             BonusView bonusView = new BonusView();
             bonusView.displayMessage(bonus);
         }
-        System.out.println("Total score:" + player.getFruits());        
-
-    }
+        System.out.println("Total score:" + player.getFruits()); 
+        
+        
 
     public static Player getLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -171,6 +114,6 @@ public class TGSBgame {
         public setCurrentGame() {
         }
     }
-
+    
     
 }

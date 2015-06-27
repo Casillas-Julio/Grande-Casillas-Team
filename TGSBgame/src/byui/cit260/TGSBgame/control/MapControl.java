@@ -12,6 +12,8 @@ import byui.cit260.TGSBgame.model.Scene;
  *
  * @author Dragon's
  */
+
+//assignment 9 - implement map
 public class MapControl {
     
     public static Map createMap() {

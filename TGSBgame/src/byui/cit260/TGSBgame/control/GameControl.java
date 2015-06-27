@@ -32,7 +32,7 @@ public class GameControl implements Serializable{
      *
      * @param player
      */
-    public static void starNewGame(Player player){
+    public static void startNewGame(Player player){
 
         player.setFruits(10);
         

@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Dragon's
  */
 //public enum Challenges {
-public enum Challenges implements Serializable{
+enum ChallengeEnum {
     
     doubt,
     iniquity,
@@ -34,74 +34,75 @@ public enum Challenges implements Serializable{
     poverty,
     loss,
     fun;
-//}
+}
 
-//public class Challenges implements Serializable{
+public class Challenges implements Serializable{
     
     //class instance variables
     private String type;
     private double ammount;
-    
+    private final String[] challenges;
+
+    // assignment 9 - implement an array and populate the list with appropriate objects
     Challenges() {
-        String[] challenges = new String[Challenge.values().length];
+        challenges = new String[ChallengeEnum.values().length];
         
-        String doubt = new String("doubt description");//create new challenge
-        challenges[Challenge.doubt.ordinal()] = doubt;// save challenge in challenge
+        String doubt = "doubt description";//create new challenge
+        challenges[ChallengeEnum.doubt.ordinal()] = doubt;// save challenge in challenge
         
-        String iniquity = new String("iniquity description");
-        challenges[Challenge.iniquity.ordinal()] = iniquity;
+        String iniquity = "iniquity description";
+        challenges[ChallengeEnum.iniquity.ordinal()] = iniquity;
         
-        String addictions = new String("addictions description");
-        challenges[Challenge.addictions.ordinal()] = addictions;
+        String addictions = "addictions description";
+        challenges[ChallengeEnum.addictions.ordinal()] = addictions;
         
-        String ignorance = new String("ignorance description");
-        challenges[Challenge.ignorance.ordinal()] = ignorance;
+        String ignorance = "ignorance description";
+        challenges[ChallengeEnum.ignorance.ordinal()] = ignorance;
         
-        String dishonesty = new String("dishonesty description");
-        challenges[Challenge.dishonesty.ordinal()] = dishonesty;
+        String dishonesty = "dishonesty description";
+        challenges[ChallengeEnum.dishonesty.ordinal()] = dishonesty;
         
-        String deception = new String("deception description");
-        challenges[Challenge.deception.ordinal()] = deception;
+        String deception = "deception description";
+        challenges[ChallengeEnum.deception.ordinal()] = deception;
         
-        String pride = new String("pride description");
-        challenges[Challenge.pride.ordinal()] = pride;
+        String pride = "pride description";
+        challenges[ChallengeEnum.pride.ordinal()] = pride;
         
-        String unemployment = new String("unemployment description");
-        challenges[Challenge.unemployment.ordinal()] = unemployment;
+        String unemployment = "unemployment description";
+        challenges[ChallengeEnum.unemployment.ordinal()] = unemployment;
         
-        String peer_pressure = new String("peer_pressure description");
-        challenges[Challenge.peer_pressure.ordinal()] = peer_pressure;
+        String peer_pressure = "peer_pressure description";
+        challenges[ChallengeEnum.peer_pressure.ordinal()] = peer_pressure;
         
-        String sickeness = new String("sickeness description");
-        challenges[Challenge.sickeness.ordinal()] = sickeness;
+        String sickeness = "sickeness description";
+        challenges[ChallengeEnum.sickeness.ordinal()] = sickeness;
         
-        String rebelion = new String("rebelion description");
-        challenges[Challenge.rebelion.ordinal()] = rebelion;
+        String rebelion = "rebelion description";
+        challenges[ChallengeEnum.rebelion.ordinal()] = rebelion;
         
-        String fear = new String("fear description");
-        challenges[Challenge.fear.ordinal()] = fear;
+        String fear = "fear description";
+        challenges[ChallengeEnum.fear.ordinal()] = fear;
         
-        String greed = new String("greed description");
-        challenges[Challenge.greed.ordinal()] = greed;
+        String greed = "greed description";
+        challenges[ChallengeEnum.greed.ordinal()] = greed;
         
-        String loneliness = new String("loneliness description");
-        challenges[Challenge.loneliness.ordinal()] = loneliness;
+        String loneliness = "loneliness description";
+        challenges[ChallengeEnum.loneliness.ordinal()] = loneliness;
         
-        String betrayal = new String("betrayal description");
-        challenges[Challenge.betrayal.ordinal()] = betrayal;
+        String betrayal = "betrayal description";
+        challenges[ChallengeEnum.betrayal.ordinal()] = betrayal;
         
-        String power = new String("power description");
-        challenges[Challenge.power.ordinal()] = power;
+        String power = "power description";
+        challenges[ChallengeEnum.power.ordinal()] = power;
         
-        String poverty = new String("poverty description");
-        challenges[Challenge.poverty.ordinal()] = poverty;
+        String poverty = "poverty description";
+        challenges[ChallengeEnum.poverty.ordinal()] = poverty;
         
-        String loss = new String("loss description");
-        challenges[Challenge.loss.ordinal()] = loss;
+        String loss = "loss description";
+        challenges[ChallengeEnum.loss.ordinal()] = loss;
         
-        String fun = new String("fun description");
-        challenges[Challenge.fun.ordinal()] = fun;
-        
+        String fun = "fun description";
+        challenges[ChallengeEnum.fun.ordinal()] = fun;
     }
     
     public String getType() {

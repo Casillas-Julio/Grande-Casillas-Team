@@ -21,34 +21,26 @@ public class Map implements Serializable {
     
     
     public int getRowCount() {
-        return rowCount;
+        return noOfRows;
     }
 
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
+    public void setRowCount(int noOfRows) {
+        this.noOfRows = noOfRows;
     }
 
     public int getColumnCount() {
-        return columnCount;
+        return noOfColumns;
     }
 
-    public void setColumnCount(int columnCount) {
-        this.columnCount = columnCount;
+    public void setColumnCount(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
     }
 
-//    public Map(int rowCount, int columnCount) {
-//        this.rowCount = rowCount;
-//        this.columnCount = columnCount;
+//    public Map(int noOfRows, int noOfColumns) {
+//        this.noOfRows = noOfRows;
+//        this.noOfColumns = noOfColumns;
 //    }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + this.rowCount;
-        hash = 89 * hash + this.columnCount;
-        return hash;
-    }
-    
     public Map() {    
     }
     
@@ -73,11 +65,11 @@ public class Map implements Serializable {
             for  (int column = 0; column < noOfColumns; column++) {
                 Location location = new Location();
                 location.setColumn(column);
-                location. setRow(row);
+                location.setRow(row);
                 location.setVisited(false);
                 
                 //assign the Location object to the current position in array
-                location[row][column] = location;
+                locations[row][column] = location;
             }
         }
     }
@@ -91,10 +83,10 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (this.rowCount != other.rowCount) {
+        if (this.noOfRows != other.noOfRows) {
             return false;
         }
-        if (this.columnCount != other.columnCount) {
+        if (this.noOfColumns != other.noOfColumns) {
             return false;
         }
         return true;
@@ -102,7 +94,7 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns + '}';
     }
 
     private void setColumn(int column) {
