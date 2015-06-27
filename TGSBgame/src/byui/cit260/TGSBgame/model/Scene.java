@@ -89,7 +89,7 @@ public class Scene implements Serializable {
                 + "to you engages in a conversation.");
         startingScene.setMapSymbol("JFK");
         startingScene.setBlocked(false);
-        //startingScene.setTravelTime(240);
+        
     //ImageIcon startingSceneImage = MapControl.getImage(startingScene,
                 //"\"/citbyui/cit260/curiousworkmanship/images/startingPoint.jpg");
         startingScene.setIcon(startingSceneImage);
@@ -126,26 +126,6 @@ public class Scene implements Serializable {
             Chelsea_Market,
             Brooklyn_Bridge,
             Soho,
-            Empire_State_Building,
-            Rockefeller_Center,
-            Ellis_Island,
-            New_York_Public_Library,
-            Fifth_Avenue,
-            Gothan_West_Market,
-            Washignton_Square_Park,
-            Flatiron_Building,
-            Wall_Street,
-            Queensbridge_Park_Queens,
-            Music_Hall_of_Williamsburg_Brooklyn,
-            Carlos_Bakery_New_Jersey,
-            Radio_City_Music_Hall,
-            The_Cathedral_Church_of_St_John_the_Divine,
-            United_Nation_Headquarters,
-            Unisphere_Queens,
-            Yankee_Stadium_Bronx,
-            Nine_Eleven_Museum ,
-            High_Line,
-            Manhatan_Temple;
         }
     
     private enum void assignScenesToLocation(Map map, Scene[] scenes) {
@@ -191,3 +171,23 @@ public class Scene implements Serializable {
     }
     }
 }
+            Empire_State_Building,
+            Rockefeller_Center,
+            Ellis_Island,
+            New_York_Public_Library,
+            Fifth_Avenue,
+            Gothan_West_Market,
+            Washignton_Square_Park,
+            Flatiron_Building,
+            Wall_Street,
+            Queensbridge_Park_Queens,
+            Music_Hall_of_Williamsburg_Brooklyn,
+            Carlos_Bakery_New_Jersey,
+            Radio_City_Music_Hall,
+            The_Cathedral_Church_of_St_John_the_Divine,
+            United_Nation_Headquarters,
+            Unisphere_Queens,
+            Yankee_Stadium_Bronx,
+            Nine_Eleven_Museum ,
+            High_Line,
+            Manhatan_Temple;
