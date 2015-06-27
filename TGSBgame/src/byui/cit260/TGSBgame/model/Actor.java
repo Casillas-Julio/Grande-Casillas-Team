@@ -24,6 +24,13 @@ public enum Actor implements Serializable{
     private final String description;
     private final String challenge;
     
+    /*private Random rand; 
+
+    public ChallengesControl(int numLocations) {
+        rand = new Random(System.currentTimeMillis());
+        this.numLocations = numLocations;
+    }*/
+    
     Actor(String description) {
         this.description = description;
         String challenge1 = this.getChallenge(); 
