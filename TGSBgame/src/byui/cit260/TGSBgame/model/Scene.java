@@ -90,17 +90,14 @@ public class Scene implements Serializable {
                 + "to you engages in a conversation.");
         startingScene.setMapSymbol("JFK");
         startingScene.setBlocked(false);
-        //startingScene.setTravelTime(240);
+        
     //ImageIcon startingSceneImage = MapControl.getImage(startingScene,
                 //"\"/citbyui/cit260/curiousworkmanship/images/startingPoint.jpg");
         startingScene.setIcon(startingSceneImage);
         scenes[ScenesType.start.ordinal()] = startingScene;
-        //don't have any finishing scenes
-        /*Scene   finishScene= new Scene();
-        finishScene.setDescription()
-    */
+        
         public enum SceneType {
-            JFK Airport ,
+            JFK_Airport,
             Time Square,
             Central Park,
             NY Subway,
@@ -130,8 +127,8 @@ public class Scene implements Serializable {
             Radio City Music Hall,
             The Cathedral Church of St John the Divine,
             United Nation Headquarters,
-            Unisphere _ Queens,
-            Yankee Stadium _ Bronx,
+            Unisphere_Queens,
+            Yankee Stadium_Bronx,
             Nine Eleven Museum ,
             High Line,
             Manhatan Temple;

@@ -38,8 +38,7 @@ public class Challenges implements Serializable{
     
     //class instance variables
     private String type;
-    private double ammount;
-    
+       
     public Challenges() {
         String[] challenges = new String[Challenge.values().length];
         
@@ -110,14 +109,6 @@ public class Challenges implements Serializable{
         this.type = type;
     }
 
-    public double getAmmount() {
-        return ammount;
-    }
-
-    public void setAmmount(double ammount) {
-        this.ammount = ammount;
-    }
-
     @Override
     public String toString() {
         return "Challenges{" + "type=" + type + ", ammount=" + ammount + '}';
@@ -148,7 +139,4 @@ public class Challenges implements Serializable{
         }
         return true;
     }
-    
-    
-    
 }

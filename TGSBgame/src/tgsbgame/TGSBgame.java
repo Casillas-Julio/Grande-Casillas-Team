@@ -130,8 +130,7 @@ public class TGSBgame {
         Challenges challengesX = new Challenges();
         
         challengesX.setType("Doubt");
-        challengesX.setAmmount(4);
-        
+             
         String challengesInfo = challengesX.toString();
         System.out.println(challengesInfo);
         
