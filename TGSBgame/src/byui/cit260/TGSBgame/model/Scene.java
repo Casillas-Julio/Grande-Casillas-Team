@@ -5,8 +5,11 @@
  */
 package byui.cit260.TGSBgame.model;
 
+import byui.cit260.TGSBgame.model.Scene.SceneType;
+import java.awt.image.BufferedImage;
 import java.io.Serializable;
 import java.util.Objects;
+import tgsbgame.TGSBgame;
 
 /**
  *
@@ -62,12 +65,8 @@ public class Scene implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.symbol, other.symbol)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.symbol, other.symbol);
         
-        //testcase
     }
 
     private static Scene[] createScenes{} throws MapControlException {
@@ -95,88 +94,100 @@ public class Scene implements Serializable {
                 //"\"/citbyui/cit260/curiousworkmanship/images/startingPoint.jpg");
         startingScene.setIcon(startingSceneImage);
         scenes[ScenesType.start.ordinal()] = startingScene;
+
+//    private void setBlocked(boolean b) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setMapSymbol(String jfk) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setBlocked(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         //don't have any finishing scenes
         /*Scene   finishScene= new Scene();
         finishScene.setDescription()
     */
         public enum SceneType {
-            JFK Airport ,
-            Time Square,
-            Central Park,
-            NY Subway,
+            JFK_Airport,
+            Time_Square,
+            Central_Park,
+            NY_Subway,
             Chinatown, 
-            Little Itally,
-            Metropolitan Museum of Art,
+            Little_Itally,
+            Metropolitan_Museum_of_Art,
             Broadway,
-            Lincoln Center,
-            Grand Central Station,
-            Statue of Liberty,
-            Hudson River,
-            Chelsea Market,
-            Brooklyn Bridge,
+            Lincoln_Center,
+            Grand_Central_Station,
+            Statue_of_Liberty,
+            Hudson_River,
+            Chelsea_Market,
+            Brooklyn_Bridge,
             Soho,
-            Empire State Building,
-            Rockefeller Center,
-            Ellis Island,
-            New York Public Library,
-            Fifth Avenue,
-            Gothan West Market,
-            Washignton Square Park,
-            Flatiron Building,
-            Wall Street,
-            Queensbridge Park _ Queens,
-            Music Hall of Williamsburg _ Brooklyn,
-            Carlos Bakery _ New Jersey,
-            Radio City Music Hall,
-            The Cathedral Church of St John the Divine,
-            United Nation Headquarters,
-            Unisphere _ Queens,
-            Yankee Stadium _ Bronx,
-            Nine Eleven Museum ,
-            High Line,
-            Manhatan Temple;
+            Empire_State_Building,
+            Rockefeller_Center,
+            Ellis_Island,
+            New_York_Public_Library,
+            Fifth_Avenue,
+            Gothan_West_Market,
+            Washignton_Square_Park,
+            Flatiron_Building,
+            Wall_Street,
+            Queensbridge_Park_Queens,
+            Music_Hall_of_Williamsburg_Brooklyn,
+            Carlos_Bakery_New_Jersey,
+            Radio_City_Music_Hall,
+            The_Cathedral_Church_of_St_John_the_Divine,
+            United_Nation_Headquarters,
+            Unisphere_Queens,
+            Yankee_Stadium_Bronx,
+            Nine_Eleven_Museum ,
+            High_Line,
+            Manhatan_Temple;
         }
-    }
-}
-
-    private static void assignScenesToLocation(Map map, Scene[] scenes) {
+    
+    private enum void assignScenesToLocation(Map map, Scene[] scenes) {
         Location [][] locations = map.getLocations();
 
         //start point
-        locations[0][0].setScene(scene[SceneType.airport.ordinal()]);
-        locations[0][1].setScene(scene[SceneType.timeSquatet.ordinal()]);
-        locations[0][2].setScene(scene[SceneType.centralPark.ordinal()]);
-        locations[0][3].setScene(scene[SceneType.subway.ordinal()]);
-        locations[0][4].setScene(scene[SceneType.chinatown.ordinal()]);
-        locations[1][0].setScene(scene[SceneType.littleItaly.ordinal()]);
-        locations[1][1].setScene(scene[SceneType.met.ordinal()]);
-        locations[1][2].setScene(scene[SceneType.brodway.ordinal()]);
-        locations[1][3].setScene(scene[SceneType.lincolnCenter.ordinal()]);
-        locations[1][4].setScene(scene[SceneType.grandCentralStation.ordinal()]);
-        locations[2][0].setScene(scene[SceneType.statueOfLiberty.ordinal()]);
-        locations[2][1].setScene(scene[SceneType.hudsonRiver.ordinal()]);
-        locations[2][2].setScene(scene[SceneType.chelseaMarket.ordinal()]);
-        locations[2][3].setScene(scene[SceneType.brooklynBridge.ordinal()]);
-        locations[2][4].setScene(scene[SceneType.soho.ordinal()]);
-        locations[3][0].setScene(scene[SceneType.empireState.ordinal()]);
-        locations[3][1].setScene(scene[SceneType.rockfellerCenter.ordinal()]);
-        locations[3][2].setScene(scene[SceneType.ellisIsland.ordinal()]);
-        locations[3][3].setScene(scene[SceneType.library.ordinal()]);
-        locations[3][4].setScene(scene[SceneType.fifthAvenue.ordinal()]);
-        locations[4][0].setScene(scene[SceneType.gothanWest.ordinal()]);
-        locations[4][1].setScene(scene[SceneType.washingtonSquare.ordinal()]);
-        locations[4][2].setScene(scene[SceneType.flatiron.ordinal()]);
-        locations[4][3].setScene(scene[SceneType.wallStreet.ordinal()]);
-        locations[4][4].setScene(scene[SceneType.queensbridgePark.ordinal()]);
-        locations[5][0].setScene(scene[SceneType.musicHall.ordinal()]);
-        locations[5][1].setScene(scene[SceneType.carlosBakery.ordinal()]);
-        locations[5][2].setScene(scene[SceneType.radioCity.ordinal()]);
-        locations[5][3].setScene(scene[SceneType.stJohnCathedral.ordinal()]);
-        locations[5][4].setScene(scene[SceneType.onu.ordinal()]);
-        locations[6][0].setScene(scene[SceneType.unisphere.ordinal()]);
-        locations[6][1].setScene(scene[SceneType.yankeeStadium.ordinal()]);
-        locations[6][2].setScene(scene[SceneType.nineElevenMuseum.ordinal()]);
-        locations[6][3].setScene(scene[SceneType.highLine.ordinal()]);
+        locations[0][0].setScene(scenes[SceneType.JFK_Airport.ordinal()]);
+        locations[0][1].setScene(scenes[SceneType.Time_Square.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.Central_Park.ordinal()]);
+        locations[0][3].setScene(scenes[SceneType.NY_Subway.ordinal()]);
+        locations[0][4].setScene(scenes[SceneType.Chinatown.ordinal()]);
+        locations[1][0].setScene(scenes[SceneType.Little_Itally.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.Metropolitan_Museum_of_Art.ordinal()]);
+        locations[1][2].setScene(scenes[SceneType.Broadway.ordinal()]);
+        locations[1][3].setScene(scenes[SceneType.Lincoln_Center.ordinal()]);
+        locations[1][4].setScene(scenes[SceneType.Grand_Central_Station.ordinal()]);
+        locations[2][0].setScene(scenes[SceneType.Statue_of_Liberty.ordinal()]);
+        locations[2][1].setScene(scenes[SceneType.Hudson_River.ordinal()]);
+        locations[2][2].setScene(scenes[SceneType.Chelsea_Market.ordinal()]);
+        locations[2][3].setScene(scenes[SceneType.Brooklyn_Bridge.ordinal()]);
+        locations[2][4].setScene(scenes[SceneType.Soho.ordinal()]);
+        locations[3][0].setScene(scenes[SceneType.Empire_State_Building.ordinal()]);
+        locations[3][1].setScene(scenes[SceneType.Rockefeller_Center.ordinal()]);
+        locations[3][2].setScene(scenes[SceneType.Ellis_Island.ordinal()]);
+        locations[3][3].setScene(scenes[SceneType.New_York_Public_Library.ordinal()]);
+        locations[3][4].setScene(scenes[SceneType.Fifth_Avenue.ordinal()]);
+        locations[4][0].setScene(scenes[SceneType.Gothan_West_Market.ordinal()]);
+        locations[4][1].setScene(scenes[SceneType.Washignton_Square_Park.ordinal()]);
+        locations[4][2].setScene(scenes[SceneType.Flatiron_Building.ordinal()]);
+        locations[4][3].setScene(scenes[SceneType.Wall_Street.ordinal()]);
+        locations[4][4].setScene(scenes[SceneType.Queensbridge_Park_Queens.ordinal()]);
+        locations[5][0].setScene(scenes[SceneType.Music_Hall_of_Williamsburg_Brooklyn.ordinal()]);
+        locations[5][1].setScene(scenes[SceneType.Carlos_Bakery_New_Jersey.ordinal()]);
+        locations[6][0].setScene(scenes[SceneType.Radio_City_Music_Hall.ordinal()]);        
+        locations[5][2].setScene(scenes[SceneType.The_Cathedral_Church_of_St_John_the_Divine. ordinal()]);
+        locations[5][3].setScene(scenes[SceneType.United_Nation_Headquarters.ordinal()]);
+        locations[5][4].setScene(scenes[SceneType.Unisphere_Queens.ordinal()]);
+        locations[6][1].setScene(scenes[SceneType.Yankee_Stadium_Bronx.ordinal()]);
+        locations[6][2].setScene(scenes[SceneType.Nine_Eleven_Museum.ordinal()]);
+        locations[6][3].setScene(scenes[SceneType.High_Line.ordinal()]);
         //end point
-        locations[6][4].setScene(scene[SceneType.temple.ordinal()]);
+        locations[6][4].setScene(scenes[SceneType.Manhatan_Temple.ordinal()]);
+    }
+    }
 }

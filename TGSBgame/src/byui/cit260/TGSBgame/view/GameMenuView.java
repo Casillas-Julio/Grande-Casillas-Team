@@ -7,7 +7,6 @@ package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.control.GameControl;
 import byui.cit260.TGSBgame.control.LocationControl;
 import tgsbgame.TGSBgame;
-import java.util.Scanner;
 
 /**
  *

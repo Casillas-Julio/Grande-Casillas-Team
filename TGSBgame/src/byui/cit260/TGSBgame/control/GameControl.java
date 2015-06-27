@@ -9,8 +9,8 @@ import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import java.io.Serializable;
+import tgsbgame.TGSBgame;
 import static tgsbgame.TGSBgame.player;
-import byui.cit260.TGSBgame.model.Actor;
 
 
 /**
@@ -19,7 +19,7 @@ import byui.cit260.TGSBgame.model.Actor;
  */
 public class GameControl implements Serializable{
     
-    public static void createNewGame(Player player){
+    public static void startNewGame(Player player){
         player.setFruits(10);
         System.out.println("\n*** startNewGame stub function called ***");
     
@@ -34,6 +34,7 @@ public class GameControl implements Serializable{
     public static int calculateScore(Player player, int fruitsToAdd) {
         int totalScore;
         int bonus;
+        
         
         bonus = calculateBonus(player);
         totalScore = player.getFruits() + fruitsToAdd + bonus;
@@ -60,14 +61,18 @@ public class GameControl implements Serializable{
         return bonus;
         }
         
-        public class GameControl {
-            public static void createNewGame(Player player) {
-                System.out.println("***createNewGame in GameControl called ***");
-            
+       // public class GameControl {
+           // public static void createNewGame(Player player) {
+              //  System.out.println("***createNewGame in GameControl called ***");
+            public class Game implements Serializable {
+            private Player player;
+            private Challenges[] inventory;
+            private Map map;
+        }
             Game game =new Game (); // create new game
-            TGSBGame.setCurrentGame(game); // save in TGSBGame
+            TGSBgame.setCurrentGame(game); // save in TGSBGame
             
-            game.detPlayer(player); //save player in game
+            game.getPlayer(player); //save player in game
             
             Challenges[] challengesList = GameControl.createChallenges();
             game.setChallenges(Challenges);
@@ -78,12 +83,9 @@ public class GameControl implements Serializable{
             MapControl.moveActorsToStartingLocation(map); //move actors to starting position
         }
             
-        public class Game implements Serializable {
-            private Player player;
-            private Challenges[] inventory;
-            private Map map;
-        }
+
         
+        }
         }
     }
 }

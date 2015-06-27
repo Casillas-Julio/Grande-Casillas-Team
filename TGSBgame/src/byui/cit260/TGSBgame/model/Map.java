@@ -38,10 +38,10 @@ public class Map implements Serializable {
         this.columnCount = columnCount;
     }
 
-    public Map(int rowCount, int columnCount) {
-        this.rowCount = rowCount;
-        this.columnCount = columnCount;
-    }
+//    public Map(int rowCount, int columnCount) {
+//        this.rowCount = rowCount;
+//        this.columnCount = columnCount;
+//    }
 
     @Override
     public int hashCode() {
@@ -54,6 +54,11 @@ public class Map implements Serializable {
     public Map() {    
     }
     
+    /**
+     *
+     * @param noOfRows
+     * @param noOfColumns
+     */
     public Map(int noOfRows, int noOfColumns) {
         
         if (noOfRows < 1 || noOfColumns <1) {
@@ -69,7 +74,7 @@ public class Map implements Serializable {
         for (int row = 0; row < noOfRows; row++) {
             for  (int column = 0; column < noOfColumns; column++) {
                 Location location = new Location();
-                location,setColumn(column);
+                location.setColumn(column);
                 location. setRow(row);
                 location.setVisited(false);
                 
@@ -103,6 +108,10 @@ public class Map implements Serializable {
     }
 
     private void setColumn(int column) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Location[][] getLocations() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

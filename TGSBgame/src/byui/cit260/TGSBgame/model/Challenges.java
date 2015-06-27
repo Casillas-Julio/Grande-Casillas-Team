@@ -12,7 +12,9 @@ import java.util.Objects;
  *
  * @author Dragon's
  */
-public enum Challenge {
+//public enum Challenges {
+public enum Challenges implements Serializable{
+    
     doubt,
     iniquity,
     addictions,
@@ -32,15 +34,15 @@ public enum Challenge {
     poverty,
     loss,
     fun;
-}
+//}
 
-public class Challenges implements Serializable{
+//public class Challenges implements Serializable{
     
     //class instance variables
     private String type;
     private double ammount;
     
-    public Challenges() {
+    Challenges() {
         String[] challenges = new String[Challenge.values().length];
         
         String doubt = new String("doubt description");//create new challenge
