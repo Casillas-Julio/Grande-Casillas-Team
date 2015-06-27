@@ -12,47 +12,29 @@ import java.util.Objects;
  *
  * @author Adriana
  */
-public class Actor implements Serializable{
+public enum Actor implements Serializable{
     
-    //Class Instance Variables
-    private String type;
-
-    public String getType() {
-        return type;
+    John Worth("He's a recent New York resident, and is excited about sharing his discovery of the Big Apple."),
+    Simon Kwan("Kwan is a Chinese-American New Yorker used to life in the big city and its sub-cultures."),
+    Kevin Doom("Kevin is a trendy New York who brags about all this city has to offer. Manhathan is his crib."),
+    Mandi Baxter("Mandi is a fashionista who is always on top of what's happening in her city."),
+    Harper Young("She's a publicist, closely connected with everyone who is important in NY."),
+    Angel Hernandez("Angel know this city inside-out. From the famous avenues to the darkest alley. He has been in all of them.");
+    
+    
+    private final String description;
+    private final String challenge;
+    
+    Actor(String description) {
+        this.description = description;
+        challenge = 
     }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Actor() {
-    }
-
-    @Override
-    public String toString() {
-        return "Actor{" + "type=" + type + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + Objects.hashCode(this.type);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        return true;
+        
+    public String getDescription() {
+        return description;
     }
     
+    public String getChallenge() {
+        return challenge;
+    }
 }

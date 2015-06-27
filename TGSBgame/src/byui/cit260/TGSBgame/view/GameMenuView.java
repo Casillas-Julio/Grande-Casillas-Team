@@ -20,10 +20,10 @@ public class GameMenuView extends View{
             + "\n--------------------------------------"
             + "\n|            Game Menu               |"
             + "\n--------------------------------------"
-            + "\nM - Move to a map location"
-            + "\nR - Return to Main Menu"
-            + "\nH - Show Help Menu"
             + "\nD - Display Map"
+            + "\nM - Move to a map location"
+            + "\nH - Show Help Menu"
+            + "\nR - Return to Main Menu"
             + "\n--------------------------------------");
     }    
     
@@ -52,18 +52,19 @@ public class GameMenuView extends View{
         char choice = value.charAt(0);
 
         switch (choice) {
+            
+            case 'D': // D - Display Map
+                System.out.println(displayMap);
+                break;
             case 'M':// M - Move to the map location 
                 this.startLocationControl();
-                break;
-            case 'R': //R - Return to the Main Menu
-                this.startNewGame();
                 break;
             case 'H': // H - Show Help Menu
                 this.displayHelpMenu();
                 break;
-            case 'D': // D - Display Map
-                System.out.println(displayMap);
-                break;
+            case 'R': //R - Return to the Main Menu
+                this.startNewGame();
+                break;            
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
