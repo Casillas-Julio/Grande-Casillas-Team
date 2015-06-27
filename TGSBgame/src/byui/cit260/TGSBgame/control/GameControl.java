@@ -5,10 +5,13 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import java.io.Serializable;
 import static tgsbgame.TGSBgame.player;
+import byui.cit260.TGSBgame.model.Actor;
+
 
 /**
  *
@@ -55,5 +58,32 @@ public class GameControl implements Serializable{
             player.setBonus60(true);
         }
         return bonus;
+        }
+        
+        public class GameControl {
+            public static void createNewGame(Player player) {
+                System.out.println("***createNewGame in GameControl called ***");
+            
+            Game game =new Game (); // create new game
+            TGSBGame.setCurrentGame(game); // save in TGSBGame
+            
+            game.detPlayer(player); //save player in game
+            
+            Challenges[] challengesList = GameControl.createChallenges();
+            game.setChallenges(Challenges);
+            
+            Map map = MapControl.createMap(); //create nd initialize new map
+            game.setMap(map); //save map in game
+            
+            MapControl.moveActorsToStartingLocation(map); //move actors to starting position
+        }
+            
+        public class Game implements Serializable {
+            private Player player;
+            private Challenges[] inventory;
+            private Map map;
+        }
+        
+        }
     }
 }
