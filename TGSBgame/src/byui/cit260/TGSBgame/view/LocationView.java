@@ -98,40 +98,10 @@ public class LocationView {
         } else if (location == 2) {
             System.out.println(TIMESQUARE);
         }
-        else if (location == 3){
+        else if (location == 3) {
             System.out.println(CENTRALPARK);
         }
-        else if (location == 4){
-            System.out.println(SUBWAY);
-        }
-        else if (location == 5){
-            System.out.println(CHINATOWN);
-        }
-        else if (location == 6){
-            System.out.println("lOCATION 6");
-        }
-        else if (location == 7){
-            System.out.println("lOCATION 7");
-        }
-        else if (location == 8){
-            System.out.println("lOCATION 8");
-        }
-        else if (location == 9){
-            System.out.println("lOCATION 9");
-        }
-        else if (location == 10){
-            System.out.println("lOCATION 10");
-        }
-        else if (location == 11){
-            System.out.println("lOCATION 11");
-        }
-        else if (location == 12 || location <=35){
-            System.out.println("location " + location);
-        }
-        else{  
-          System.out.println("\n*** You're out of this world! ***");
-        }
-        if (location == 4) {
+        else if (location == 4) {
             System.out.println(SUBWAY);
         }
         else if (location == 5) {
@@ -143,5 +113,5 @@ public class LocationView {
             System.out.println("\n*** You're out of this world! ***");
         }
     }
-}
 
+}
