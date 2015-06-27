@@ -127,13 +127,12 @@ public class TGSBgame {
 //        String gameInfo = gameOne.toString();
 //        System.out.println(gameInfo);
         
-        Challenges challengesX = new Challenges();
+        //Challenges challengesX = new Challenges();
         
-        challengesX.setType("Doubt");
-        challengesX.setAmmount(4);
-        
-        String challengesInfo = challengesX.toString();
-        System.out.println(challengesInfo);
+        //challengesX.setType("Doubt");
+             
+     //   String challengesInfo = challengesX.toString();
+      //  System.out.println(challengesInfo);
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
