@@ -112,14 +112,6 @@ public enum Challenges implements Serializable{
         this.type = type;
     }
 
-    public double getAmmount() {
-        return ammount;
-    }
-
-    public void setAmmount(double ammount) {
-        this.ammount = ammount;
-    }
-
     @Override
     public String toString() {
         return "Challenges{" + "type=" + type + ", ammount=" + ammount + '}';
@@ -150,7 +142,4 @@ public enum Challenges implements Serializable{
         }
         return true;
     }
-    
-    
-    
 }
