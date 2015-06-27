@@ -16,7 +16,7 @@ import static tgsbgame.TGSBgame.player;
  */
 public class GameControl implements Serializable{
     
-    public static void startNewGame(Player player){
+    public static void createNewGame(Player player){
         player.setFruits(10);
         System.out.println("\n*** startNewGame stub function called ***");
     
