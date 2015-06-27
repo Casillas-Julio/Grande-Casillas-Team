@@ -16,7 +16,12 @@ public class Map implements Serializable {
     // class instance variables
     private int rowCount;
     private int columnCount;
+    private Location [][] locations;
+    private int noOfRows;
+    private int noOfColumns;
 
+    
+    
     public int getRowCount() {
         return rowCount;
     }
@@ -45,6 +50,34 @@ public class Map implements Serializable {
         hash = 89 * hash + this.columnCount;
         return hash;
     }
+    
+    public Map() {    
+    }
+    
+    public Map(int noOfRows, int noOfColumns) {
+        
+        if (noOfRows < 1 || noOfColumns <1) {
+            System.out.println("The number of rows and columns must be > zero");
+            return;
+        }
+        
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        // create 2-D array for Location objects
+        this.locations = new Location[noOfRows][noOfColumns];
+        for (int row = 0; row < noOfRows; row++) {
+            for  (int column = 0; column < noOfColumns; column++) {
+                Location location = new Location();
+                location,setColumn(column);
+                location. setRow(row);
+                location.setVisited(false);
+                
+                //assign the Location object to the current position in array
+                location[row][column] = location;
+            }
+        }
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -67,6 +100,10 @@ public class Map implements Serializable {
     @Override
     public String toString() {
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+    }
+
+    private void setColumn(int column) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

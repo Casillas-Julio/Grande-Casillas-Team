@@ -5,7 +5,9 @@
  */
 package byui.cit260.TGSBgame.model;
 
+import byui.cit260.TGSBgame.control.GameControl;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,7 +17,16 @@ public class Location implements Serializable{
     
     public int row;
     public int column;
+    private boolean visited;
+    private Scene scene;
+    private ArrayList<Actor> actors;
 
+
+
+    Location() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     public int getRow() {
         return row;
     }
@@ -67,4 +78,8 @@ public class Location implements Serializable{
         }
         return true;
     } 
+
+    void setVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

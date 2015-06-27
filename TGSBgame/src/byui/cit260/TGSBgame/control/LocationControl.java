@@ -5,7 +5,9 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
+import byui.cit260.TGSBgame.model.Scene;
 
 /**
  *
@@ -35,5 +37,18 @@ public class LocationControl {
             location = newLocation;
             return 0;
         }
+    }
+    
+        private static Map createMap() {
+        //create the map
+        Map map = new Map (7, 5);
+        
+        //create the scenes for the game
+        Scene[] scenes = createScenes();
+        
+        //assign scenes to locations
+        GameControl.assignSceneToLocations(map, scenes);
+        
+        return map;
     }
 }
