@@ -7,7 +7,6 @@ package byui.cit260.TGSBgame.view;
 
 import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.model.Map;
-import java.util.Scanner;
 
 /**
  *
@@ -16,7 +15,7 @@ import java.util.Scanner;
  */
 public class LocationView {
 
-    private LocationControl locationControl;
+    private final LocationControl locationControl;
 
     public LocationView() {
 
