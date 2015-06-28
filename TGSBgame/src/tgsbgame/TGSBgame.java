@@ -16,6 +16,15 @@ public class TGSBgame {
 
     private static Game currentGame = null;
     public static Player player = null;
+    public static Challenges challenges = null;
+
+    public static Challenges getChallenges() {
+        return challenges;
+    }
+
+    public static void setChallenges(Challenges challenges) {
+        TGSBgame.challenges = challenges;
+    }
     
     public static Game getCurrentGame() {
         return currentGame;
@@ -41,5 +50,9 @@ public class TGSBgame {
         //test code
         ChallengesControl challengeOne = new ChallengesControl(35);
         System.out.println(challengeOne.getChallenge(6));
+    }
+
+    public static Player getLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

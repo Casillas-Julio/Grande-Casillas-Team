@@ -82,7 +82,7 @@ public class GameMenuView extends View{
      
      private void startNewGame() {
         //create a new game
-        GameControl.startNewGame(TGSBgame.getPlayer());
+        GameControl.createNewGame(TGSBgame.getPlayer());
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();

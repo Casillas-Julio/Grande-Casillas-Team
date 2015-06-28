@@ -51,7 +51,7 @@ public class LocationControl {
         Scene[] scenes = createScenes();
         
         //assign scenes to locations
-        GameControl.assignSceneToLocations(map, scenes);
+        GameControl.assignScenesToLocations(map, scenes);
         
         return map;
     }

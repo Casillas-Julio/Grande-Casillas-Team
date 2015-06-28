@@ -14,7 +14,6 @@ import java.util.Objects;
  */
 //public enum Challenges {
 enum ChallengeEnum {
-    
     doubt,
     iniquity,
     addictions,
@@ -25,7 +24,7 @@ enum ChallengeEnum {
     unemployment,
     peer_pressure,
     sickeness,
-    rebelion,
+    rebellion,
     fear,
     greed,
     loneliness,
@@ -44,7 +43,7 @@ public class Challenges implements Serializable{
     private final String[] challenges;
 
     // assignment 9 - implement an array and populate the list with appropriate objects
-    Challenges() {
+    public Challenges() {
         challenges = new String[ChallengeEnum.values().length];
         
         String doubt = "doubt description";//create new challenge
@@ -78,7 +77,7 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.sickeness.ordinal()] = sickeness;
         
         String rebelion = "rebelion description";
-        challenges[ChallengeEnum.rebelion.ordinal()] = rebelion;
+        challenges[ChallengeEnum.rebellion.ordinal()] = rebelion;
         
         String fear = "fear description";
         challenges[ChallengeEnum.fear.ordinal()] = fear;

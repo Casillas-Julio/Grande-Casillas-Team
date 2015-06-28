@@ -20,9 +20,7 @@ public class Game implements Serializable {
     private String attribute;
 
     public Game() {
-    }
-    
-    
+    }    
 
     public String getPlayer() {
         return player;
@@ -38,14 +36,6 @@ public class Game implements Serializable {
 
     public void setActors(double actors) {
         this.actors = actors;
-    }
-
-    public String getAttribute() {
-        return attribute;
-    }
-
-    public void setAttribute(String attribute) {
-        this.attribute = attribute;
     }
 
     @Override
