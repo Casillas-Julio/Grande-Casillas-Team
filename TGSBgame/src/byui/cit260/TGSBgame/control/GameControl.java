@@ -37,17 +37,14 @@ public class GameControl implements Serializable{
         Game game = new Game(); // create new game
         TGSBgame.setCurrentGame(game); // save in TGSBGame
 
-        game.setPlayer(player);// save player in game
+        //game.setPlayer(player);// save player in game
         
-        //Challenges[] challengesList = GameControl.createChallenges();
-        //game.setChallenges(Challenges);
         Challenges challenges = new Challenges();
         TGSBgame.setChallenges(challenges);
         
         Map map = MapControl.createMap(); //create nd initialize new map
         game.setMap(map); //save map in game
 
-        MapControl.moveActorsToStartingLocation(map); //move actors to starting position
     }
 
 

@@ -36,11 +36,6 @@ public class Map implements Serializable {
         this.noOfColumns = noOfColumns;
     }
 
-//    public Map(int noOfRows, int noOfColumns) {
-//        this.noOfRows = noOfRows;
-//        this.noOfColumns = noOfColumns;
-//    }
-
     public Map() {    
     }
     
@@ -97,12 +92,8 @@ public class Map implements Serializable {
         return "Map{" + "noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns + '}';
     }
 
-    private void setColumn(int column) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     Location[][] getLocations() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.locations;
     }
 
     

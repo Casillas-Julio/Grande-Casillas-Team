@@ -7,6 +7,8 @@ package tgsbgame;
 
 import byui.cit260.TGSBgame.control.ChallengesControl;
 import byui.cit260.TGSBgame.model.*;
+import byui.cit260.TGSBgame.view.MainMenuView;
+import byui.cit260.TGSBgame.view.StartProgramView;
 
 /**
  *
@@ -50,6 +52,12 @@ public class TGSBgame {
         //test code
         ChallengesControl challengeOne = new ChallengesControl(35);
         System.out.println(challengeOne.getChallenge(6));
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
+        
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
 
     public static Player getLocation() {

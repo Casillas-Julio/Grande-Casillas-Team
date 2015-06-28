@@ -18,6 +18,15 @@ public class Game implements Serializable {
     private String player;
     private double actors;
     private String attribute;
+    private Map map;
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
 
     public Game() {
     }    
@@ -70,14 +79,4 @@ public class Game implements Serializable {
         return Objects.equals(this.attribute, other.attribute);
     }
 
-    public void setMap(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setPlayer(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
 }

@@ -21,10 +21,24 @@ public class Location implements Serializable{
     private Scene scene;
     private ArrayList<Actor> actors;
 
+    public boolean isVisited() {
+        return visited;
+    }
 
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
 
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+    
     Location() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public int getRow() {
@@ -78,12 +92,4 @@ public class Location implements Serializable{
         }
         return true;
     } 
-
-    void setVisited(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setScene(Scene scene) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

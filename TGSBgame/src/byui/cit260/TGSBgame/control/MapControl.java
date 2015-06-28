@@ -21,10 +21,10 @@ public class MapControl {
         Map map = new Map (5, 7);
         
         // create a list of the different scenes in the game
-        Scene[] scenes = createScenes();
+        //Scene[] scenes = createScenes();
         
         //assign the different scenes to locations in the map
-        assignScenesToLocation(map, scenes);
+        //assignScenesToLocation(map, scenes);
         
         return map;
     }
