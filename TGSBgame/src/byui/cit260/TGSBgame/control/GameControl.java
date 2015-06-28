@@ -8,6 +8,7 @@ package byui.cit260.TGSBgame.control;
 import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
+import byui.cit260.TGSBgame.model.Scene;
 import java.io.Serializable;
 import static tgsbgame.TGSBgame.player;
 import tgsbgame.TGSBgame;
@@ -19,11 +20,15 @@ import tgsbgame.TGSBgame;
  * @author Adriana
  */
 public class GameControl implements Serializable{
+
+    static void assignSceneToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
-    public static void startNewGame(Player player){
-        
-    }
+//    public static void startNewGame(Player player){
+//        
+//    }
     private Player player;
     private Challenges[] inventory;
     private Map map;
@@ -96,18 +101,18 @@ public class GameControl implements Serializable{
             private Challenges[] inventory;
             private Map map;
         
-            Game game =new Game (); // create new game
-            TGSBgame.setCurrentGame(game); // save in TGSBGame
-            
-            game.getPlayer(player); //save player in game
-            
-            Challenges[] challengesList = GameControl.createChallenges();
-            game.setChallenges(Challenges);
-            
-            Map map = MapControl.createMap(); //create nd initialize new map
-            game.setMap(map); //save map in game
-            
-            MapControl.moveActorsToStartingLocation(map); //move actors to starting position
+//            Game game =new Game (); // create new game
+//            TGSBgame.setCurrentGame(game); // save in TGSBGame
+//            
+//            game.getPlayer(player); //save player in game
+//            
+//            Challenges[] challengesList = GameControl.createChallenges();
+//            game.setChallenges(Challenges);
+//            
+//            Map map = MapControl.createMap(); //create nd initialize new map
+//            game.setMap(map); //save map in game
+//            
+//            MapControl.moveActorsToStartingLocation(map); //move actors to starting position
         }
 }            
 
