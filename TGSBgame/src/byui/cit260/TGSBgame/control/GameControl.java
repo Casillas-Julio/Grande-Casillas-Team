@@ -6,10 +6,10 @@
 package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.model.Challenges;
+import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import java.io.Serializable;
-import static tgsbgame.TGSBgame.player;
 import tgsbgame.TGSBgame;
 
 
@@ -19,21 +19,17 @@ import tgsbgame.TGSBgame;
  * @author Adriana
  */
 public class GameControl implements Serializable{
-    
 
-    public static void startNewGame(Player player){
-        
-    }
     private Player player;
-    private Challenges[] inventory;
+    private Challenges[] challengesList;
     private Map map;
-        
-    /**
-     *
-     * @param player
-     */
-    public static void startNewGame(Player player){
 
+    private static Challenges[] createChallenges() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public static void startNewGame(Player player){
+    
         player.setFruits(10);
         
         Game game = new Game(); // create new game
@@ -50,7 +46,8 @@ public class GameControl implements Serializable{
 
         MapControl.moveActorsToStartingLocation(map); //move actors to starting position
     }
-    
+
+
     public static void initializeMap(Map map){
         map.setColumnCount(1);
         map.setRowCount(1);
@@ -86,28 +83,6 @@ public class GameControl implements Serializable{
             player.setBonus60(true);
         }
         return bonus;
-        }
-        
-       // public class GameControl {
-           // public static void createNewGame(Player player) {
-              //  System.out.println("***createNewGame in GameControl called ***");
-            public class Game implements Serializable {
-            private Player player;
-            private Challenges[] inventory;
-            private Map map;
-        
-            Game game =new Game (); // create new game
-            TGSBgame.setCurrentGame(game); // save in TGSBGame
-            
-            game.getPlayer(player); //save player in game
-            
-            Challenges[] challengesList = GameControl.createChallenges();
-            game.setChallenges(Challenges);
-            
-            Map map = MapControl.createMap(); //create nd initialize new map
-            game.setMap(map); //save map in game
-            
-            MapControl.moveActorsToStartingLocation(map); //move actors to starting position
         }
 }            
 

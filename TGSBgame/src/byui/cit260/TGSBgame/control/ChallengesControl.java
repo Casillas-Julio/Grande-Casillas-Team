@@ -15,7 +15,7 @@ import java.util.Random;
 public class ChallengesControl implements Serializable{
     
     //class variable
-    private static final String[] challenges = 
+    private static final String[] challengesList = 
         {"doubt", "iniquity" ,"addictions", "ignorance", "dishonesty", 
          "deception", "pride", "unemployment", "peer pressure", "sickeness",
          "rebelion", "fear", "greed", "loneliness", "betrayal",
@@ -39,8 +39,8 @@ public class ChallengesControl implements Serializable{
             return "Error";
         }
         else { 
-            whichEntry = rand.nextInt(challenges.length);
-            return challenges[whichEntry];
+            whichEntry = rand.nextInt(challengesList.length);
+            return challengesList[whichEntry];
         }
     }
     
