@@ -42,17 +42,4 @@ public class LocationControl {
             return 0;
         }
     }
-    
-        private static Map createMap() {
-        //create the map
-        Map map = new Map (7, 5);
-        
-        //create the scenes for the game
-        Scene[] scenes = createScenes();
-        
-        //assign scenes to locations
-        GameControl.assignScenesToLocations(map, scenes);
-        
-        return map;
-    }
 }

@@ -7,6 +7,7 @@ package byui.cit260.TGSBgame.view;
 
 import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.model.Map;
+import byui.cit260.TGSBgame.model.Scene;
 
 /**
  *
@@ -22,7 +23,7 @@ public class LocationView {
         locationControl = new LocationControl();
     }
 
-    private final String JFK = "\n"
+    /*private final String JFK = "\n"
             + "\n--------------------------------------------------"
             + "\n| JFK Airport                                    |"
             + "\n--------------------------------------------------"
@@ -83,7 +84,7 @@ public class LocationView {
             + "\n--------------------------------------"
             + "\n"
             + "\n--------------------------------------";
-
+*/
     public void display(Map map) {
         int location;
 
@@ -92,7 +93,12 @@ public class LocationView {
         location = locationControl.getLocation();
         // display description for location
 
-        if (location == 1) {
+        for (Scene s : Scene.values()) {
+            if (s.ordinal() == location) {
+                System.out.println(s.toString());
+            }
+        }
+        /*if (location == 1) {
             System.out.println(JFK);
             
         } else if (location == 2) {
@@ -111,7 +117,7 @@ public class LocationView {
             System.out.println("Location is" + location);
         } else {
             System.out.println("\n*** You're out of this world! ***");
-        }
+        }*/
     }
 
 }

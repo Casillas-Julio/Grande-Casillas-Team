@@ -5,158 +5,256 @@
  */
 package byui.cit260.TGSBgame.model;
 
-import java.io.Serializable;
-
 /**
  *
- * @author Dragon's
+ * @author Adriana
  */
-enum SceneType {
-
-    JFK_Airport,
-    Time_Square,
-    Central_Park,
-    NY_Subway,
-    Chinatown,
-    Little_Italy,
-    Metropolitan_Museum_of_Art,
-    Broadway,
-    Lincoln_Center,
-    Grand_Central_Station,
-    Statue_of_Liberty,
-    Hudson_River,
-    Chelsea_Market,
-    Brooklyn_Bridge,
-    Soho,
-    Empire_State_Building,
-    Rockefeller_Center,
-    Ellis_Island,
-    New_York_Public_Library,
-    Fifth_Avenue,
-    Gothan_West_Market,
-    Washignton_Square_Park,
-    Flatiron_Building,
-    Wall_Street,
-    Queensbridge_Park_Queens,
-    Music_Hall_of_Williamsburg_Brooklyn,
-    Carlos_Bakery_New_Jersey,
-    Radio_City_Music_Hall,
-    The_Cathedral_Church_of_St_John_the_Divine,
-    United_Nation_Headquarters,
-    Unisphere_Queens,
-    Yankee_Stadium_Bronx,
-    Nine_Eleven_Museum,
-    High_Line,
-    Manhatan_Temple;
-
-}
-
-public class Scene implements Serializable {
-
-    //class instance variables
-    private String description;
-    private String symbol;
-
-    public Scene() {
-
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+public enum Scene {
+    
+    JFK_Airport("\n"
+            + "\n--------------------------------------------------"
+            + "\n| JFK Airport                                    |"
+            + "\n--------------------------------------------------"
+            + "\nYou have arrived at the John F Kennedy Airport    "
+            + "\n(JFK) is the busiest of New York's three airport. "
+            + "\nthree airports There are millions of passengers   "
+            + "\nheading to or arriving from domestic and interna- "
+            + "\ntional destinations every year here. Today is a   "
+            + "\nbeautiful day, and there are many people passing  "
+            + "\nby, some in a hurry and some looking for someone  "
+            + "\nto who could guide them out of this madness. You  "
+            + "\nran to get into one of the AirTrain and is heading"
+            + "\nout to your hotel. A person next to you engages in"
+            + "\na conversation."
+            + "\n--------------------------------------------------"),
+    
+    Time_Square("\n"
+            + "\n----------------------------------------------------"
+            + "\n| Time Square                                      |"
+            + "\n----------------------------------------------------"
+            + "\nTimes Square displays of lights and digital signs   "
+            + "\nis impressive even during the daytime. It is a      "
+            + "\nmajor commercial intersection and neighborhood in   "
+            + "\nMidtown Manhattan, New York City, at the junction   "
+            + "\nof Broadway and Seventh Avenue. There are people    "
+            + "\neverywhere, some enjoying the day eating ouside,    "
+            + "\nothers are in line to by tickes for tonight's       "
+            + "\nshows other's are waiting for the free entertainment"
+            + "\nabout to start, and others are just trying to take  "
+            + "\nall in as you do. As you watch people passing by, a "
+            + "\nperson stops by your side and starts a conversation."
+            + "\n----------------------------------------------------"),
+    
+    Central_Park("\n"
+            + "\n----------------------------------------"
+            + "\n| Central Park                         |"
+            + "\n----------------------------------------"
+            + "\n"
+            + "\n----------------------------------------"),
+    
+    NY_Subway("\n"
+            + "\n----------------------------------------"
+            + "\n| NYC Subway                            |"
+            + "\n----------------------------------------"
+            + "\n"
+            + "\n----------------------------------------"),
+    
+    Chinatown("\n"
+            + "\n------------------------------------------"
+            + "\n| Chinatown                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    
+    Little_Italy("\n"
+            + "\n------------------------------------------"
+            + "\n| Little Italy                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Metropolitan_Museum_of_Art("\n"
+            + "\n------------------------------------------"
+            + "\n| Metropolitan Museum of Art                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Broadway("\n"
+            + "\n------------------------------------------"
+            + "\n| Broadway                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Lincoln_Center("\n"
+            + "\n------------------------------------------"
+            + "\n| Lincoln Center                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Grand_Central_Station("\n"
+            + "\n------------------------------------------"
+            + "\n| Grand Central Station                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Statue_of_Liberty("\n"
+            + "\n------------------------------------------"
+            + "\n| Statue of Liberty                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Hudson_River("\n"
+            + "\n------------------------------------------"
+            + "\n| Hudson River                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Chelsea_Market("\n"
+            + "\n------------------------------------------"
+            + "\n| Chelsea Market                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Brooklyn_Bridge("\n"
+            + "\n------------------------------------------"
+            + "\n| Brooklyn Bridge                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Soho("\n"
+            + "\n------------------------------------------"
+            + "\n| Soho                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Empire_State_Building("\n"
+            + "\n------------------------------------------"
+            + "\n| Empire State Building                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Rockefeller_Center("\n"
+            + "\n------------------------------------------"
+            + "\n| Rockefeller Center                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Ellis_Island("\n"
+            + "\n------------------------------------------"
+            + "\n| Ellis Island                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    New_York_Public_Library("\n"
+            + "\n------------------------------------------"
+            + "\n| New York Public Library                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Fifth_Avenue("\n"
+            + "\n------------------------------------------"
+            + "\n| Fifth Avenue                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Gothan_West_Market("\n"
+            + "\n------------------------------------------"
+            + "\n| Gothan West Market                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Washignton_Square_Park("\n"
+            + "\n------------------------------------------"
+            + "\n| Washignton Square Park                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Flatiron_Building("\n"
+            + "\n------------------------------------------"
+            + "\n| Flatiron Building                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Wall_Street("\n"
+            + "\n------------------------------------------"
+            + "\n| Wall Street                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Queensbridge_Park_Queens("\n"
+            + "\n------------------------------------------"
+            + "\n| Queensbridge Park Queens                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Music_Hall_of_Williamsburg_Brooklyn("\n"
+            + "\n------------------------------------------"
+            + "\n| Music Hall of Williamsburg Brooklyn                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Carlos_Bakery_New_Jersey("\n"
+            + "\n------------------------------------------"
+            + "\n| Carlos Bakery New Jersey                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Radio_City_Music_Hall("\n"
+            + "\n------------------------------------------"
+            + "\n| Radio City Music Hall                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    The_Cathedral_Church_of_St_John_the_Divine("\n"
+            + "\n------------------------------------------"
+            + "\n| The Cathedral Church of St John the Divine                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    United_Nation_Headquarters("\n"
+            + "\n------------------------------------------"
+            + "\n| United Nation Headquarters                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Unisphere_Queens("\n"
+            + "\n------------------------------------------"
+            + "\n| Unisphere Queens                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Yankee_Stadium_Bronx("\n"
+            + "\n------------------------------------------"
+            + "\n| Yankee Stadium Bronx                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Nine_Eleven_Museum("\n"
+            + "\n------------------------------------------"
+            + "\n| 9-11 Museum                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    High_Line("\n"
+            + "\n------------------------------------------"
+            + "\n| High Line                               |"
+            + "\n------------------------------------------"
+            + "\n"
+            + "\n------------------------------------------"),
+    Manhatan_Temple("\n"
+            + "\n--------------------------------------"
+            + "\n| Manhathan Temple                   |"
+            + "\n--------------------------------------"
+            + "\n"
+            + "\n--------------------------------------");
+    
+    private final String description;
+        
+    Scene(String description) {
         this.description = description;
-    }
-
-    public String getSymbol() {
-        return symbol;
-    }
-
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
     }
 
     @Override
     public String toString() {
-        return "Scene{" + "description=" + description + ", symbol=" + symbol + '}';
-    }
-
-    /* ***NOT BEING USED, MAY BE ABLE TO DELETE***
-     private static Scene[] createScenes{} throws MapControlException {
-     BufferedImage image = null;
-
-     Game game = TGSBgame.getCurrentGame();
-
-     Scene[] scenes = new Scene[SceneType.values().length];
-
-     Scene startingScene = new Scene();
-     startingScene.set.Description(
-     "\nYou have arrived at the John F Kennedy Airport, which"
-     + "is the busiest of New York's three airports There are "
-     + "millions of passengers heading to or arriving from domestic"
-     + "and international destinations every year here. Today is a "
-     + "beautiful day, and there are many people passing by, some "
-     + "in a hurry and some looking for someone to who could guide "
-     + "them out of this madness. You run to get into one of the "
-     + "AirTrain that is heading out to your hotel. A person next "
-     + "to you engages in a conversation.");
-     startingScene.setMapSymbol("JFK");
-     startingScene.setBlocked(false);
-        
-     startingScene.setIcon(startingSceneImage);
-     scenes[ScenesType.start.ordinal()] = startingScene;
-
-     //    private void setBlocked(boolean b) {
-     //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-     }
-
-     private void setMapSymbol(String jfk) {
-     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-     }
-
-     private void setBlocked(boolean b) {
-     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-     }*/
-    private void assignScenesToLocation(Map map, Scene[] scenes) {
-        Location[][] locations = map.getLocations();
-
-        //start point
-        locations[0][0].setScene(scenes[SceneType.JFK_Airport.ordinal()]);
-        locations[0][1].setScene(scenes[SceneType.Time_Square.ordinal()]);
-        locations[0][2].setScene(scenes[SceneType.Central_Park.ordinal()]);
-        locations[0][3].setScene(scenes[SceneType.NY_Subway.ordinal()]);
-        locations[0][4].setScene(scenes[SceneType.Chinatown.ordinal()]);
-        locations[1][0].setScene(scenes[SceneType.Little_Italy.ordinal()]);
-        locations[1][1].setScene(scenes[SceneType.Metropolitan_Museum_of_Art.ordinal()]);
-        locations[1][2].setScene(scenes[SceneType.Broadway.ordinal()]);
-        locations[1][3].setScene(scenes[SceneType.Lincoln_Center.ordinal()]);
-        locations[1][4].setScene(scenes[SceneType.Grand_Central_Station.ordinal()]);
-        locations[2][0].setScene(scenes[SceneType.Statue_of_Liberty.ordinal()]);
-        locations[2][1].setScene(scenes[SceneType.Hudson_River.ordinal()]);
-        locations[2][2].setScene(scenes[SceneType.Chelsea_Market.ordinal()]);
-        locations[2][3].setScene(scenes[SceneType.Brooklyn_Bridge.ordinal()]);
-        locations[2][4].setScene(scenes[SceneType.Soho.ordinal()]);
-        locations[3][0].setScene(scenes[SceneType.Empire_State_Building.ordinal()]);
-        locations[3][1].setScene(scenes[SceneType.Rockefeller_Center.ordinal()]);
-        locations[3][2].setScene(scenes[SceneType.Ellis_Island.ordinal()]);
-        locations[3][3].setScene(scenes[SceneType.New_York_Public_Library.ordinal()]);
-        locations[3][4].setScene(scenes[SceneType.Fifth_Avenue.ordinal()]);
-        locations[4][0].setScene(scenes[SceneType.Gothan_West_Market.ordinal()]);
-        locations[4][1].setScene(scenes[SceneType.Washignton_Square_Park.ordinal()]);
-        locations[4][2].setScene(scenes[SceneType.Flatiron_Building.ordinal()]);
-        locations[4][3].setScene(scenes[SceneType.Wall_Street.ordinal()]);
-        locations[4][4].setScene(scenes[SceneType.Queensbridge_Park_Queens.ordinal()]);
-        locations[5][0].setScene(scenes[SceneType.Music_Hall_of_Williamsburg_Brooklyn.ordinal()]);
-        locations[5][1].setScene(scenes[SceneType.Carlos_Bakery_New_Jersey.ordinal()]);
-        locations[6][0].setScene(scenes[SceneType.Radio_City_Music_Hall.ordinal()]);
-        locations[5][2].setScene(scenes[SceneType.The_Cathedral_Church_of_St_John_the_Divine.ordinal()]);
-        locations[5][3].setScene(scenes[SceneType.United_Nation_Headquarters.ordinal()]);
-        locations[5][4].setScene(scenes[SceneType.Unisphere_Queens.ordinal()]);
-        locations[6][1].setScene(scenes[SceneType.Yankee_Stadium_Bronx.ordinal()]);
-        locations[6][2].setScene(scenes[SceneType.Nine_Eleven_Museum.ordinal()]);
-        locations[6][3].setScene(scenes[SceneType.High_Line.ordinal()]);
-        //end point
-        locations[6][4].setScene(scenes[SceneType.Manhatan_Temple.ordinal()]);
+        return this.description;
     }
 }

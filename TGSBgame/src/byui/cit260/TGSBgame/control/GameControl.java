@@ -21,8 +21,6 @@ import tgsbgame.TGSBgame;
  */
 public class GameControl implements Serializable{
 
-
-
     private Player player;
     private Map map;
     

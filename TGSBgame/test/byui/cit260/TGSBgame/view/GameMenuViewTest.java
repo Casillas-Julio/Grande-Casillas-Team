@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.TGSBgame.model;
+package byui.cit260.TGSBgame.view;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class SceneTypeTest {
+public class GameMenuViewTest {
     
-    public SceneTypeTest() {
+    public GameMenuViewTest() {
     }
     
     @BeforeClass
@@ -38,27 +38,15 @@ public class SceneTypeTest {
     }
 
     /**
-     * Test of values method, of class SceneType.
+     * Test of doAction method, of class GameMenuView.
      */
     @Test
-    public void testValues() {
-        System.out.println("values");
-        SceneType[] expResult = null;
-        SceneType[] result = SceneType.values();
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of valueOf method, of class SceneType.
-     */
-    @Test
-    public void testValueOf() {
-        System.out.println("valueOf");
-        String name = "";
-        SceneType expResult = null;
-        SceneType result = SceneType.valueOf(name);
+    public void testDoAction() {
+        System.out.println("doAction");
+        Object obj = null;
+        GameMenuView instance = new GameMenuView();
+        boolean expResult = false;
+        boolean result = instance.doAction(obj);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

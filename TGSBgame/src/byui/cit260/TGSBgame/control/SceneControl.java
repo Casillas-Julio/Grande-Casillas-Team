@@ -6,6 +6,10 @@
 package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.model.Actor;
+import byui.cit260.TGSBgame.model.Location;
+import byui.cit260.TGSBgame.model.Map;
+import byui.cit260.TGSBgame.model.Scene;
+import byui.cit260.TGSBgame.model.Scene;
 import java.util.Random;
 
 /**
@@ -32,4 +36,5 @@ public class SceneControl {
         }
         return null;
     }
+
 }

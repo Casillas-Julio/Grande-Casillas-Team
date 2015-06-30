@@ -71,13 +71,19 @@ public class GameMenuView extends View{
         return true;
     }
     
-     private void startLocationControl() {
+    private void startLocationControl() {
         //move to the map location 
-        LocationControl.startLocationControl(TGSBgame.getLocation());
-        
+        /* TODO
+        1. Move forward 1, 2, or 3
+        2. Set map location to new value.  Need to make sure don't pass
+           end of row.
+        3. set location to new value using row/column
+        */
+        /*LocationControl.startLocationControl(TGSBgame.getLocation());
+
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();        
+        gameMenu.display();*/
     }
      
      private void startNewGame() {

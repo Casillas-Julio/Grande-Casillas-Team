@@ -92,7 +92,7 @@ public class Map implements Serializable {
         return "Map{" + "noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns + '}';
     }
 
-    Location[][] getLocations() {
+    public Location[][] getLocations() {
         return this.locations;
     }
 
