@@ -20,9 +20,9 @@ import java.util.Scanner;
  * F - Friends
  * P - Prayer
  */
-public class GetHelpFromFriend extends View {
+public class GetHelpFromFriendView extends View {
     
-    public GetHelpFromFriend() {
+    public GetHelpFromFriendView() {
         super("\n"
             + "\n--------------------------------------"
             + "\n| Get Help From Friend Menu          |"
@@ -94,6 +94,7 @@ public class GetHelpFromFriend extends View {
         
         value = value.toUpperCase();
         char choice = value.charAt(0);
+        boolean addHelpFruit = true;
 
         switch (choice) {
             case 'H':// H - Holy Ghost
@@ -116,6 +117,13 @@ public class GetHelpFromFriend extends View {
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
+        }
+        if (addHelpFruit == true){
+            int helpFruits;
+            
+            helpFruits = GameControl.helpFruits(TGSBgame.getPlayer());
+            System.out.println("You earned " + helpFruits + 
+                    " extra fruits for getting help from a friend in times of trial and temptation!");
         }
         
     return true;

@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class FriendTest {
+public class GameTest {
     
-    public FriendTest() {
+    public GameTest() {
     }
     
     @BeforeClass
@@ -38,120 +38,93 @@ public class FriendTest {
     }
 
     /**
-     * Test of getName method, of class Friend.
+     * Test of getMap method, of class Game.
      */
     @Test
-    public void testGetName() {
-        System.out.println("getName");
-        Friend instance = new Friend();
-        String expResult = "";
-        String result = instance.getName();
+    public void testGetMap() {
+        System.out.println("getMap");
+        Game instance = new Game();
+        Map expResult = null;
+        Map result = instance.getMap();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setName method, of class Friend.
+     * Test of setMap method, of class Game.
      */
     @Test
-    public void testSetName() {
-        System.out.println("setName");
-        String name = "";
-        Friend instance = new Friend();
-        instance.setName(name);
+    public void testSetMap() {
+        System.out.println("setMap");
+        Map map = null;
+        Game instance = new Game();
+        instance.setMap(map);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getRow method, of class Friend.
+     * Test of getPlayer method, of class Game.
      */
     @Test
-    public void testGetRow() {
-        System.out.println("getRow");
-        Friend instance = new Friend();
+    public void testGetPlayer() {
+        System.out.println("getPlayer");
+        Game instance = new Game();
+        String expResult = "";
+        String result = instance.getPlayer();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setPlayer method, of class Game.
+     */
+    @Test
+    public void testSetPlayer() {
+        System.out.println("setPlayer");
+        String player = "";
+        Game instance = new Game();
+        instance.setPlayer(player);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getActors method, of class Game.
+     */
+    @Test
+    public void testGetActors() {
+        System.out.println("getActors");
+        Game instance = new Game();
         double expResult = 0.0;
-        double result = instance.getRow();
+        double result = instance.getActors();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setRow method, of class Friend.
+     * Test of setActors method, of class Game.
      */
     @Test
-    public void testSetRow() {
-        System.out.println("setRow");
-        double row = 0.0;
-        Friend instance = new Friend();
-        instance.setRow(row);
+    public void testSetActors() {
+        System.out.println("setActors");
+        double actors = 0.0;
+        Game instance = new Game();
+        instance.setActors(actors);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getColumn method, of class Friend.
-     */
-    @Test
-    public void testGetColumn() {
-        System.out.println("getColumn");
-        Friend instance = new Friend();
-        double expResult = 0.0;
-        double result = instance.getColumn();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setColumn method, of class Friend.
-     */
-    @Test
-    public void testSetColumn() {
-        System.out.println("setColumn");
-        double column = 0.0;
-        Friend instance = new Friend();
-        instance.setColumn(column);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getFriendNo method, of class Friend.
-     */
-    @Test
-    public void testGetFriendNo() {
-        System.out.println("getFriendNo");
-        Friend instance = new Friend();
-        double expResult = 0.0;
-        double result = instance.getFriendNo();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setFriendNo method, of class Friend.
-     */
-    @Test
-    public void testSetFriendNo() {
-        System.out.println("setFriendNo");
-        double friendNo = 0.0;
-        Friend instance = new Friend();
-        instance.setFriendNo(friendNo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class Friend.
+     * Test of toString method, of class Game.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        Friend instance = new Friend();
+        Game instance = new Game();
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
@@ -160,12 +133,12 @@ public class FriendTest {
     }
 
     /**
-     * Test of hashCode method, of class Friend.
+     * Test of hashCode method, of class Game.
      */
     @Test
     public void testHashCode() {
         System.out.println("hashCode");
-        Friend instance = new Friend();
+        Game instance = new Game();
         int expResult = 0;
         int result = instance.hashCode();
         assertEquals(expResult, result);
@@ -174,13 +147,13 @@ public class FriendTest {
     }
 
     /**
-     * Test of equals method, of class Friend.
+     * Test of equals method, of class Game.
      */
     @Test
     public void testEquals() {
         System.out.println("equals");
         Object obj = null;
-        Friend instance = new Friend();
+        Game instance = new Game();
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);

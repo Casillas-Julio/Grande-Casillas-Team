@@ -38,6 +38,47 @@ public class ActorTest {
     }
 
     /**
+     * Test of values method, of class Actor.
+     */
+    @Test
+    public void testValues() {
+        System.out.println("values");
+        Actor[] expResult = null;
+        Actor[] result = Actor.values();
+        assertArrayEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of valueOf method, of class Actor.
+     */
+    @Test
+    public void testValueOf() {
+        System.out.println("valueOf");
+        String name = "";
+        Actor expResult = null;
+        Actor result = Actor.valueOf(name);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of toString method, of class Actor.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        Actor instance = null;
+        String expResult = "";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of getType method, of class Actor.
      */
 //    @Test

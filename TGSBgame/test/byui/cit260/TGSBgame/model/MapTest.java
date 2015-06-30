@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class AttributeTest {
+public class MapTest {
     
-    public AttributeTest() {
+    public MapTest() {
     }
     
     @BeforeClass
@@ -38,66 +38,81 @@ public class AttributeTest {
     }
 
     /**
-     * Test of getType method, of class Attribute.
+     * Test of getRowCount method, of class Map.
      */
     @Test
-    public void testGetType() {
-        System.out.println("getType");
-        Attribute instance = new Attribute();
-        String expResult = "";
-        String result = instance.getType();
+    public void testGetRowCount() {
+        System.out.println("getRowCount");
+        Map instance = new Map();
+        int expResult = 0;
+        int result = instance.getRowCount();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setType method, of class Attribute.
+     * Test of setRowCount method, of class Map.
      */
     @Test
-    public void testSetType() {
-        System.out.println("setType");
-        String type = "";
-        Attribute instance = new Attribute();
-        instance.setType(type);
+    public void testSetRowCount() {
+        System.out.println("setRowCount");
+        int noOfRows = 0;
+        Map instance = new Map();
+        instance.setRowCount(noOfRows);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getAmmount method, of class Attribute.
+     * Test of getColumnCount method, of class Map.
      */
     @Test
-    public void testGetAmmount() {
-        System.out.println("getAmmount");
-        Attribute instance = new Attribute();
-        double expResult = 0.0;
-        double result = instance.getAmmount();
-        assertEquals(expResult, result, 0.0);
+    public void testGetColumnCount() {
+        System.out.println("getColumnCount");
+        Map instance = new Map();
+        int expResult = 0;
+        int result = instance.getColumnCount();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setAmmount method, of class Attribute.
+     * Test of setColumnCount method, of class Map.
      */
     @Test
-    public void testSetAmmount() {
-        System.out.println("setAmmount");
-        double ammount = 0.0;
-        Attribute instance = new Attribute();
-        instance.setAmmount(ammount);
+    public void testSetColumnCount() {
+        System.out.println("setColumnCount");
+        int noOfColumns = 0;
+        Map instance = new Map();
+        instance.setColumnCount(noOfColumns);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of toString method, of class Attribute.
+     * Test of equals method, of class Map.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
+        Object obj = null;
+        Map instance = new Map();
+        boolean expResult = false;
+        boolean result = instance.equals(obj);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of toString method, of class Map.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        Attribute instance = new Attribute();
+        Map instance = new Map();
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
@@ -106,30 +121,15 @@ public class AttributeTest {
     }
 
     /**
-     * Test of hashCode method, of class Attribute.
+     * Test of getLocations method, of class Map.
      */
     @Test
-    public void testHashCode() {
-        System.out.println("hashCode");
-        Attribute instance = new Attribute();
-        int expResult = 0;
-        int result = instance.hashCode();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of equals method, of class Attribute.
-     */
-    @Test
-    public void testEquals() {
-        System.out.println("equals");
-        Object obj = null;
-        Attribute instance = new Attribute();
-        boolean expResult = false;
-        boolean result = instance.equals(obj);
-        assertEquals(expResult, result);
+    public void testGetLocations() {
+        System.out.println("getLocations");
+        Map instance = new Map();
+        Location[][] expResult = null;
+        Location[][] result = instance.getLocations();
+        assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

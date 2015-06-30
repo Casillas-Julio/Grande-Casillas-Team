@@ -50,14 +50,15 @@ public class TGSBgame {
     public static void main(String[] args) {
     
         //test code
-        ChallengesControl challengeOne = new ChallengesControl(35);
-        System.out.println(challengeOne.getChallenge(6));
+        //ChallengesControl challengeOne = new ChallengesControl(35);
+        //System.out.println(challengeOne.getChallenge(6));
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
         
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
+        
     }
 
     public static Player getLocation() {

@@ -57,8 +57,7 @@ public class GameControl implements Serializable{
     public static int calculateScore(Player player, int fruitsToAdd) {
         int totalScore;
         int bonus;
-        
-        
+                
         bonus = calculateBonus(player);
         totalScore = player.getFruits() + fruitsToAdd + bonus;
         player.setFruits(totalScore);
@@ -66,21 +65,31 @@ public class GameControl implements Serializable{
     }
     
 
-    public static int calculateBonus(Player player) {
+    public static int calculateBonus(Player player){
         int score = player.getFruits();
         int bonus = 0;
-
-        if ((score >= 20) && (player.isBonus20() == false)) {
-            bonus = (int) (score * 0.2);
+        //changed to increment the bonus on each level of points
+        if ((score >= 20) && (player.isBonus20() == false)){
+            bonus += (int)(score * 0.2);
             player.setBonus20(true);// flag that the player already got the  20 bonus once
-        } else if ((score >= 40) && (player.isBonus40() == false)) {
-            bonus = (int) (score * 0.25);
-            player.setBonus40(true);
-        } else if ((score >= 60) && (player.isBonus60() == false)) {
-            bonus = (int) (score * 0.3);
-            player.setBonus60(true);
+        }
+        if ((score >= 40) && (player.isBonus40() == false)){
+            bonus += (int)(score * 0.25);
+            player.setBonus40(true);// flag that the player already got the  40 bonus once
+        }
+        if ((score >= 60) && (player.isBonus60() == false)){
+            bonus += (int)(score * 0.3);
+            player.setBonus60(true);// flag that the player already got the  60 bonus once
         }
         return bonus;
     }
     
+    public static int helpFruits(Player player) {
+        int totalScore;
+        final int bonusHelpFruits = 2;
+                        
+        totalScore = player.getFruits() + bonusHelpFruits;
+        player.setFruits(totalScore);
+        return bonusHelpFruits;
+    }
 }    

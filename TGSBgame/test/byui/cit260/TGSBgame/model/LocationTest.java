@@ -133,5 +133,59 @@ public class LocationTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of isVisited method, of class Location.
+     */
+    @Test
+    public void testIsVisited() {
+        System.out.println("isVisited");
+        Location instance = new Location();
+        boolean expResult = false;
+        boolean result = instance.isVisited();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setVisited method, of class Location.
+     */
+    @Test
+    public void testSetVisited() {
+        System.out.println("setVisited");
+        boolean visited = false;
+        Location instance = new Location();
+        instance.setVisited(visited);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getScene method, of class Location.
+     */
+    @Test
+    public void testGetScene() {
+        System.out.println("getScene");
+        Location instance = new Location();
+        Scene expResult = null;
+        Scene result = instance.getScene();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setScene method, of class Location.
+     */
+    @Test
+    public void testSetScene() {
+        System.out.println("setScene");
+        Scene scene = null;
+        Location instance = new Location();
+        instance.setScene(scene);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

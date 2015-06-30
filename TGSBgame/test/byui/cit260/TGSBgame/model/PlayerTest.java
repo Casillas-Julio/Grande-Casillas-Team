@@ -106,5 +106,150 @@ public class PlayerTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getFruits method, of class Player.
+     */
+    @Test
+    public void testGetFruits() {
+        System.out.println("getFruits");
+        Player instance = new Player();
+        int expResult = 0;
+        int result = instance.getFruits();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setFruits method, of class Player.
+     */
+    @Test
+    public void testSetFruits() {
+        System.out.println("setFruits");
+        int fruits = 0;
+        Player instance = new Player();
+        instance.setFruits(fruits);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of isBonus20 method, of class Player.
+     */
+    @Test
+    public void testIsBonus20() {
+        System.out.println("isBonus20");
+        Player instance = new Player();
+        boolean expResult = false;
+        boolean result = instance.isBonus20();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setBonus20 method, of class Player.
+     */
+    @Test
+    public void testSetBonus20() {
+        System.out.println("setBonus20");
+        boolean bonus20 = false;
+        Player instance = new Player();
+        instance.setBonus20(bonus20);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of isBonus40 method, of class Player.
+     */
+    @Test
+    public void testIsBonus40() {
+        System.out.println("isBonus40");
+        Player instance = new Player();
+        boolean expResult = false;
+        boolean result = instance.isBonus40();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setBonus40 method, of class Player.
+     */
+    @Test
+    public void testSetBonus40() {
+        System.out.println("setBonus40");
+        boolean bonus40 = false;
+        Player instance = new Player();
+        instance.setBonus40(bonus40);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of isBonus60 method, of class Player.
+     */
+    @Test
+    public void testIsBonus60() {
+        System.out.println("isBonus60");
+        Player instance = new Player();
+        boolean expResult = false;
+        boolean result = instance.isBonus60();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setBonus60 method, of class Player.
+     */
+    @Test
+    public void testSetBonus60() {
+        System.out.println("setBonus60");
+        boolean bonus60 = false;
+        Player instance = new Player();
+        instance.setBonus60(bonus60);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setName method, of class Player.
+     */
+    @Test
+    public void testSetName_String() {
+        System.out.println("setName");
+        String name = "";
+        Player instance = new Player();
+        instance.setName(name);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setName method, of class Player.
+     */
+    @Test
+    public void testSetName_0args() {
+        System.out.println("setName");
+        Player instance = new Player();
+        instance.setName();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setPlayerName method, of class Player.
+     */
+    @Test
+    public void testSetPlayerName() {
+        System.out.println("setPlayerName");
+        Player instance = new Player();
+        instance.setPlayerName();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

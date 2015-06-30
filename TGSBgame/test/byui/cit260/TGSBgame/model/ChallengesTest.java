@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class ItemTest {
+public class ChallengesTest {
     
-    public ItemTest() {
+    public ChallengesTest() {
     }
     
     @BeforeClass
@@ -38,66 +38,39 @@ public class ItemTest {
     }
 
     /**
-     * Test of getRequiredAmount method, of class Item.
+     * Test of getType method, of class Challenges.
      */
     @Test
-    public void testGetRequiredAmount() {
-        System.out.println("getRequiredAmount");
-        Item instance = new Item();
-        double expResult = 0.0;
-        double result = instance.getRequiredAmount();
-        assertEquals(expResult, result, 0.0);
+    public void testGetType() {
+        System.out.println("getType");
+        Challenges instance = new Challenges();
+        String expResult = "";
+        String result = instance.getType();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setRequiredAmount method, of class Item.
+     * Test of setType method, of class Challenges.
      */
     @Test
-    public void testSetRequiredAmount() {
-        System.out.println("setRequiredAmount");
-        double requiredAmount = 0.0;
-        Item instance = new Item();
-        instance.setRequiredAmount(requiredAmount);
+    public void testSetType() {
+        System.out.println("setType");
+        String type = "";
+        Challenges instance = new Challenges();
+        instance.setType(type);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getQuantityInStock method, of class Item.
-     */
-    @Test
-    public void testGetQuantityInStock() {
-        System.out.println("getQuantityInStock");
-        Item instance = new Item();
-        double expResult = 0.0;
-        double result = instance.getQuantityInStock();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setQuantityInStock method, of class Item.
-     */
-    @Test
-    public void testSetQuantityInStock() {
-        System.out.println("setQuantityInStock");
-        double quantityInStock = 0.0;
-        Item instance = new Item();
-        instance.setQuantityInStock(quantityInStock);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class Item.
+     * Test of toString method, of class Challenges.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        Item instance = new Item();
+        Challenges instance = new Challenges();
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
@@ -106,12 +79,12 @@ public class ItemTest {
     }
 
     /**
-     * Test of hashCode method, of class Item.
+     * Test of hashCode method, of class Challenges.
      */
     @Test
     public void testHashCode() {
         System.out.println("hashCode");
-        Item instance = new Item();
+        Challenges instance = new Challenges();
         int expResult = 0;
         int result = instance.hashCode();
         assertEquals(expResult, result);
@@ -120,13 +93,13 @@ public class ItemTest {
     }
 
     /**
-     * Test of equals method, of class Item.
+     * Test of equals method, of class Challenges.
      */
     @Test
     public void testEquals() {
         System.out.println("equals");
         Object obj = null;
-        Item instance = new Item();
+        Challenges instance = new Challenges();
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);

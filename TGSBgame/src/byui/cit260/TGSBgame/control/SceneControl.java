@@ -20,6 +20,7 @@ public class SceneControl {
         rand = new Random(System.currentTimeMillis());
     }
 
+    // Ind. assignment 9 - for each statement and locate the position of value in a list.
     public String getActor() {
         int whichEntry;
 
