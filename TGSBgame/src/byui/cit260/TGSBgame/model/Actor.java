@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 
 /**
@@ -30,5 +31,9 @@ public enum Actor implements Serializable{
     @Override
     public String toString() {
         return this.description;
+    }
+
+    public Point getCoordinates() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

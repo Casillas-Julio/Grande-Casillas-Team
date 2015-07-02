@@ -5,10 +5,13 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Actor;
 import byui.cit260.TGSBgame.model.Location;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Scene;
 import byui.cit260.TGSBgame.model.Scene;
+import java.awt.Point;
+import tgsbgame.TGSBgame;
 
 /**
  *
@@ -78,8 +81,33 @@ public class MapControl {
         locations[6][4].setScene(Scene.Manhatan_Temple);
     }
     
-    static void moveActorsToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void moveActorsToStartingLocation(Map map) {
+                            throws MapControlException{
+        // for every actor
+        Actor[] actors = Actor.values();
+        
+        for (Actor actor : actors) {
+            Point coordinates = actor.getCoordinates();
+            MapControl.moveActorsToLocation(actor, coordinates);
+            
+            }
+        }       
     }
     
+    public static void moveActorsToLocation(Actor actor, Point coordinates) {
+                            throws MapControlException{
+        
+        Map map = TGSBgame.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if (newRow < 0 || newRow >= map.getNoOfRows() || newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+            throw new MapControlException("Can not move actor to location"
+                                        + coordinates.x + ", " coordinates.y
+                                        + " because that location is outside "
+                                        + " the bounds of the map.");
+        }
+       
+    }
+    }
 }
