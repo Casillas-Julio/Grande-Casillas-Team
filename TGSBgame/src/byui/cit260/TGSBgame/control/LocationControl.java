@@ -42,8 +42,8 @@ public class LocationControl {
 
         if (newLocation < 1 || newLocation > 35) {
             throw new LocationControlException("Can not move actor to location"
-                                            + " because that location is outside "
-                                            + " the bounds of the map.");
+                    + " because that location is outside "
+                    + " the bounds of the map.");
         } else {
             location = newLocation;
 

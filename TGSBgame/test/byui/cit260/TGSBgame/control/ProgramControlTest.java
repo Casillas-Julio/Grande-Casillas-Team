@@ -5,7 +5,10 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.ProgramControlException;
 import byui.cit260.TGSBgame.model.Player;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -46,8 +49,14 @@ public class ProgramControlTest {
         System.out.println("createPlayer");
         String name = "";
         Player expResult = null;
-        Player result = ProgramControl.createPlayer(name);
-        assertEquals(expResult, result);
+        Player result;
+        try {
+            result = ProgramControl.createPlayer(name);
+            assertEquals(expResult, result);
+        } catch (ProgramControlException ex) {
+            Logger.getLogger(ProgramControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

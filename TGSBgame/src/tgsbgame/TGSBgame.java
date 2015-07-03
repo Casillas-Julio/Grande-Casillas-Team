@@ -6,9 +6,12 @@
 package tgsbgame;
 
 import byui.cit260.TGSBgame.control.ChallengesControl;
+import byui.cit260.TGSBgame.exceptions.ProgramControlException;
 import byui.cit260.TGSBgame.model.*;
 import byui.cit260.TGSBgame.view.MainMenuView;
 import byui.cit260.TGSBgame.view.StartProgramView;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -54,7 +57,11 @@ public class TGSBgame {
         //System.out.println(challengeOne.getChallenge(6));
         
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();
+        try {
+            startProgramView.startProgram();
+        } catch (ProgramControlException ex) {
+            Logger.getLogger(TGSBgame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();

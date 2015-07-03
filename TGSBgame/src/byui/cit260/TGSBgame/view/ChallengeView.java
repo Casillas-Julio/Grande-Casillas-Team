@@ -64,34 +64,5 @@ public class ChallengeView {
     public void display(Map map) {
         int location;
         
-        // get location
-  //      locationControl.setLocation(map.getRowCount(), map.getColumnCount());
-  //      location = locationControl.getLocation();
-        // display description for location
-  //      if (location == 1){
-  //          System.out.println(JFK);
-        }
-  //      else if (location == 2){
-  //          System.out.println(TIMESQUARE);
-        }
-  //      else {
-  //          System.out.println("\n*** Invalid location ***");
-  //      }
-  //  }
-    //we may not need this
-  //  public String getInput() {
-  //      String input;
-   //     Scanner keyboard = new Scanner(System.in); //keyboard input screen
-
-        // prompt for the input from the player selection
-   //     System.out.println("Enter choice.");
-
-        //get the selection from the keyboard
-   //     input = keyboard.nextLine();
-   //     input = input.trim();
-    //    input = input.toUpperCase();
-
-   //     return input; // Return Name
-   // }
-    //
-//}
+    }
+}

@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import java.io.Serializable;
 import java.util.Random;
 
@@ -32,11 +33,13 @@ public class ChallengesControl implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public String getChallenge(int location){
+    public String getChallenge(int location) throws ChallengesControlException{
         int whichEntry;
         
         if ((location < 1) || (location > numLocations)) {
-            return "Error";
+            throw new ChallengesControlException("Can not move actor to location"
+                                            + " because that location is outside "
+                                            + " the bounds of the map.");
         }
         else { 
             whichEntry = rand.nextInt(challengesList.length);

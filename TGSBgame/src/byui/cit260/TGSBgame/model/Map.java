@@ -48,7 +48,7 @@ public class Map implements Serializable {
         
         if (noOfRows < 1 || noOfColumns <1) {
             System.out.println("The number of rows and columns must be > zero");
-            return;
+            return;//MAP EXCEPTION GOES HERE!!
         }
         
         this.noOfRows = noOfRows;

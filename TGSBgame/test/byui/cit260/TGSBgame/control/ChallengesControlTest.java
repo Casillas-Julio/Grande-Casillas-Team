@@ -5,6 +5,9 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -46,8 +49,14 @@ public class ChallengesControlTest {
         int location = 0;
         ChallengesControl instance = new ChallengesControl();
         String expResult = "";
-        String result = instance.getChallenge(location);
-        assertEquals(expResult, result);
+        String result;
+        try {
+            result = instance.getChallenge(location);
+            assertEquals(expResult, result);
+        } catch (ChallengesControlException ex) {
+            Logger.getLogger(ChallengesControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

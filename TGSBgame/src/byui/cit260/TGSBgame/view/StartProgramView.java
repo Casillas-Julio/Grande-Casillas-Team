@@ -8,6 +8,7 @@ package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.model.*;
 import java.util.Scanner;
 import byui.cit260.TGSBgame.control.ProgramControl;
+import byui.cit260.TGSBgame.exceptions.ProgramControlException;
 
 /**
  *   startProgram(): void 
@@ -26,7 +27,7 @@ public class StartProgramView {
                 
     public StartProgramView() {
     }
-    public void startProgram() {
+    public void startProgram() throws ProgramControlException {
         
         //Diplay the banner screen
         this.displayBanner();
@@ -100,11 +101,6 @@ public class StartProgramView {
             
         }
         return playerName; // Return Name
-    }
-    
-    public static Player createPlayer(String playerName) {
-        System.out.println("\n**** createPlayer function called ****");
-        return null;
     }
     
     public void displayWelcomeMessage(Player player) {

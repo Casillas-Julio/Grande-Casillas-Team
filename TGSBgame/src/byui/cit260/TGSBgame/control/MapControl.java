@@ -80,9 +80,6 @@ public class MapControl {
         //end point
         locations[6][4].setScene(Scene.Manhatan_Temple);
     }
-    
-
-       
-    }
+}
  
 
