@@ -19,5 +19,4 @@ public class PlayerControl implements Serializable {
         playerName.setPlayerName();    
     
     }
-
 }

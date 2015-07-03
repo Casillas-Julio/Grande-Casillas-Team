@@ -19,8 +19,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({byui.cit260.TGSBgame.model.ChallengesControlTest.class,
     byui.cit260.TGSBgame.model.PlayerTest.class, byui.cit260.TGSBgame.model.LocationTest.class, 
-    byui.cit260.TGSBgame.model.ActorTest.class, byui.cit260.TGSBgame.model.GameControlTest.class, 
-    byui.cit260.TGSBgame.model.LocationControlTest.class})
+    byui.cit260.TGSBgame.model.ActorTest.class, byui.cit260.TGSBgame.model.GameControlTest.class })
+
 public class ModelSuite {
 
     @BeforeClass

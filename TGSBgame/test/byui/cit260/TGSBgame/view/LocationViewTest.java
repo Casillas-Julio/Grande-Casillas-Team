@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.TGSBgame.model;
+package byui.cit260.TGSBgame.view;
 
-import byui.cit260.TGSBgame.control.LocationControl;
+import byui.cit260.TGSBgame.model.Map;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,11 +15,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Adriana
+ * @author Dragon's
  */
-public class LocationControlTest {
+public class LocationViewTest {
     
-    public LocationControlTest() {
+    public LocationViewTest() {
     }
     
     @BeforeClass
@@ -39,17 +39,14 @@ public class LocationControlTest {
     }
 
     /**
-     * Test of location method, of class LocationControl.
+     * Test of display method, of class LocationView.
      */
     @Test
-    public void testLocation() {
-        System.out.println("location");
-        int row = 0;
-        int column = 0;
-        LocationControl instance = new LocationControl();
-        int expResult = 0;
-        int result = instance.setLocation(row, column);
-        assertEquals(expResult, result);
+    public void testDisplay() throws Exception {
+        System.out.println("display");
+        Map map = null;
+        LocationView instance = new LocationView();
+        instance.display(map);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

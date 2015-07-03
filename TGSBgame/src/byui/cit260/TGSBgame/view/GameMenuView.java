@@ -5,7 +5,6 @@
  */
 package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.control.GameControl;
-import byui.cit260.TGSBgame.control.LocationControl;
 import tgsbgame.TGSBgame;
 
 /**
@@ -71,7 +70,41 @@ public class GameMenuView extends View{
         return true;
     }
     
+    public int getIntNumber() {
+        Integer number = null;
+
+        while (number == null) {
+            String value = this.getInput();
+            value = value.trim().toUpperCase();
+
+            if (value.equals("Q")) {
+                break;
+            }
+
+            try {
+                //parse and convertnumber from text to a int
+                number = Integer.parseInt(value);
+            } catch (NumberFormatException nf) {
+
+                System.out.println("\nYou must enter a valid number."
+                        + " Try again to enter a number between 1"
+                        + " to 3 or enter Q to quit.");
+            }
+        }
+
+        return number;
+
+    }
+
     private void startLocationControl() {
+
+        System.out.println("\nEnter a number of spaces between 1"
+                + " and 3 to move forward.");
+        
+        getIntNumber();
+        
+        
+                        
         //move to the map location 
         /* TODO
         1. Move forward 1, 2, or 3

@@ -9,24 +9,24 @@ package byui.cit260.TGSBgame.exceptions;
  *
  * @author Dragon's
  */
-public class MapControlException extends Exception {
+public class LocationControlException extends Exception {
 
-    public MapControlException() {
+    public LocationControlException() {
     }
 
-    public MapControlException(String string) {
+    public LocationControlException(String string) {
         super(string);
     }
 
-    public MapControlException(String string, Throwable thrwbl) {
+    public LocationControlException(String string, Throwable thrwbl) {
         super(string, thrwbl);
     }
 
-    public MapControlException(Throwable thrwbl) {
+    public LocationControlException(Throwable thrwbl) {
         super(thrwbl);
     }
 
-    public MapControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
+    public LocationControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
     

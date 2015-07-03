@@ -50,17 +50,5 @@ public class MapControlTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
-    /**
-     * Test of moveActorsToStartingLocation method, of class MapControl.
-     */
-    @Test
-    public void testMoveActorsToStartingLocation() {
-        System.out.println("moveActorsToStartingLocation");
-        Map map = null;
-        MapControl.moveActorsToStartingLocation(map);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
     
 }

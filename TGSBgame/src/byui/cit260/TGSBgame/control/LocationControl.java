@@ -5,9 +5,11 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import byui.cit260.TGSBgame.model.Scene;
+import java.awt.Point;
 
 /**
  *
@@ -15,6 +17,9 @@ import byui.cit260.TGSBgame.model.Scene;
  */
 public class LocationControl {
 
+
+    
+    
     public static void startLocationControl(Player player) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -31,15 +36,18 @@ public class LocationControl {
 
     //returns 0 on success, -1 on failure
 
-    public int setLocation(int row, int column) {
+    public void setLocation(int row, int column) throws LocationControlException {
 
         int newLocation = (5 * row) - (5 - column);
 
         if (newLocation < 1 || newLocation > 35) {
-            return -1;
+            throw new LocationControlException("Can not move actor to location"
+                                            + " because that location is outside "
+                                            + " the bounds of the map.");
         } else {
             location = newLocation;
-            return 0;
+
         }
+
     }
 }
