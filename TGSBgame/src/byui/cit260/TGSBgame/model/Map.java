@@ -96,6 +96,8 @@ public class Map implements Serializable {
         return this.locations;
     }
 
-    
+    public Location getLocation(int row, int column) {
+        return this.locations[row][column];
+    }
 }
 

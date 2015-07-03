@@ -5,6 +5,14 @@
  */
 package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.control.GameControl;
+import byui.cit260.TGSBgame.control.LocationControl;
+import byui.cit260.TGSBgame.control.MapControl;
+import byui.cit260.TGSBgame.exceptions.LocationControlException;
+import byui.cit260.TGSBgame.model.Game;
+import byui.cit260.TGSBgame.model.Location;
+import byui.cit260.TGSBgame.model.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import tgsbgame.TGSBgame;
 
 /**
@@ -54,9 +62,15 @@ public class GameMenuView extends View{
             case 'D': // D - Display Map
                 System.out.println(displayMap);
                 break;
-            case 'M':// M - Move to the map location 
-                this.startLocationControl();
-                break;
+            case 'M': {
+                try {
+                    // M - Move to the map location
+                    this.startLocationControl();
+                } catch (LocationControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             case 'H': // H - Show Help Menu
                 this.displayHelpMenu();
                 break;
@@ -96,14 +110,19 @@ public class GameMenuView extends View{
 
     }
 
-    private void startLocationControl() {
-
+    private void startLocationControl() throws LocationControlException {
+        Location locationObj;
+        int spaces;
+        
         System.out.println("\nEnter a number of spaces between 1"
                 + " and 3 to move forward.");
         
-        getIntNumber();
+        spaces = getIntNumber();
         
-        
+        LocationControl.moveToNextLocation(spaces);
+        locationObj = MapControl.getLocationFromMap(spaces);
+        System.out.println(locationObj);
+        System.out.println(locationObj.getScene());
                         
         //move to the map location 
         /* TODO

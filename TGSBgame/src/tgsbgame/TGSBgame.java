@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class TGSBgame {
 
-    private static Game currentGame = null;
+    public static Game currentGame = null;
     public static Player player = null;
     public static Challenges challenges = null;
 

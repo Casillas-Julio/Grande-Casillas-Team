@@ -21,15 +21,17 @@ import tgsbgame.TGSBgame;
 //assignment 9 - implement map
 public class MapControl {
     
+    private static Map map;
+    
     public static Map createMap() {
         //create the map
-        Map map = new Map(7, 5);
+        map = new Map(7, 5);
 
         //create the scenes for the game
         //Scene[] scenes = createScenes();
 
         //assign scenes to locations
-        assignScenesToLocations(map);
+        assignScenesToLocations();
 
         return map;
     }
@@ -39,7 +41,7 @@ public class MapControl {
     }
 
         
-    private static void assignScenesToLocations(Map map) {
+    private static void assignScenesToLocations() {
         Location[][] locations = map.getLocations();
 
         //start point
@@ -79,6 +81,16 @@ public class MapControl {
         locations[6][3].setScene(Scene.High_Line);
         //end point
         locations[6][4].setScene(Scene.Manhatan_Temple);
+    }
+    
+    public static Location getLocationFromMap(int linear_location) {
+        int row;
+        int column;
+
+        row = linear_location / map.getColumnCount();
+        column = linear_location % map.getColumnCount();
+
+        return map.getLocation(row, column);
     }
 }
  
