@@ -6,11 +6,8 @@
 package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.control.GameControl;
 import byui.cit260.TGSBgame.control.LocationControl;
-import byui.cit260.TGSBgame.control.MapControl;
+import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
-import byui.cit260.TGSBgame.model.Game;
-import byui.cit260.TGSBgame.model.Location;
-import byui.cit260.TGSBgame.model.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tgsbgame.TGSBgame;
@@ -66,7 +63,7 @@ public class GameMenuView extends View{
                 try {
                     // M - Move to the map location
                     this.moveToMapLocation();
-                } catch (LocationControlException ex) {
+                } catch (LocationControlException | ChallengesControlException ex) {
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
@@ -110,7 +107,7 @@ public class GameMenuView extends View{
 
     }
 
-    private void moveToMapLocation() throws LocationControlException {
+    private void moveToMapLocation() throws LocationControlException, ChallengesControlException {
         int spaces;
         
         System.out.println("\nEnter a number of spaces between 1"
