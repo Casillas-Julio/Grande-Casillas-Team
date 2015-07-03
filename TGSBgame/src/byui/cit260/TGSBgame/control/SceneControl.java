@@ -18,14 +18,14 @@ import java.util.Random;
  */
 public class SceneControl {
 
-    private final Random rand;
+    private static Random rand;
 
-    public SceneControl() {
+    public static void SceneControlSetup() {
         rand = new Random(System.currentTimeMillis());
     }
 
     // Ind. assignment 9 - for each statement and locate the position of value in a list.
-    public String getActor() {
+    public static String getActor() {
         int whichEntry;
 
         whichEntry = rand.nextInt(Actor.values().length);
@@ -36,5 +36,4 @@ public class SceneControl {
         }
         return null;
     }
-
 }

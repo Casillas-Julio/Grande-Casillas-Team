@@ -5,7 +5,11 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
+import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.model.Player;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -45,7 +49,13 @@ public class LocationControlTest {
     public void testStartLocationControl() {
         System.out.println("startLocationControl");
         Player player = null;
-        LocationControl.startLocationControl(player);
+        try {
+            LocationControl.startLocationControl(5);
+        } catch (LocationControlException ex) {
+            Logger.getLogger(LocationControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ChallengesControlException ex) {
+            Logger.getLogger(LocationControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

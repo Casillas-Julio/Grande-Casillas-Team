@@ -14,9 +14,9 @@ import byui.cit260.TGSBgame.model.Map;
  */
 public class ChallengeView {
     
-        public ChallengeView() {
-        
-            ChallengesControl ChallengesControl = new ChallengesControl();
+    public ChallengeView() {
+
+       // ChallengesControl ChallengesControl = new ChallengesControl();
     }
     //"doubt", "iniquity" ,"addictions", "ignorance", "dishonesty", 
     //     "deception", "pride", "unemployment", "peer pressure", "sickeness",
@@ -61,8 +61,7 @@ public class ChallengeView {
             + "\n--------------------------------------------------";
 
     
-    public void display(Map map) {
-        int location;
+    public void display() {
         
     }
 }

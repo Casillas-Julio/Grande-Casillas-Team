@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.model;
 
+import byui.cit260.TGSBgame.control.ChallengesControl;
 import java.io.Serializable;
 
 /**
@@ -45,6 +46,7 @@ public class Map implements Serializable {
      * @param noOfColumns
      */
     public Map(int noOfRows, int noOfColumns) {
+        int linearLocation = 0;
         
         if (noOfRows < 1 || noOfColumns <1) {
             System.out.println("The number of rows and columns must be > zero");
@@ -61,6 +63,7 @@ public class Map implements Serializable {
                 Location location = new Location();
                 location.setColumn(column);
                 location.setRow(row);
+                location.setLinearLocation(linearLocation++);
                 location.setVisited(false);
                 
                 //assign the Location object to the current position in array

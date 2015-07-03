@@ -65,7 +65,7 @@ public class GameMenuView extends View{
             case 'M': {
                 try {
                     // M - Move to the map location
-                    this.startLocationControl();
+                    this.moveToMapLocation();
                 } catch (LocationControlException ex) {
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -110,8 +110,7 @@ public class GameMenuView extends View{
 
     }
 
-    private void startLocationControl() throws LocationControlException {
-        Location locationObj;
+    private void moveToMapLocation() throws LocationControlException {
         int spaces;
         
         System.out.println("\nEnter a number of spaces between 1"
@@ -119,10 +118,7 @@ public class GameMenuView extends View{
         
         spaces = getIntNumber();
         
-        LocationControl.moveToNextLocation(spaces);
-        locationObj = MapControl.getLocationFromMap(spaces);
-        System.out.println(locationObj);
-        System.out.println(locationObj.getScene());
+        LocationControl.startLocationControl(spaces);
                         
         //move to the map location 
         /* TODO

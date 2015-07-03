@@ -21,19 +21,15 @@ public class ChallengesControl implements Serializable{
          "deception", "pride", "unemployment", "peer pressure", "sickeness",
          "rebelion", "fear", "greed", "loneliness", "betrayal",
          "power", "poverty", "loss","fun"};
-    private int numLocations;
-    private Random rand; 
+    private static int numLocations;
+    private static Random rand; 
 
-    public ChallengesControl(int numLocations) {
+    public static void ChallengesControlSetup(int numberLocations) {
         rand = new Random(System.currentTimeMillis());
-        this.numLocations = numLocations;
+        numLocations = numberLocations;
     }
 
-    public ChallengesControl() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    public String getChallenge(int location) throws ChallengesControlException{
+    public static String getChallenge(int location) throws ChallengesControlException{
         int whichEntry;
         
         if ((location < 1) || (location > numLocations)) {
@@ -46,6 +42,4 @@ public class ChallengesControl implements Serializable{
             return challengesList[whichEntry];
         }
     }
-    
-    
 }

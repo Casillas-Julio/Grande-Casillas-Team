@@ -5,13 +5,9 @@
  */
 package byui.cit260.TGSBgame.control;
 
-import byui.cit260.TGSBgame.model.Actor;
 import byui.cit260.TGSBgame.model.Location;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Scene;
-import byui.cit260.TGSBgame.model.Scene;
-import java.awt.Point;
-import tgsbgame.TGSBgame;
 
 /**
  *
@@ -26,7 +22,13 @@ public class MapControl {
     public static Map createMap() {
         //create the map
         map = new Map(7, 5);
-
+                
+        // Setup challenges for map
+        ChallengesControl.ChallengesControlSetup(7 * 5);
+        
+        // Setup actors for map
+        SceneControl.SceneControlSetup();
+        
         //create the scenes for the game
         //Scene[] scenes = createScenes();
 

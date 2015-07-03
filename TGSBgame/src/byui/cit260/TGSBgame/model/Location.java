@@ -15,8 +15,9 @@ import java.util.ArrayList;
  */
 public class Location implements Serializable{
     
-    public int row;
-    public int column;
+    private int row;
+    private int column;
+    private int linearLocation;
     private boolean visited;
     private Scene scene;
     //private ArrayList<Actor> actors;
@@ -57,6 +58,14 @@ public class Location implements Serializable{
         this.column = column;
     }
 
+    public int getLinearLocation() {
+        return linearLocation;
+    }
+
+    public void setLinearLocation(int linearLocation) {
+        this.linearLocation = linearLocation;
+    }
+    
     public Location(int row, int column) {
         this.row = row;
         this.column = column;
