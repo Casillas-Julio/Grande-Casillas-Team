@@ -5,8 +5,10 @@
  */
 package byui.cit260.TGSBgame.model;
 
-import byui.cit260.TGSBgame.control.ChallengesControl;
+import byui.cit260.TGSBgame.exceptions.MapException;
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -82,10 +84,18 @@ public class Map implements Serializable {
         }
         final Map other = (Map) obj;
         if (this.noOfRows != other.noOfRows) {
-            return false;
+            try {
+                throw new MapException("Number of row is invalid");
+            } catch (MapException ex) {
+                Logger.getLogger(Map.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (this.noOfColumns != other.noOfColumns) {
-            return false;
+            try {
+                throw new MapException ("Number of columns are invalid");
+            } catch (MapException ex) {
+                Logger.getLogger(Map.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         return true;
     }

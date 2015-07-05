@@ -5,11 +5,8 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Actor;
-import byui.cit260.TGSBgame.model.Location;
-import byui.cit260.TGSBgame.model.Map;
-import byui.cit260.TGSBgame.model.Scene;
-import byui.cit260.TGSBgame.model.Scene;
 import java.util.Random;
 
 /**
@@ -24,16 +21,15 @@ public class SceneControl {
         rand = new Random(System.currentTimeMillis());
     }
 
-    // Ind. assignment 9 - for each statement and locate the position of value in a list.
-    public static String getActor() {
+    
+    public static void getActor() throws SceneControlException {
         int whichEntry;
 
         whichEntry = rand.nextInt(Actor.values().length);
         for (Actor a : Actor.values()) {
             if (a.ordinal() == whichEntry) {
-                return a.toString();
+                throw new SceneControlException("Is not posible to load the scene");
             }
         }
-        return null;
     }
 }

@@ -7,6 +7,7 @@ package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
+import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Location;
 import byui.cit260.TGSBgame.model.Player;
 import byui.cit260.TGSBgame.model.Scene;
@@ -64,7 +65,7 @@ public class LocationControl {
         }
     }    
     
-    private static void doLocationAction(Location location) throws ChallengesControlException {
+    private static void doLocationAction(Location location) throws ChallengesControlException, SceneControlException {
         String challengeString;
         
         // show description of scene for this location
