@@ -17,6 +17,7 @@ import byui.cit260.TGSBgame.exceptions.ProgramControlException;
  */
 
 public class StartProgramView {
+    
 //  BEGIN
 //      Display the banner screen
 //      Get the player name
@@ -47,16 +48,16 @@ public class StartProgramView {
     }
 
     private void displayBanner() {
-        System.out.println("\n************************************************");
+        this.console.println("\n************************************************");
         
-        System.out.println("*                                              *"
+        this.console.println("*                                              *"
                          + "\n* This is THE GREAT AND SPACIOUS BUILDING game.*"
                          + "\n* This game is an example of what we face in   *"
                          + "\n* life. In this trip to New York, where your   *"
                          + "\n* goal is to reach the temple, and renew your  *"
                          + "\n* convenants with the Lord.                    *"
         );  
-        System.out.println("*                                              *"
+        this.console.println("*                                              *"
                          + "\n* You want to stay in the narrow path, and you *"
                          + "\n* constantly strive to hold the Iron rod.      *"
                          + "\n* During this mortal life we face many         *"
@@ -69,31 +70,30 @@ public class StartProgramView {
                          + "\n* of Life, and that you will be happy forever. *"
         );
     
-        System.out.println("*                                              *"
+        this.console.println("*                                              *"
                          + "\n* Enjoy you trip to New York. Good Luck.       *"
                          + "\n*                                              *"
         );
-        System.out.println("************************************************"
+        this.console.println("************************************************"
         );
         }
 
     private String getPlayeName() {
         boolean valid= false; //indicate if the name has be retrived
         String playerName = null;
-        Scanner keyboard = new Scanner(System.in); //keyboard input screen
-        
+                
         while(!valid) {//while a valid name has not be retreived
             
             // prompt for the player's name
-            System.out.println("What's your name?");
+            this.console.println("What's your name?");
             
             //get the name from the keyboard
-            playerName = keyboard.nextLine();
+            playerName = this.keyboard.readLine();
             playerName = playerName.trim();
             
             //If player name is invalid (less than two characters in length)
             if (playerName.length() <2) {
-                System.out.println("Come on, tell me your name for real.");
+                this.console.println("Come on, tell me your name for real.");
                 continue; //and repeat again 
                 
             }
@@ -104,10 +104,14 @@ public class StartProgramView {
     }
     
     public void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n===============================================");
-        System.out.println("\tWelcome to the game " + player.getName());
-        System.out.println("\tEnjoy the game!");
-        System.out.println("===============================================");
+        this.console.println("\n\n===============================================");
+        this.console.println("\tWelcome to the game " + player.getName());
+        this.console.println("\tEnjoy the game!");
+        this.console.println("===============================================");
+    }
+
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

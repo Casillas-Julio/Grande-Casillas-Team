@@ -66,7 +66,19 @@ public class MainMenuView extends View {
     }
     
     private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+        System.out.println("\n\nEnter the file path for the game"
+                            + "is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            GameControl.getStartExistingGame(filePath);
+        }
+        catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
     
     private void displayHelpMenu() {
@@ -75,7 +87,17 @@ public class MainMenuView extends View {
     }
     
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        System.out.println("\n\nEnter the file path for the game"
+                            + "is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(TGSBgame.getCurrentGame(), filePath);
+        }
+        catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
     
 }

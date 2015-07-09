@@ -42,7 +42,7 @@ public class MapTest {
      */
     @Test
     public void testGetRowCount() {
-        System.out.println("getRowCount");
+        this.console.println("getRowCount");
         Map instance = new Map();
         int expResult = 0;
         int result = instance.getRowCount();
@@ -56,7 +56,7 @@ public class MapTest {
      */
     @Test
     public void testSetRowCount() {
-        System.out.println("setRowCount");
+        this.console.println("setRowCount");
         int noOfRows = 0;
         Map instance = new Map();
         instance.setRowCount(noOfRows);
@@ -69,7 +69,7 @@ public class MapTest {
      */
     @Test
     public void testGetColumnCount() {
-        System.out.println("getColumnCount");
+        this.console.println("getColumnCount");
         Map instance = new Map();
         int expResult = 0;
         int result = instance.getColumnCount();
@@ -83,7 +83,7 @@ public class MapTest {
      */
     @Test
     public void testSetColumnCount() {
-        System.out.println("setColumnCount");
+        this.console.println("setColumnCount");
         int noOfColumns = 0;
         Map instance = new Map();
         instance.setColumnCount(noOfColumns);
@@ -96,7 +96,7 @@ public class MapTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
+        this.console.println("equals");
         Object obj = null;
         Map instance = new Map();
         boolean expResult = false;
@@ -111,7 +111,7 @@ public class MapTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
+        this.console.println("toString");
         Map instance = new Map();
         String expResult = "";
         String result = instance.toString();
@@ -125,7 +125,7 @@ public class MapTest {
      */
     @Test
     public void testGetLocations() {
-        System.out.println("getLocations");
+        this.console.println("getLocations");
         Map instance = new Map();
         Location[][] expResult = null;
         Location[][] result = instance.getLocations();

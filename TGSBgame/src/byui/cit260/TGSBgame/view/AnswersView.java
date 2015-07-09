@@ -34,19 +34,19 @@ public class AnswersView extends View{
 
         switch (choice) {
             case 'Y':// Y - Yes Please
-                System.out.println("Yes Please");
+                this.console.println("Yes Please");
                 break;
             case 'N': //N - No thanks
-                System.out.println("No thanks");
+                this.console.println("No thanks");
                 break;
             case 'G': // G - Get help from a friend
-                System.out.println("Get help from friend");
+                this.console.println("Get help from friend");
                 break;
             case 'R': // R - You are right
-                System.out.println("You are right");
+                this.console.println("You are right");
                 break;
             case 'W': // W - You are wrong
-                System.out.println("You are wrong");
+                this.console.println("You are wrong");
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");

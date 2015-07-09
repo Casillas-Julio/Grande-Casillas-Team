@@ -42,7 +42,7 @@ public class ChallengeEnumTest {
      */
     @Test
     public void testValues() {
-        System.out.println("values");
+        this.console.println("values");
         ChallengeEnum[] expResult = null;
         ChallengeEnum[] result = ChallengeEnum.values();
         assertArrayEquals(expResult, result);
@@ -55,7 +55,7 @@ public class ChallengeEnumTest {
      */
     @Test
     public void testValueOf() {
-        System.out.println("valueOf");
+        this.console.println("valueOf");
         String name = "";
         ChallengeEnum expResult = null;
         ChallengeEnum result = ChallengeEnum.valueOf(name);

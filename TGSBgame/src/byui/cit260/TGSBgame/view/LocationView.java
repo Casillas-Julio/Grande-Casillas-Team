@@ -19,6 +19,7 @@ import byui.cit260.TGSBgame.model.Scene;
 public class LocationView {
 
     private final LocationControl locationControl;
+    private Object console;
 
     public LocationView() {
 
@@ -32,13 +33,13 @@ public class LocationView {
         try {
             locationControl.setLocation(map.getRowCount(), map.getColumnCount());
         } catch (LocationControlException le) {
-            System.out.println(le.getMessage());
+            this.console.println(this.console.getMessage());
         }
         location = locationControl.getLocation();
         // display description for location
         for (Scene s : Scene.values()) {
             if (s.ordinal() == location) {
-                System.out.println(s.toString());
+                this.console.println(s.toString());
             }
         }
     }

@@ -42,7 +42,7 @@ public class LocationTest {
      */
     @Test
     public void testGetRow() {
-        System.out.println("getRow");
+        this.console.println("getRow");
         Location instance = null;
         int expResult = 0;
         int result = instance.getRow();
@@ -56,7 +56,7 @@ public class LocationTest {
      */
     @Test
     public void testSetRow() {
-        System.out.println("setRow");
+        this.console.println("setRow");
         int row = 0;
         Location instance = null;
         instance.setRow(row);
@@ -69,7 +69,7 @@ public class LocationTest {
      */
     @Test
     public void testGetColumn() {
-        System.out.println("getColumn");
+        this.console.println("getColumn");
         Location instance = null;
         int expResult = 0;
         int result = instance.getColumn();
@@ -83,7 +83,7 @@ public class LocationTest {
      */
     @Test
     public void testSetColumn() {
-        System.out.println("setColumn");
+        this.console.println("setColumn");
         int column = 0;
         Location instance = null;
         instance.setColumn(column);
@@ -96,7 +96,7 @@ public class LocationTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
+        this.console.println("toString");
         Location instance = null;
         String expResult = "";
         String result = instance.toString();
@@ -110,7 +110,7 @@ public class LocationTest {
      */
     @Test
     public void testHashCode() {
-        System.out.println("hashCode");
+        this.console.println("hashCode");
         Location instance = null;
         int expResult = 0;
         int result = instance.hashCode();
@@ -124,7 +124,7 @@ public class LocationTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
+        this.console.println("equals");
         Object obj = null;
         Location instance = null;
         boolean expResult = false;
@@ -139,7 +139,7 @@ public class LocationTest {
      */
     @Test
     public void testIsVisited() {
-        System.out.println("isVisited");
+        this.console.println("isVisited");
         Location instance = new Location();
         boolean expResult = false;
         boolean result = instance.isVisited();
@@ -153,7 +153,7 @@ public class LocationTest {
      */
     @Test
     public void testSetVisited() {
-        System.out.println("setVisited");
+        this.console.println("setVisited");
         boolean visited = false;
         Location instance = new Location();
         instance.setVisited(visited);
@@ -166,7 +166,7 @@ public class LocationTest {
      */
     @Test
     public void testGetScene() {
-        System.out.println("getScene");
+        this.console.println("getScene");
         Location instance = new Location();
         Scene expResult = null;
         Scene result = instance.getScene();
@@ -180,7 +180,7 @@ public class LocationTest {
      */
     @Test
     public void testSetScene() {
-        System.out.println("setScene");
+        this.console.println("setScene");
         Scene scene = null;
         Location instance = new Location();
         instance.setScene(scene);

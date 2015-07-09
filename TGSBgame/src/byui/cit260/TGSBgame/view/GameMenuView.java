@@ -57,7 +57,7 @@ public class GameMenuView extends View{
         switch (choice) {
             
             case 'D': // D - Display Map
-                System.out.println(displayMap);
+                this.console.println(displayMap);
                 break;
             case 'M': {
                 try {
@@ -110,7 +110,7 @@ public class GameMenuView extends View{
     private void moveToMapLocation() throws LocationControlException, ChallengesControlException {
         int spaces;
         
-        System.out.println("\nEnter a number of spaces between 1"
+        this.console.println("\nEnter a number of spaces between 1"
                 + " and 3 to move forward.");
         
         spaces = getIntNumber();

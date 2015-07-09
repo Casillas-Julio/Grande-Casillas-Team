@@ -20,6 +20,7 @@ public class Map implements Serializable {
     private Location [][] locations;
     private int noOfRows;
     private int noOfColumns;
+    private String console;
 
     
     
@@ -51,7 +52,7 @@ public class Map implements Serializable {
         int linearLocation = 0;
         
         if (noOfRows < 1 || noOfColumns <1) {
-            System.out.println("The number of rows and columns must be > zero");
+            this.console.println("The number of rows and columns must be > zero");
             return;//MAP EXCEPTION GOES HERE!!
         }
         

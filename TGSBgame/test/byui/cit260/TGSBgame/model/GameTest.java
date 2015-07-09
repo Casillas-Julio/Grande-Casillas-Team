@@ -42,7 +42,7 @@ public class GameTest {
      */
     @Test
     public void testGetMap() {
-        System.out.println("getMap");
+        this.console.println("getMap");
         Game instance = new Game();
         Map expResult = null;
         Map result = instance.getMap();
@@ -56,7 +56,7 @@ public class GameTest {
      */
     @Test
     public void testSetMap() {
-        System.out.println("setMap");
+        this.console.println("setMap");
         Map map = null;
         Game instance = new Game();
         instance.setMap(map);
@@ -69,7 +69,7 @@ public class GameTest {
      */
     @Test
     public void testGetPlayer() {
-        System.out.println("getPlayer");
+        this.console.println("getPlayer");
         Game instance = new Game();
         String expResult = "";
         String result = instance.getPlayer();
@@ -83,7 +83,7 @@ public class GameTest {
      */
     @Test
     public void testSetPlayer() {
-        System.out.println("setPlayer");
+        this.console.println("setPlayer");
         String player = "";
         Game instance = new Game();
         instance.setPlayer(player);
@@ -96,7 +96,7 @@ public class GameTest {
      */
     @Test
     public void testGetActors() {
-        System.out.println("getActors");
+        this.console.println("getActors");
         Game instance = new Game();
         double expResult = 0.0;
         double result = instance.getActors();
@@ -110,7 +110,7 @@ public class GameTest {
      */
     @Test
     public void testSetActors() {
-        System.out.println("setActors");
+        this.console.println("setActors");
         double actors = 0.0;
         Game instance = new Game();
         instance.setActors(actors);
@@ -123,7 +123,7 @@ public class GameTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
+        this.console.println("toString");
         Game instance = new Game();
         String expResult = "";
         String result = instance.toString();
@@ -137,7 +137,7 @@ public class GameTest {
      */
     @Test
     public void testHashCode() {
-        System.out.println("hashCode");
+        this.console.println("hashCode");
         Game instance = new Game();
         int expResult = 0;
         int result = instance.hashCode();
@@ -151,7 +151,7 @@ public class GameTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
+        this.console.println("equals");
         Object obj = null;
         Game instance = new Game();
         boolean expResult = false;

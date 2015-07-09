@@ -45,7 +45,7 @@ public class GameControlTest {
      */
     @Test
     public void testAssignScenesToLocations() {
-        System.out.println("assignScenesToLocations");
+        this.console.println("assignScenesToLocations");
         Map map = null;
         Scene[] scenes = null;
         GameControl.assignScenesToLocations(map, scenes);
@@ -58,7 +58,7 @@ public class GameControlTest {
      */
     @Test
     public void testCreateNewGame() {
-        System.out.println("createNewGame");
+        this.console.println("createNewGame");
         Player player = null;
         GameControl.createNewGame(player);
         // TODO review the generated test code and remove the default call to fail.
@@ -70,7 +70,7 @@ public class GameControlTest {
      */
     @Test
     public void testInitializeMap() {
-        System.out.println("initializeMap");
+        this.console.println("initializeMap");
         Map map = null;
         GameControl.initializeMap(map);
         // TODO review the generated test code and remove the default call to fail.
@@ -82,7 +82,7 @@ public class GameControlTest {
      */
     @Test
     public void testCalculateScore() {
-        System.out.println("calculateScore");
+        this.console.println("calculateScore");
         Player player = null;
         int fruitsToAdd = 0;
         int expResult = 0;
@@ -97,7 +97,7 @@ public class GameControlTest {
      */
     @Test
     public void testCalculateBonus() {
-        System.out.println("calculateBonus");
+        this.console.println("calculateBonus");
         Player player = null;
         int expResult = 0;
         int result = GameControl.calculateBonus(player);
@@ -111,7 +111,7 @@ public class GameControlTest {
      */
     @Test
     public void testHelpFruits() {
-        System.out.println("helpFruits");
+        this.console.println("helpFruits");
         Player player = null;
         int expResult = 0;
         int result = GameControl.helpFruits(player);

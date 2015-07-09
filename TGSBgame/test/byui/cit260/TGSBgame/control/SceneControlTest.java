@@ -42,7 +42,7 @@ public class SceneControlTest {
      */
     @Test
     public void testGetActor() {
-        System.out.println("getActor");
+        this.console.println("getActor");
         SceneControl instance = new SceneControl();
         String expResult = "";
         String result = instance.getActor();

@@ -42,7 +42,7 @@ public class ActorTest {
      */
     @Test
     public void testValues() {
-        System.out.println("values");
+        this.console.println("values");
         Actor[] expResult = null;
         Actor[] result = Actor.values();
         assertArrayEquals(expResult, result);
@@ -55,7 +55,7 @@ public class ActorTest {
      */
     @Test
     public void testValueOf() {
-        System.out.println("valueOf");
+        this.console.println("valueOf");
         String name = "";
         Actor expResult = null;
         Actor result = Actor.valueOf(name);
@@ -69,7 +69,7 @@ public class ActorTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
+        this.console.println("toString");
         Actor instance = null;
         String expResult = "";
         String result = instance.toString();
@@ -83,7 +83,7 @@ public class ActorTest {
      */
 //    @Test
 //    public void testGetType() {
-//        System.out.println("getType");
+//        this.console.println("getType");
 //        Actor instance = new Actor();
 //        String expResult = "";
 //        String result = instance.getType();
@@ -97,7 +97,7 @@ public class ActorTest {
 //     */
 //    @Test
 //    public void testSetType() {
-//        System.out.println("setType");
+//        this.console.println("setType");
 //        String type = "";
 //        Actor instance = new Actor();
 //        instance.setType(type);
@@ -110,7 +110,7 @@ public class ActorTest {
 //     */
 //    @Test
 //    public void testToString() {
-//        System.out.println("toString");
+//        this.console.println("toString");
 //        Actor instance = new Actor();
 //        String expResult = "";
 //        String result = instance.toString();
@@ -124,7 +124,7 @@ public class ActorTest {
 //     */
 //    @Test
 //    public void testHashCode() {
-//        System.out.println("hashCode");
+//        this.console.println("hashCode");
 //        Actor instance = new Actor();
 //        int expResult = 0;
 //        int result = instance.hashCode();
@@ -138,7 +138,7 @@ public class ActorTest {
 //     */
 //    @Test
 //    public void testEquals() {
-//        System.out.println("equals");
+//        this.console.println("equals");
 //        Object obj = null;
 //        Actor instance = new Actor();
 //        boolean expResult = false;

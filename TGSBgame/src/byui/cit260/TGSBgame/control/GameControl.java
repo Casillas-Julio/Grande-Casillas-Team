@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.GameViewException;
 import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
@@ -23,7 +24,41 @@ public class GameControl implements Serializable{
 
     private Player player;
     private Map map;
-    
+
+    public static void saveGame(Game currentGame, String filePath) {
+        throwsGameViewException {
+
+            try (FileOutputStream fops = new FileOutputStream(filePath)) {
+                ObjectOutpuStream output = new ObjectOutpuStream(fops);
+
+                output.writeObject(game);// write the game object of the file.
+            } catch (IOException e) {
+                throw new GameControlException(e.getMessage());
+            }
+        }
+    }
+
+    public static void getStartExistingGame(String filePath) {
+        throwsGameViewException {
+
+            Game game = null;
+
+            try (FileInputStream fips = new FileInputStream(filePath)) {
+                ObjectInpuStream output = new ObjectInpuStream(fips);
+
+                game = (Game) output.readObject();// read the game object from file
+
+            } catch (fileNotFoundException fnfe) {
+                throw new GameControlException(fnfe.getMessage());
+            } catch (Exception e) {
+                throw new GameControlException(e.getMessage());
+            }
+
+            //close the output file
+            TGSBgame.setCurrentGame(game);
+        }
+    }
+
     public static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -90,4 +125,6 @@ public class GameControl implements Serializable{
         player.setFruits(totalScore);
         return bonusHelpFruits;
     }
+    
+    
 }    

@@ -113,19 +113,19 @@ public class HelpMenuView extends View{
 
         switch (choice) {
             case 'O':// create an Overview of game
-                System.out.println(OVERVIEW);
+                this.console.println(OVERVIEW);
                 break;
             case 'M': //Explain how moves are made
-                System.out.println(MOVES);
+                this.console.println(MOVES);
                 break;
             case 'G': // Explain map/locations
-                System.out.println(MAP);
+                this.console.println(MAP);
                 break;
             case 'F': // Explain fruits/attributes
-                System.out.println(FRUITS);
+                this.console.println(FRUITS);
                 break;
             case 'C': // Explain challenges
-                System.out.println(CHALLENGES);
+                this.console.println(CHALLENGES);
                 break;
             case 'R': // Return to MAIN MENU
                 return true;

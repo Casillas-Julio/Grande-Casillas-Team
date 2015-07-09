@@ -42,7 +42,7 @@ public class ChallengesTest {
      */
     @Test
     public void testGetType() {
-        System.out.println("getType");
+        this.console.println("getType");
         Challenges instance = new Challenges();
         String expResult = "";
         String result = instance.getType();
@@ -56,7 +56,7 @@ public class ChallengesTest {
      */
     @Test
     public void testSetType() {
-        System.out.println("setType");
+        this.console.println("setType");
         String type = "";
         Challenges instance = new Challenges();
         instance.setType(type);
@@ -69,7 +69,7 @@ public class ChallengesTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
+        this.console.println("toString");
         Challenges instance = new Challenges();
         String expResult = "";
         String result = instance.toString();
@@ -83,7 +83,7 @@ public class ChallengesTest {
      */
     @Test
     public void testHashCode() {
-        System.out.println("hashCode");
+        this.console.println("hashCode");
         Challenges instance = new Challenges();
         int expResult = 0;
         int result = instance.hashCode();
@@ -97,7 +97,7 @@ public class ChallengesTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
+        this.console.println("equals");
         Object obj = null;
         Challenges instance = new Challenges();
         boolean expResult = false;

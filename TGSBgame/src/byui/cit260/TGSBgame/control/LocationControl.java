@@ -69,16 +69,16 @@ public class LocationControl {
         String challengeString;
         
         // show description of scene for this location
-        System.out.println("\ndebug:" + location);  //debug can delete later
-        System.out.println(location.getScene());
+        this.console.println("\ndebug:" + location);  //debug can delete later
+        this.console.println(location.getScene());
         
         // get random actor for this location
-        System.out.println("\n" + SceneControl.getActor());
-        System.out.println("This person presents you with the following challenge:");
+        this.console.println("\n" + SceneControl.getActor());
+        this.console.println("This person presents you with the following challenge:");
         
         // get random challenge for this location
         challengeString = ChallengesControl.getChallenge(location.getLinearLocation());
-        System.out.println(challengeString);
+        this.console.println(challengeString);
         
     }
 

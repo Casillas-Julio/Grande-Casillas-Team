@@ -98,19 +98,19 @@ public class GetHelpFromFriendView extends View {
 
         switch (choice) {
             case 'H':// H - Holy Ghost
-                System.out.println(HOLYGHOST);
+                this.console.println(HOLYGHOST);
                 break;
             case 'L': //L - Leaders
-                System.out.println(LEADERS);
+                this.console.println(LEADERS);
                 break;
             case 'M': // M - Family Member
-                System.out.println(FAMILY);
+                this.console.println(FAMILY);
                 break;
             case 'F': // F - Friends
-                System.out.println(FRIENDS);
+                this.console.println(FRIENDS);
                 break;
             case 'P': // P - Prayer
-                System.out.println(PRAYER);
+                this.console.println(PRAYER);
                 break;
             case 'R': // Return to MAIN MENU
                 return true;
@@ -122,7 +122,7 @@ public class GetHelpFromFriendView extends View {
             int helpFruits;
             
             helpFruits = GameControl.helpFruits(TGSBgame.getPlayer());
-            System.out.println("You earned " + helpFruits + 
+            this.console.println("You earned " + helpFruits + 
                     " extra fruits for getting help from a friend in times of trial and temptation!");
         }
         

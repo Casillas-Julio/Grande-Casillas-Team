@@ -42,7 +42,7 @@ public class GameMenuViewTest {
      */
     @Test
     public void testDoAction() {
-        System.out.println("doAction");
+        this.console.println("doAction");
         Object obj = null;
         GameMenuView instance = new GameMenuView();
         boolean expResult = false;

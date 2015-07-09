@@ -47,7 +47,7 @@ public class LocationControlTest {
      */
     @Test
     public void testStartLocationControl() {
-        System.out.println("startLocationControl");
+        this.console.println("startLocationControl");
         Player player = null;
         try {
             LocationControl.startLocationControl(5);
@@ -65,7 +65,7 @@ public class LocationControlTest {
      */
     @Test
     public void testGetLocation() {
-        System.out.println("getLocation");
+        this.console.println("getLocation");
         LocationControl instance = new LocationControl();
         int expResult = 0;
         int result = instance.getLocation();
@@ -79,7 +79,7 @@ public class LocationControlTest {
      */
     @Test
     public void testSetLocation() {
-        System.out.println("setLocation");
+        this.console.println("setLocation");
         int row = 0;
         int column = 0;
         LocationControl instance = new LocationControl();

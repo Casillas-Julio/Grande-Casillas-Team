@@ -43,7 +43,7 @@ public class MapControlTest {
      */
     @Test
     public void testCreateMap() {
-        System.out.println("createMap");
+        this.console.println("createMap");
         Map expResult = null;
         Map result = MapControl.createMap();
         assertEquals(expResult, result);

@@ -46,7 +46,7 @@ public class ProgramControlTest {
      */
     @Test
     public void testCreatePlayer() {
-        System.out.println("createPlayer");
+        this.console.println("createPlayer");
         String name = "";
         Player expResult = null;
         Player result;
