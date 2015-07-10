@@ -11,7 +11,15 @@ import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import byui.cit260.TGSBgame.model.Scene;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import tgsbgame.TGSBgame;
 
 
@@ -20,111 +28,107 @@ import tgsbgame.TGSBgame;
  *
  * @author Adriana
  */
-public class GameControl implements Serializable{
+public class GameControl implements Serializable {
 
     private Player player;
     private Map map;
 
-    public static void saveGame(Game currentGame, String filePath) {
-        throwsGameViewException {
+    public static void saveGame(Game currentGame, String filePath)
+            throws GameViewException {
 
-            try (FileOutputStream fops = new FileOutputStream(filePath)) {
-                ObjectOutpuStream output = new ObjectOutpuStream(fops);
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
 
-                output.writeObject(game);// write the game object of the file.
-            } catch (IOException e) {
-                throw new GameControlException(e.getMessage());
-            }
+            output.writeObject(currentGame);// write the game object of the file.
+        } catch (IOException e) {
+            throw new GameViewException(e.getMessage());
         }
     }
 
-    public static void getStartExistingGame(String filePath) {
-        throwsGameViewException {
+    public static void getStartExistingGame(String filePath)
+            throws GameViewException, FileNotFoundException, ClassNotFoundException {
 
-            Game game = null;
+        Game game = null;
 
-            try (FileInputStream fips = new FileInputStream(filePath)) {
-                ObjectInpuStream output = new ObjectInpuStream(fips);
+        try (FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
 
-                game = (Game) output.readObject();// read the game object from file
+            game = (Game) input.readObject();// read the game object from file
 
-            } catch (fileNotFoundException fnfe) {
-                throw new GameControlException(fnfe.getMessage());
-            } catch (Exception e) {
-                throw new GameControlException(e.getMessage());
-            }
-
-            //close the output file
-            TGSBgame.setCurrentGame(game);
+        } catch (FileNotFoundException fnfe) {
+            throw new GameViewException(fnfe.getMessage());
+        } catch (IOException ex) {
+            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        //close the output file
+        TGSBgame.setCurrentGame(game);
     }
 
     public static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public static void createNewGame(Player player){
-    
+
+    public static void createNewGame(Player player) {
+
         player.setFruits(10);
-        
+
         Game game = new Game(); // create new game
         TGSBgame.setCurrentGame(game); // save in TGSBGame
 
         //game.setPlayer(player);// save player in game
-        
         Challenges challenges = new Challenges();
         TGSBgame.setChallenges(challenges);
-        
+
         Map map = MapControl.createMap(); //create nd initialize new map
         game.setMap(map); //save map in game
 
     }
 
-
-    public static void initializeMap(Map map){
+    public static void initializeMap(Map map) {
         map.setColumnCount(1);
         map.setRowCount(1);
-    
+
     }
+
     // returns bonus fruits if any were added
+
     public static int calculateScore(Player player, int fruitsToAdd) {
         int totalScore;
         int bonus;
-                
+
         bonus = calculateBonus(player);
         totalScore = player.getFruits() + fruitsToAdd + bonus;
         player.setFruits(totalScore);
         return bonus;
     }
-    
 
-    public static int calculateBonus(Player player){
+    public static int calculateBonus(Player player) {
         int score = player.getFruits();
         int bonus = 0;
         //changed to increment the bonus on each level of points
-        if ((score >= 20) && (player.isBonus20() == false)){
-            bonus += (int)(score * 0.2);
+        if ((score >= 20) && (player.isBonus20() == false)) {
+            bonus += (int) (score * 0.2);
             player.setBonus20(true);// flag that the player already got the  20 bonus once
         }
-        if ((score >= 40) && (player.isBonus40() == false)){
-            bonus += (int)(score * 0.25);
+        if ((score >= 40) && (player.isBonus40() == false)) {
+            bonus += (int) (score * 0.25);
             player.setBonus40(true);// flag that the player already got the  40 bonus once
         }
-        if ((score >= 60) && (player.isBonus60() == false)){
-            bonus += (int)(score * 0.3);
+        if ((score >= 60) && (player.isBonus60() == false)) {
+            bonus += (int) (score * 0.3);
             player.setBonus60(true);// flag that the player already got the  60 bonus once
         }
         return bonus;
     }
-    
+
     public static int helpFruits(Player player) {
         int totalScore;
         final int bonusHelpFruits = 2;
-                        
+
         totalScore = player.getFruits() + bonusHelpFruits;
         player.setFruits(totalScore);
         return bonusHelpFruits;
     }
-    
-    
-}    
+
+}

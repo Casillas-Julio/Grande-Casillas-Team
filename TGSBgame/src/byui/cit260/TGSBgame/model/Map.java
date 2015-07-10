@@ -52,7 +52,7 @@ public class Map implements Serializable {
         int linearLocation = 0;
         
         if (noOfRows < 1 || noOfColumns <1) {
-            this.console.println("The number of rows and columns must be > zero");
+            System.out.println("The number of rows and columns must be > zero");
             return;//MAP EXCEPTION GOES HERE!!
         }
         

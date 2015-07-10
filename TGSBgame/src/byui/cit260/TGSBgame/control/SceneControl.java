@@ -22,14 +22,15 @@ public class SceneControl {
     }
 
     
-    public static void getActor() throws SceneControlException {
+    public static String getActor() throws SceneControlException {
         int whichEntry;
 
         whichEntry = rand.nextInt(Actor.values().length);
         for (Actor a : Actor.values()) {
             if (a.ordinal() == whichEntry) {
-                throw new SceneControlException("Is not posible to load the scene");
+                return a.toString();
             }
         }
+        throw new SceneControlException("Is not posible to load the scene");
     }
 }

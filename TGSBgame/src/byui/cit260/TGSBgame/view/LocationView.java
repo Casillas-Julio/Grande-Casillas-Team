@@ -7,7 +7,6 @@ package byui.cit260.TGSBgame.view;
 
 import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
-import byui.cit260.TGSBgame.model.Location;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Scene;
 
@@ -33,13 +32,13 @@ public class LocationView {
         try {
             locationControl.setLocation(map.getRowCount(), map.getColumnCount());
         } catch (LocationControlException le) {
-            this.console.println(this.console.getMessage());
+            System.out.println(le.getMessage());
         }
         location = locationControl.getLocation();
         // display description for location
         for (Scene s : Scene.values()) {
             if (s.ordinal() == location) {
-                this.console.println(s.toString());
+                System.out.println(s.toString());
             }
         }
     }

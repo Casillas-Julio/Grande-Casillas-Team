@@ -17,7 +17,7 @@ public class BonusView {
     
     public void displayMessage(int bonus) {
         if (bonus > 0) {
-            this.console.println("\n**************************************************"
+            System.out.println("\n**************************************************"
                     + "\n* For your obedience and correct choices, you  *"
                     + "\n* received " + bonus + " bonus fruits of spiritual strength.*"
                     + "\n************************************************");

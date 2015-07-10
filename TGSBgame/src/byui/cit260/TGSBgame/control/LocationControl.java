@@ -18,7 +18,7 @@ import byui.cit260.TGSBgame.model.Scene;
  */
 public class LocationControl {
 
-    public static void startLocationControl(int spaces) throws LocationControlException, ChallengesControlException {
+    public static void startLocationControl(int spaces) throws LocationControlException, ChallengesControlException, SceneControlException {
         Location locationObj;
         
         moveToNextLocation(spaces);
@@ -69,16 +69,16 @@ public class LocationControl {
         String challengeString;
         
         // show description of scene for this location
-        this.console.println("\ndebug:" + location);  //debug can delete later
-        this.console.println(location.getScene());
+        System.out.println("\ndebug:" + location);  //debug can delete later
+        System.out.println(location.getScene());
         
         // get random actor for this location
-        this.console.println("\n" + SceneControl.getActor());
-        this.console.println("This person presents you with the following challenge:");
+        System.out.println("\n" + SceneControl.getActor());
+        System.out.println("This person presents you with the following challenge:");
         
         // get random challenge for this location
         challengeString = ChallengesControl.getChallenge(location.getLinearLocation());
-        this.console.println(challengeString);
+        System.out.println(challengeString);
         
     }
 

@@ -5,7 +5,6 @@
  */
 package tgsbgame;
 
-import byui.cit260.TGSBgame.control.ChallengesControl;
 import byui.cit260.TGSBgame.exceptions.ProgramControlException;
 import byui.cit260.TGSBgame.model.*;
 import byui.cit260.TGSBgame.view.MainMenuView;
@@ -14,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,74 +58,69 @@ public class TGSBgame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        StartProgramView startProgramView;
         //test code
         //ChallengesControl challengeOne = new ChallengesControl(35);
         //this.console.println(challengeOne.getChallenge(6));
-        StartProgramView startProgramView = new StartProgramView();
         try {
-            startProgramView.startProgram();
-        } catch (ProgramControlException ex) {
-            Logger.getLogger(TGSBgame.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            // open character string files for end user input and output
+            TGSBgame.inFile = new BufferedReader(new InputStreamReader(System.in));
+            TGSBgame.outFile = new PrintWriter(System.out, true);
 
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.display();
-        
-        try {
-        // open character string files for end user input and output
-        TGSBgame.inFile = new BufferedReader(new InputStreamReader(System.in));
-        TGSBgame.outFile = new PrintWriter(this.console, true);
-        
-        //create StartProgramView and start the program
-        //StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
-        return;
-        }
-        
-        catch (Throwable e) {
-        
-        this.console.println("Exception: " + e.toString()+
-                           "\nCause: " + e.getCause() +
-                           "\nMessage: " + e.getMessage());
-        
-        e.printStackTrace();
-        }
-        finally {
+            startProgramView = new StartProgramView();
+            startProgramView.startProgram();
+            MainMenuView mainMenuView = new MainMenuView();
+            mainMenuView.display();
+
+            //create StartProgramView and start the program
+            //StartProgramView startProgramView = new StartProgramView();
+            //startProgramView.display();
+            return;
+        } catch (Throwable e) {
+
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage: " + e.getMessage());
+
+            e.printStackTrace();
+        } finally {
             try {
-                if (TGSBgame.inFile != null);
+                if (TGSBgame.inFile != null) {
                     TGSBgame.inFile.close();
-                    
-                if (TGSBgame.outFile != null);    
+                }
+
+                if (TGSBgame.outFile != null) {
                     TGSBgame.outFile.close();
-                    
-                    if (TGSBgame.logFile != null);    
+                }
+
+                if (TGSBgame.logFile != null) {
                     TGSBgame.logFile.close();
-                    
+                }
+
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
             }
         }
+
         try {
-        //open logFile
-        String filePath = "log.txt";
-        TGSBgame.logFile = new PrintWriter(filePath);
+            //open logFile
+            String filePath = "log.txt";
+            TGSBgame.logFile = new PrintWriter(filePath);
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage: " + e.getMessage());
+
+            e.printStackTrace();
         }
-        catch (Exception e) {
-        this.console.println("Exception: " + e.toString()+
-                           "\nCause: " + e.getCause() +
-                           "\nMessage: " + e.getMessage());
-        
-        e.printStackTrace();
-        }
-        
+
     }
 
     public static Player getLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     public static PrintWriter getOutFile() {
         return outFile;
     }
@@ -149,5 +144,6 @@ public class TGSBgame {
     public static void setLogFile(PrintWriter logFile) {
         TGSBgame.logFile = logFile;
     }
-    
+    private Writer console;
+
 }

@@ -66,8 +66,8 @@ public class MainMenuView extends View {
     }
     
     private void startExistingGame() {
-        System.out.println("\n\nEnter the file path for the game"
-                            + "is to be saved");
+        System.out.println("\n\nEnter the file name for the game "
+                            + "to be loaded");
         String filePath = this.getInput();
         
         try {
@@ -87,7 +87,7 @@ public class MainMenuView extends View {
     }
     
     private void saveGame() {
-        System.out.println("\n\nEnter the file path for the game"
+        System.out.println("\n\n Enter the file name for the game "
                             + "is to be saved");
         String filePath = this.getInput();
         
