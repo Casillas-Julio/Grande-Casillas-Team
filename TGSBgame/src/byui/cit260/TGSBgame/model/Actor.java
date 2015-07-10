@@ -36,4 +36,6 @@ public enum Actor implements Serializable{
     public Point getCoordinates() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    
 }

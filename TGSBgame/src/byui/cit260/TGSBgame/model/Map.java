@@ -7,6 +7,8 @@ package byui.cit260.TGSBgame.model;
 
 import byui.cit260.TGSBgame.exceptions.MapException;
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -113,5 +115,17 @@ public class Map implements Serializable {
     public Location getLocation(int row, int column) {
         return this.locations[row][column];
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + Arrays.deepHashCode(this.locations);
+        hash = 29 * hash + this.noOfRows;
+        hash = 29 * hash + this.noOfColumns;
+        hash = 29 * hash + Objects.hashCode(this.console);
+        return hash;
+    }
+    
+    
 }
 

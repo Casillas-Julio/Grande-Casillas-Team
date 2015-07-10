@@ -40,6 +40,7 @@ public class LocationViewTest {
 
     /**
      * Test of display method, of class LocationView.
+     * @throws java.lang.Exception
      */
     @Test
     public void testDisplay() throws Exception {
