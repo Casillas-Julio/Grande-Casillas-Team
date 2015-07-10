@@ -43,7 +43,7 @@ public class LocationViewTest {
      */
     @Test
     public void testDisplay() throws Exception {
-        this.console.println("display");
+        //this.console.println("display");
         Map map = null;
         LocationView instance = new LocationView();
         instance.display(map);

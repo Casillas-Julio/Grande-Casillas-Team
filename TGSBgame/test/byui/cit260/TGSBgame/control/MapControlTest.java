@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Location;
 import byui.cit260.TGSBgame.model.Map;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -43,9 +44,23 @@ public class MapControlTest {
      */
     @Test
     public void testCreateMap() {
-        this.console.println("createMap");
+        //this.console.println("createMap");
         Map expResult = null;
         Map result = MapControl.createMap();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getLocationFromMap method, of class MapControl.
+     */
+    @Test
+    public void testGetLocationFromMap() {
+        System.out.println("getLocationFromMap");
+        int linear_location = 0;
+        Location expResult = null;
+        Location result = MapControl.getLocationFromMap(linear_location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

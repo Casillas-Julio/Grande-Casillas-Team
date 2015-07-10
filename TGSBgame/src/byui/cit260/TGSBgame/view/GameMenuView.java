@@ -64,24 +64,21 @@ public class GameMenuView extends View{
                 try {
                     // M - Move to the map location
                     this.moveToMapLocation();
-                } catch (LocationControlException | ChallengesControlException ex) {
+                } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (SceneControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                }
             }
             break;
             case 'H': // H - Show Help Menu
                 this.displayHelpMenu();
                 break;
             case 'R': //R - Return to the Main Menu
-                this.startNewGame();
-                break;            
+                return true;            
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
-        return true;
+        return false;
     }
     
     public int getIntNumber() {

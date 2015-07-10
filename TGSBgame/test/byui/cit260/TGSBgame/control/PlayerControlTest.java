@@ -43,7 +43,7 @@ public class PlayerControlTest {
      */
     @Test
     public void testPlayerName() {
-        this.console.println("playerName");
+        //this.console.println("playerName");
         Player playerName = null;
         PlayerControl.playerName(playerName);
         // TODO review the generated test code and remove the default call to fail.

@@ -46,7 +46,7 @@ public class ChallengesControlTest {
      */
     @Test
     public void testGetChallenge() {
-        this.console.println("getChallenge");
+        //this.console.println("getChallenge");
         int location = 0;
         ChallengesControl instance = null;
         String expResult = "";

@@ -9,7 +9,6 @@ import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Location;
-import byui.cit260.TGSBgame.model.Player;
 import byui.cit260.TGSBgame.model.Scene;
 
 /**

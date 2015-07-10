@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,8 +42,8 @@ public class SceneControlTest {
      * Test of getActor method, of class SceneControl.
      */
     @Test
-    public void testGetActor() {
-        this.console.println("getActor");
+    public void testGetActor() throws SceneControlException {
+        //this.console.println("getActor");
         SceneControl instance = new SceneControl();
         String expResult = "";
         String result = instance.getActor();

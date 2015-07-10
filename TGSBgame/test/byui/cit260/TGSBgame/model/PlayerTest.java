@@ -42,7 +42,7 @@ public class PlayerTest {
      */
     @Test
     public void testGetName() {
-        this.console.println("getName");
+        //this.console.println("getName");
         Player instance = new Player();
         String expResult = "";
         String result = instance.getName();
@@ -56,7 +56,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetName() {
-        this.console.println("setName");
+        //this.console.println("setName");
         String name = "";
         Player instance = new Player();
         instance.setName(name);
@@ -69,7 +69,7 @@ public class PlayerTest {
      */
     @Test
     public void testToString() {
-        this.console.println("toString");
+        //this.console.println("toString");
         Player instance = new Player();
         String expResult = "";
         String result = instance.toString();
@@ -83,7 +83,7 @@ public class PlayerTest {
      */
     @Test
     public void testHashCode() {
-        this.console.println("hashCode");
+        //this.console.println("hashCode");
         Player instance = new Player();
         int expResult = 0;
         int result = instance.hashCode();
@@ -97,7 +97,7 @@ public class PlayerTest {
      */
     @Test
     public void testEquals() {
-        this.console.println("equals");
+        //this.console.println("equals");
         Object obj = null;
         Player instance = new Player();
         boolean expResult = false;
@@ -112,7 +112,7 @@ public class PlayerTest {
      */
     @Test
     public void testGetFruits() {
-        this.console.println("getFruits");
+        //this.console.println("getFruits");
         Player instance = new Player();
         int expResult = 0;
         int result = instance.getFruits();
@@ -126,7 +126,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetFruits() {
-        this.console.println("setFruits");
+        //this.console.println("setFruits");
         int fruits = 0;
         Player instance = new Player();
         instance.setFruits(fruits);
@@ -139,7 +139,7 @@ public class PlayerTest {
      */
     @Test
     public void testIsBonus20() {
-        this.console.println("isBonus20");
+        //this.console.println("isBonus20");
         Player instance = new Player();
         boolean expResult = false;
         boolean result = instance.isBonus20();
@@ -153,7 +153,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetBonus20() {
-        this.console.println("setBonus20");
+        //this.console.println("setBonus20");
         boolean bonus20 = false;
         Player instance = new Player();
         instance.setBonus20(bonus20);
@@ -166,7 +166,7 @@ public class PlayerTest {
      */
     @Test
     public void testIsBonus40() {
-        this.console.println("isBonus40");
+        //this.console.println("isBonus40");
         Player instance = new Player();
         boolean expResult = false;
         boolean result = instance.isBonus40();
@@ -180,7 +180,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetBonus40() {
-        this.console.println("setBonus40");
+        //this.console.println("setBonus40");
         boolean bonus40 = false;
         Player instance = new Player();
         instance.setBonus40(bonus40);
@@ -193,7 +193,7 @@ public class PlayerTest {
      */
     @Test
     public void testIsBonus60() {
-        this.console.println("isBonus60");
+        //this.console.println("isBonus60");
         Player instance = new Player();
         boolean expResult = false;
         boolean result = instance.isBonus60();
@@ -207,7 +207,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetBonus60() {
-        this.console.println("setBonus60");
+        //this.console.println("setBonus60");
         boolean bonus60 = false;
         Player instance = new Player();
         instance.setBonus60(bonus60);
@@ -220,7 +220,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetName_String() {
-        this.console.println("setName");
+        //this.console.println("setName");
         String name = "";
         Player instance = new Player();
         instance.setName(name);
@@ -233,7 +233,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetName_0args() {
-        this.console.println("setName");
+        //this.console.println("setName");
         Player instance = new Player();
         instance.setName();
         // TODO review the generated test code and remove the default call to fail.
@@ -245,7 +245,7 @@ public class PlayerTest {
      */
     @Test
     public void testSetPlayerName() {
-        this.console.println("setPlayerName");
+        //this.console.println("setPlayerName");
         Player instance = new Player();
         instance.setPlayerName();
         // TODO review the generated test code and remove the default call to fail.

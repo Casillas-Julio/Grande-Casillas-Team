@@ -7,6 +7,7 @@ package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
+import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Player;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -44,10 +45,11 @@ public class LocationControlTest {
 
     /**
      * Test of startLocationControl method, of class LocationControl.
+     * @throws byui.cit260.TGSBgame.exceptions.SceneControlException
      */
     @Test
-    public void testStartLocationControl() {
-        this.console.println("startLocationControl");
+    public void testStartLocationControl() throws SceneControlException {
+        //this.console.println("startLocationControl");
         Player player = null;
         try {
             LocationControl.startLocationControl(5);
@@ -65,7 +67,7 @@ public class LocationControlTest {
      */
     @Test
     public void testGetLocation() {
-        this.console.println("getLocation");
+        //this.console.println("getLocation");
         LocationControl instance = new LocationControl();
         int expResult = 0;
         int result = instance.getLocation();
@@ -79,7 +81,7 @@ public class LocationControlTest {
      */
     @Test
     public void testSetLocation() {
-        this.console.println("setLocation");
+        //this.console.println("setLocation");
         int row = 0;
         int column = 0;
         LocationControl instance = new LocationControl();

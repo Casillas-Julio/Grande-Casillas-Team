@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import byui.cit260.TGSBgame.model.Scene;
@@ -45,7 +46,7 @@ public class GameControlTest {
      */
     @Test
     public void testAssignScenesToLocations() {
-        this.console.println("assignScenesToLocations");
+        //this.console.println("assignScenesToLocations");
         Map map = null;
         Scene[] scenes = null;
         GameControl.assignScenesToLocations(map, scenes);
@@ -58,7 +59,7 @@ public class GameControlTest {
      */
     @Test
     public void testCreateNewGame() {
-        this.console.println("createNewGame");
+        //this.console.println("createNewGame");
         Player player = null;
         GameControl.createNewGame(player);
         // TODO review the generated test code and remove the default call to fail.
@@ -70,7 +71,7 @@ public class GameControlTest {
      */
     @Test
     public void testInitializeMap() {
-        this.console.println("initializeMap");
+        //this.console.println("initializeMap");
         Map map = null;
         GameControl.initializeMap(map);
         // TODO review the generated test code and remove the default call to fail.
@@ -82,7 +83,7 @@ public class GameControlTest {
      */
     @Test
     public void testCalculateScore() {
-        this.console.println("calculateScore");
+        //this.console.println("calculateScore");
         Player player = null;
         int fruitsToAdd = 0;
         int expResult = 0;
@@ -97,7 +98,7 @@ public class GameControlTest {
      */
     @Test
     public void testCalculateBonus() {
-        this.console.println("calculateBonus");
+        //this.console.println("calculateBonus");
         Player player = null;
         int expResult = 0;
         int result = GameControl.calculateBonus(player);
@@ -111,11 +112,36 @@ public class GameControlTest {
      */
     @Test
     public void testHelpFruits() {
-        this.console.println("helpFruits");
+        //this.console.println("helpFruits");
         Player player = null;
         int expResult = 0;
         int result = GameControl.helpFruits(player);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of saveGame method, of class GameControl.
+     */
+    @Test
+    public void testSaveGame() throws Exception {
+        System.out.println("saveGame");
+        Game currentGame = null;
+        String filePath = "";
+        GameControl.saveGame(currentGame, filePath);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getStartExistingGame method, of class GameControl.
+     */
+    @Test
+    public void testGetStartExistingGame() throws Exception {
+        System.out.println("getStartExistingGame");
+        String filePath = "";
+        GameControl.getStartExistingGame(filePath);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

@@ -20,6 +20,7 @@ import static org.junit.Assert.*;
  * @author Adriana
  */
 public class ChallengesControlTest {
+    private Object console;
     
     public ChallengesControlTest() {
     }
@@ -45,7 +46,7 @@ public class ChallengesControlTest {
      */
     @Test
     public void testGetChallenge() {
-        this.console.println("getChallenge");
+        //this.console.println("getChallenge");
         int location = 0;
         ChallengesControl instance = new ChallengesControl();
         String expResult = "";
@@ -57,6 +58,18 @@ public class ChallengesControlTest {
             Logger.getLogger(ChallengesControlTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of ChallengesControlSetup method, of class ChallengesControl.
+     */
+    @Test
+    public void testChallengesControlSetup() {
+        System.out.println("ChallengesControlSetup");
+        int numberLocations = 0;
+        ChallengesControl.ChallengesControlSetup(numberLocations);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

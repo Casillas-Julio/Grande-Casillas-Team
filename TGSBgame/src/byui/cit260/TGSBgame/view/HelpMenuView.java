@@ -33,7 +33,7 @@ public class HelpMenuView extends View{
             + "\nG - Explain map/locations"
             + "\nF - Explain fruits/attributes"
             + "\nC - Explain challenges"
-            + "\nR - Return to MAIN MENU"
+            + "\nR - Return to Game Menu"
             + "\n--------------------------------------");
     }
 
@@ -127,7 +127,7 @@ public class HelpMenuView extends View{
             case 'C': // Explain challenges
                 this.console.println(CHALLENGES);
                 break;
-            case 'R': // Return to MAIN MENU
+            case 'R': // Return to Game Menu
                 return true;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");

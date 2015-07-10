@@ -5,9 +5,7 @@
  */
 package byui.cit260.TGSBgame.model;
 
-import byui.cit260.TGSBgame.control.GameControl;
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  *
