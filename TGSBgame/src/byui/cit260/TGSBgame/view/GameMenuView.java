@@ -9,6 +9,9 @@ import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.exceptions.SceneControlException;
+import byui.cit260.TGSBgame.model.Actor;
+import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tgsbgame.TGSBgame;
@@ -27,6 +30,7 @@ public class GameMenuView extends View{
             + "\nD - Display Map"
             + "\nM - Move to a map location"
             + "\nH - Show Help Menu"
+            + "\nP - Print Actor List"
             + "\nR - Return to Main Menu"
             + "\n--------------------------------------");
     }    
@@ -47,16 +51,16 @@ public class GameMenuView extends View{
             + "\n                                      "
             + "\n--------------------------------------";
     
-    @Override  
+    @Override
     public boolean doAction(Object obj) {
-        
+
         String value = (String) obj;
-        
+
         value = value.toUpperCase();
         char choice = value.charAt(0);
 
         switch (choice) {
-            
+
             case 'D': // D - Display Map
                 this.console.println(displayMap);
                 break;
@@ -72,8 +76,11 @@ public class GameMenuView extends View{
             case 'H': // H - Show Help Menu
                 this.displayHelpMenu();
                 break;
+            case 'P': // P - Print Actor list
+                this.printActorList(outputActor);
+                break;
             case 'R': //R - Return to the Main Menu
-                return true;            
+                return true;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
@@ -144,4 +151,16 @@ public class GameMenuView extends View{
         HelpMenuView gameMenu = new HelpMenuView();
         gameMenu.display();
     }
-}
+    
+    public void printActorList (String outputActor) {
+         try (PrintWriter out = new PrintWriter(){
+                    out.println("\n\n Characters");
+                    out.printf("%n");
+                    
+                    for (Actor actor : printActorList) {
+                    out.printf"%n-40s";
+                    }    
+                } catch (IOException ex) {
+                    System.out.println("I?o Error: " + ex.message());
+                    }
+    }
