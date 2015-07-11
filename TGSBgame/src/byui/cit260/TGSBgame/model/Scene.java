@@ -406,7 +406,6 @@ public enum Scene {
             + "\n----------------------------------------------------"
             + "\n| Radio City Music Hall                            |"
             + "\n----------------------------------------------------"
-            + "\n----------------------------------------------------"
             + "\nRadio City Music Hall is an entertainment venue     "
             + "located in Rockefeller Center. Its nickname is the    "
             + "Showplace of the Nation, and for a time it was the    "
