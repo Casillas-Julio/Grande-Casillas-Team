@@ -56,7 +56,7 @@ public enum Scene {
             + "\nscene. There are people everywhere sitting on benches,"
             + "\nin the grass, and in the half-walls by the sidewalks. "
             + "\nAs you are sitting on the wall, a person nearby       "
-            + "strikes a conversation.                               "
+            + "\nstrikes a conversation.                               "
             + "\n----------------------------------------------------"),
     
     NY_Subway("\n"
@@ -64,11 +64,11 @@ public enum Scene {
             + "\n| NYC Subway                                       |"
             + "\n----------------------------------------------------"
             + "\nYou are about to enter the New York City Subway. It "
-            + "is the largest, by number of stations, and one of the "
-            + "world's oldest, most used public transit systems.     "
-            + "Thousands of people travel in them daily. New Yorkers "
-            + "are not famous for neighbourly conversation. However, "
-            + "a nearby passenger starts to talk to you.             "
+            + "\nis the largest, by number of stations, and one of the "
+            + "\nworld's oldest, most used public transit systems.     "
+            + "\nThousands of people travel in them daily. New Yorkers "
+            + "\nare not famous for neighbourly conversation. However, "
+            + "\na nearby passenger starts to talk to you.             "
             + "\n----------------------------------------------------"),
     
     Chinatown("\n"
@@ -80,7 +80,7 @@ public enum Scene {
             + "\nWestern Hemisphere. It looks, feels and smells      "
             + "\ndifferent. The Chinese culture is present in every  "
             + "\naspect, from the number of people walking on the    "
-            + "street, to the open market feel of food and products  "
+            + "\nstreet, to the open market feel of food and products  "
             + "\nsold on the sidelines. Even the trafic signs are    "
             + "\nwritten in both Chinese and English. It is a foreign"
             + "\nexperience in the middle of lower Manhathan.        "

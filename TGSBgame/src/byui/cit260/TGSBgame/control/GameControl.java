@@ -5,7 +5,9 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.exceptions.GameMenuViewException;
 import byui.cit260.TGSBgame.exceptions.GameViewException;
+import byui.cit260.TGSBgame.model.Actor;
 import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
@@ -129,6 +131,18 @@ public class GameControl implements Serializable {
         totalScore = player.getFruits() + bonusHelpFruits;
         player.setFruits(totalScore);
         return bonusHelpFruits;
+    }
+    
+    public static void writeActorList(Actor actorList, String filePath)
+            throws GameMenuViewException {
+
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+
+            output.writeObject(actorList);// write the game object of the file.
+        } catch (IOException e) {
+            throw new GameMenuViewException(e.getMessage());
+        }
     }
 
 }

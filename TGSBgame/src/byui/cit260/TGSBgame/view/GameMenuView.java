@@ -10,6 +10,7 @@ import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Actor;
+import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
 import java.util.logging.Level;
@@ -77,7 +78,8 @@ public class GameMenuView extends View{
                 this.displayHelpMenu();
                 break;
             case 'P': // P - Print Actor list
-                this.printActorList(outputActor);
+                String filePath = getFileName();
+                this.printActorList(filePath);
                 break;
             case 'R': //R - Return to the Main Menu
                 return true;
@@ -152,15 +154,29 @@ public class GameMenuView extends View{
         gameMenu.display();
     }
     
-    public void printActorList (String outputActor) {
-         try (PrintWriter out = new PrintWriter(){
-                    out.println("\n\n Characters");
-                    out.printf("%n");
-                    
-                    for (Actor actor : printActorList) {
-                    out.printf"%n-40s";
-                    }    
-                } catch (IOException ex) {
-                    System.out.println("I?o Error: " + ex.message());
-                    }
+    public String getFileName(){
+        System.out.println("\n\n Enter the file path for the report "
+                            + "to be saved");
+        String filePath = this.getInput();
+        return filePath;
+                 
     }
+    
+    public void printActorList(String outputLocation) {
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+
+            out.println("\n\n Characters in the Game");
+            out.printf("%n%-10s%-20s%-20s", "Number", "Name", "Description");
+            out.printf("%n%-10s%-20s%-20s", "------", "----", "-----------");
+
+            for (Actor a : Actor.values()) {
+                out.printf("%n%-10s%-20s%-100s",(a.ordinal()+ 1),a.name(),a.toString());
+                //System.out.println(a.name());
+                //System.out.println(a.toString());
+            }
+        } catch (IOException ex) {
+            System.out.println("I?o Error: " + ex.getMessage());
+        }
+    }
+    
+}

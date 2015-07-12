@@ -29,6 +29,7 @@ public class TGSBgame {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
+    public static Actor actorList = null;
     
     public static Challenges getChallenges() {
         return challenges;
@@ -76,7 +77,7 @@ public class TGSBgame {
             //StartProgramView startProgramView = new StartProgramView();
             //startProgramView.display();
             return;
-        } catch (Throwable e) {
+        } catch (ProgramControlException | IOException e) {
 
             System.out.println("Exception: " + e.toString()
                     + "\nCause: " + e.getCause()
