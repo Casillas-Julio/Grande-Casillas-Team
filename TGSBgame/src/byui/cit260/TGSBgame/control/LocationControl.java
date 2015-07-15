@@ -70,7 +70,7 @@ public class LocationControl {
         
         // get random actor for this location
         System.out.println("\n" + SceneControl.getActor());
-        System.out.println("This person presents you with the following challenge:");
+        System.out.println("This person presents you with the following challenge:");// FIXME this line is to be substituted with the real challenges and will no longer be needed.
         
         // get random challenge for this location
         challengeString = ChallengesControl.getChallenge(location.getLinearLocation());
