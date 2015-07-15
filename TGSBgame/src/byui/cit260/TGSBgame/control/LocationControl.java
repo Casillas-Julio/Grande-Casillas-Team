@@ -25,9 +25,6 @@ public class LocationControl {
         doLocationAction(locationObj);
     }
 
-    private static Scene[] createScenes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     //class variables
     public static int location;
 

@@ -42,19 +42,6 @@ public class GameControlTest {
     }
 
     /**
-     * Test of assignScenesToLocations method, of class GameControl.
-     */
-    @Test
-    public void testAssignScenesToLocations() {
-        //this.console.println("assignScenesToLocations");
-        Map map = null;
-        Scene[] scenes = null;
-        GameControl.assignScenesToLocations(map, scenes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of createNewGame method, of class GameControl.
      */
     @Test

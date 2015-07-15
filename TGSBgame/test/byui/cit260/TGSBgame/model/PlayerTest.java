@@ -228,28 +228,5 @@ public class PlayerTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setName method, of class Player.
-     */
-    @Test
-    public void testSetName_0args() {
-        //this.console.println("setName");
-        Player instance = new Player();
-        instance.setName();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setPlayerName method, of class Player.
-     */
-    @Test
-    public void testSetPlayerName() {
-        //this.console.println("setPlayerName");
-        Player instance = new Player();
-        instance.setPlayerName();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+       
 }

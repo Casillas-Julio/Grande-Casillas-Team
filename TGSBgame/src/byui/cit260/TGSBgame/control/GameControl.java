@@ -67,10 +67,6 @@ public class GameControl implements Serializable {
         TGSBgame.setCurrentGame(game);
     }
 
-    public static void assignScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public static void createNewGame(Player player) {
 
         player.setFruits(10);
