@@ -63,7 +63,7 @@ public class LocationControl {
     
     private static void doLocationAction(Location location) throws ChallengesControlException, SceneControlException {
         String challengeString;
-        
+        //FIXME we may be done here and just delete debug?
         // show description of scene for this location
         System.out.println("\ndebug:" + location);  //debug can delete later
         System.out.println(location.getScene());
