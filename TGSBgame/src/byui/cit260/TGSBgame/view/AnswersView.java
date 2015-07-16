@@ -17,10 +17,10 @@ public class AnswersView extends View {
                 + "\n--------------------------------------"
                 + "\n|            Answers Menu            |"
                 + "\n--------------------------------------"
-                + "\nY - Yes please"
-                + "\nN - No thanks"
+                + "\nY - Yes"
+                + "\nN - No"
                 + "\nG - Get Help from friend"
-                + "\nR - You are Right"
+                + "\nR - I agree with you"
                 + "\nW - You are Wrong"
                 + "\n--------------------------------------");
     }
@@ -35,16 +35,16 @@ public class AnswersView extends View {
 
         switch (choice) {
             case 'Y':// Y - Yes Please
-                this.console.println("Yes Please");
+                this.console.println("Yes");
                 break;
             case 'N': //N - No thanks
-                this.console.println("No thanks");
+                this.console.println("No");
                 break;
             case 'G': // G - Get help from a friend
                 this.console.println("Get help from friend");
                 break;
             case 'R': // R - You are right
-                this.console.println("You are right");
+                this.console.println("I agree with you");
                 break;
             case 'W': // W - You are wrong
                 this.console.println("You are wrong");

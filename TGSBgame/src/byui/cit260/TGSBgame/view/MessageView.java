@@ -15,7 +15,7 @@ public class MessageView {
     
     }
     
-    /*public void displayMessage(int bonus) {
+    /*FIXME public void displayMessage(int message) {
         if (bonus > 0) {
             System.out.println("\n*************************************************************"
                     + "\n* Congratulations! You have been successful in reaching     *"
