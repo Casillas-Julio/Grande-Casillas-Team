@@ -10,25 +10,26 @@ import java.util.Scanner;
  *
  * @author Dragon's
  */
-public class AnswersView extends View{
-    
+public class AnswersView extends View {
+
     public AnswersView() {
         super("\n"
-            + "\n--------------------------------------"
-            + "\n|            Answers Menu            |"
-            + "\n--------------------------------------"
-            + "\nY - Yes please"
-            + "\nN - No thanks"
-            + "\nG - Get Help from friend"
-            + "\nR - You are Right"
-            + "\nW - You are Wrong"
-            + "\n--------------------------------------");
+                + "\n--------------------------------------"
+                + "\n|            Answers Menu            |"
+                + "\n--------------------------------------"
+                + "\nY - Yes please"
+                + "\nN - No thanks"
+                + "\nG - Get Help from friend"
+                + "\nR - You are Right"
+                + "\nW - You are Wrong"
+                + "\n--------------------------------------");
     }
+
     @Override
     public boolean doAction(Object obj) {
-        
+
         String value = (String) obj;
-        
+
         value = value.toUpperCase();
         char choice = value.charAt(0);
 
@@ -52,6 +53,6 @@ public class AnswersView extends View{
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
-    return true;
+        return true;
     }
 }

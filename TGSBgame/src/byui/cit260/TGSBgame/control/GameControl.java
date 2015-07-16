@@ -7,6 +7,7 @@ package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.exceptions.GameMenuViewException;
 import byui.cit260.TGSBgame.exceptions.GameViewException;
+import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.model.Actor;
 import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Game;
@@ -80,7 +81,11 @@ public class GameControl implements Serializable {
 
         Map map = MapControl.createMap(); //create nd initialize new map
         game.setMap(map); //save map in game
-
+        try {
+            LocationControl.setLocation(0);
+        } catch (LocationControlException ex) {
+            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public static void initializeMap(Map map) {

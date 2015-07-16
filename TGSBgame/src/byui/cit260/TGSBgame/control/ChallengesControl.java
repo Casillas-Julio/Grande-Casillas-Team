@@ -32,7 +32,7 @@ public class ChallengesControl implements Serializable{
     public static String getChallenge(int location) throws ChallengesControlException{
         int whichEntry;
         
-        if ((location < 1) || (location > numLocations)) {
+        if ((location < 0) || (location > numLocations - 1)) {
             throw new ChallengesControlException("Can not move actor to location"
                                             + " because that location is outside "
                                             + " the bounds of the map.");

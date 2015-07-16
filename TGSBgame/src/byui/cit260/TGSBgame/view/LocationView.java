@@ -15,6 +15,7 @@ import byui.cit260.TGSBgame.model.Scene;
  * @author Adriana
  * Display the following locations description
  */
+/*
 public class LocationView {
 
     private final LocationControl locationControl;
@@ -43,3 +44,4 @@ public class LocationView {
         }
     }
 }
+*/

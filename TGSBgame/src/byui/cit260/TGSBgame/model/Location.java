@@ -70,7 +70,7 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ",linearLocation=" + linearLocation + '}';
     }
 
     @Override

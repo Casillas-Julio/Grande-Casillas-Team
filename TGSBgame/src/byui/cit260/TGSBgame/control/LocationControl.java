@@ -33,12 +33,23 @@ public class LocationControl {
     }
 
     //returns 0 on success, -1 on failure
+    //function overload of setLocation
+    public static void setLocation(int position) throws LocationControlException {
+
+        if (position < 0 || position > 34) {
+            throw new LocationControlException("Can not move actor to location"
+                    + " because that location is outside "
+                    + " the bounds of the map.");
+        } else {
+            location = position;
+        }
+    }
 
     public static void setLocation(int row, int column) throws LocationControlException {
 
         int newLocation = (5 * row) - (5 - column);
 
-        if (newLocation < 1 || newLocation > 35) {
+        if (newLocation < 0 || newLocation > 34) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
@@ -51,7 +62,7 @@ public class LocationControl {
 
         int newLocation = location + spaces;
 
-        if (newLocation > 35) {
+        if (newLocation > 34) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
