@@ -19,7 +19,7 @@ public class BonusView {
         if (bonus > 0) {
             System.out.println("\n**************************************************"
                     + "\n* For your obedience and correct choices, you  *"
-                    + "\n* received " + bonus + " bonus fruits of spiritual strength.*"
+                    + "\n* received 2 bonus fruits of spiritual strength.*"
                     + "\n************************************************");
         }
     }

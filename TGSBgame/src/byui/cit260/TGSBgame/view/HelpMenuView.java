@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package byui.cit260.TGSBgame.view;
-import byui.cit260.TGSBgame.control.GameControl;
-import tgsbgame.TGSBgame;
-import java.util.Scanner;
 /**
  *
  * @author Adriana

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package byui.cit260.TGSBgame.view;
-import byui.cit260.TGSBgame.control.GameControl;
 import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
@@ -14,7 +13,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import tgsbgame.TGSBgame;
 
 /**
  *

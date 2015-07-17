@@ -7,7 +7,6 @@ package byui.cit260.TGSBgame.view;
 
 import byui.cit260.TGSBgame.control.GameControl;
 import tgsbgame.TGSBgame;
-import java.util.Scanner;
 
 /**
  *
@@ -35,6 +34,7 @@ public class GetHelpFromFriendView extends View {
             + "\nR - Return to MAIN MENU"
             + "\n--------------------------------------");
     }
+    
     
     private final String HOLYGHOST = "\n"
             + "\n--------------------------------------"
@@ -122,8 +122,7 @@ public class GetHelpFromFriendView extends View {
             int helpFruits;
 
             helpFruits = GameControl.helpFruits(TGSBgame.getPlayer());
-            this.console.println("You earned " + helpFruits
-                    + " extra fruits for getting help from a friend in times of trial and temptation!");
+            this.console.println("You earned 2 extra fruits for getting help from a friend in times of trial and temptation!");
         }
 
         return true;

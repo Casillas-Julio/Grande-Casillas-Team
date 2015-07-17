@@ -5,8 +5,8 @@
  */
 package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.control.GameControl;
-import java.util.Scanner;
 import tgsbgame.TGSBgame;
+import byui.cit260.TGSBgame.view.GetHelpFromFriendView;
 
 /**
  *
@@ -45,10 +45,10 @@ public class AnswersView extends View {
             case 'N': //N - No thanks
                 this.console.println("No");
                 totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
-                System.out.println("Congratulations! You have overcome challenge and win 2 fruits");
+                System.out.println("Congratulations! You overcame this challenge and won 2 fruits");
                 break;
             case 'G': // G - Get help from a friend
-                this.console.println("Get help from friend");
+                this.displayGetHelpFromFriend();
                 break;
             case 'R': // R - You are right
                 this.console.println("I agree with you");
@@ -58,7 +58,7 @@ public class AnswersView extends View {
             case 'W': // W - You are wrong
                 this.console.println("You are wrong");
                 totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
-                System.out.println("Congratulations! You have overcome challenge and win 2 fruits");
+                System.out.println("Congratulations! You overcame this challenge and won 2 fruits");
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
@@ -66,5 +66,9 @@ public class AnswersView extends View {
 
         }
         return true;
+    }
+    private void displayGetHelpFromFriend() {
+        GetHelpFromFriendView answerMenu = new GetHelpFromFriendView();
+        answerMenu.display();
     }
 }
