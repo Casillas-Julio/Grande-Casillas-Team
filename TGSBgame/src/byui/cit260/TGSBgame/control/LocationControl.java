@@ -70,23 +70,21 @@ public class LocationControl {
             location = newLocation;
 
         }
-    }    
-    
+    }
+
     private static void doLocationAction(Location location) throws ChallengesControlException, SceneControlException {
         String challengeString;
-        //FIXME we may be done here and just delete debug?
+
         // show description of scene for this location
-        System.out.println("\ndebug:" + location);  //debug can delete later
         System.out.println(location.getScene());
-        
+
         // get random actor for this location
-        System.out.println("\n" + SceneControl.getActor());
-        System.out.println("This person presents you with the following challenge:");// FIXME this line is to be substituted with the real challenges and will no longer be needed.
-        
+        System.out.println(SceneControl.getActor());
+
         // get random challenge for this location
         challengeString = ChallengesControl.getChallenge(location.getLinearLocation());
         System.out.println(challengeString);
-        
+
     }
 
-  }
+}

@@ -89,9 +89,9 @@ public class GetHelpFromFriendView extends View {
 
     @Override
     public boolean doAction(Object obj) {
-        
+
         String value = (String) obj;
-        
+
         value = value.toUpperCase();
         char choice = value.charAt(0);
         boolean addHelpFruit = true;
@@ -118,14 +118,14 @@ public class GetHelpFromFriendView extends View {
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
         }
-        if (addHelpFruit == true){
+        if (addHelpFruit == true) {
             int helpFruits;
-            
+
             helpFruits = GameControl.helpFruits(TGSBgame.getPlayer());
-            this.console.println("You earned " + helpFruits + 
-                    " extra fruits for getting help from a friend in times of trial and temptation!");
+            this.console.println("You earned " + helpFruits
+                    + " extra fruits for getting help from a friend in times of trial and temptation!");
         }
-        
-    return true;
+
+        return true;
     }
 }

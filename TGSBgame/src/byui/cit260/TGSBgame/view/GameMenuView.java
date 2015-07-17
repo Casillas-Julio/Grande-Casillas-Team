@@ -29,7 +29,7 @@ public class GameMenuView extends View{
             + "\n|            Game Menu               |"
             + "\n--------------------------------------"
             + "\nD - Display Map"
-            + "\nM - Move to a map location"
+            + "\nM - Move to a new location"
             + "\nH - Show Help Menu"
             + "\nP - Print Actor List"
             + "\nR - Return to Main Menu"
@@ -67,11 +67,19 @@ public class GameMenuView extends View{
                 break;
             case 'M': {
                 try {
-                    // M - Move to the map location
+                    // M - Move to a new location
                     this.moveToMapLocation();
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                AnswersView answersView = new AnswersView();
+                try {
+                    LocationControl.startLocationControl(0);
+                } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                //display the answer menu
+                answersView.display();
             }
             break;
             case 'H': // H - Show Help Menu

@@ -66,14 +66,16 @@ public class MainMenuView extends View {
         //create a new game
         GameControl.createNewGame(TGSBgame.getPlayer());
         
-        GameMenuView gameMenu = new GameMenuView();
+        AnswersView answersView = new AnswersView();
         try {
             LocationControl.startLocationControl(0);
         } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //display the game menu
-        gameMenu.display();        
+        //display the answer menu
+        answersView.display();
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
     
     private void startExistingGame() {

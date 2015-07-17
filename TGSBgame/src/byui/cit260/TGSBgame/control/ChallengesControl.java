@@ -38,7 +38,7 @@ public class ChallengesControl implements Serializable{
         else {
             challenges = TGSBgame.getChallenges();
             whichEntry = rand.nextInt(challenges.getNumChallenges());
-            return challenges.getChallenge(whichEntry);
+            return challenges.getChallenge(whichEntry); 
         }
     }
 }

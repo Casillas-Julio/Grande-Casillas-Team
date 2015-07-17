@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.control;
 
+import byui.cit260.TGSBgame.model.Actor;
 import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
@@ -56,15 +57,7 @@ public class GameControlTest {
     /**
      * Test of initializeMap method, of class GameControl.
      */
-    @Test
-    public void testInitializeMap() {
-        //this.console.println("initializeMap");
-        Map map = null;
-        GameControl.initializeMap(map);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
     /**
      * Test of calculateScore method, of class GameControl.
      */
@@ -74,7 +67,7 @@ public class GameControlTest {
         Player player = null;
         int fruitsToAdd = 0;
         int expResult = 0;
-        int result = GameControl.calculateScore(player, fruitsToAdd);
+        int result = GameControl.calculateTotalScore(player, fruitsToAdd);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -129,6 +122,34 @@ public class GameControlTest {
         System.out.println("getStartExistingGame");
         String filePath = "";
         GameControl.getStartExistingGame(filePath);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of calculateTotalScore method, of class GameControl.
+     */
+    @Test
+    public void testCalculateTotalScore() {
+        System.out.println("calculateTotalScore");
+        Player player = null;
+        int fruitsToAdd = 0;
+        int expResult = 0;
+        int result = GameControl.calculateTotalScore(player, fruitsToAdd);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of writeActorList method, of class GameControl.
+     */
+    @Test
+    public void testWriteActorList() throws Exception {
+        System.out.println("writeActorList");
+        Actor actorList = null;
+        String filePath = "";
+        GameControl.writeActorList(actorList, filePath);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
