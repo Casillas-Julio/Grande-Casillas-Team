@@ -46,35 +46,33 @@ public class Challenges implements Serializable{
     public Challenges() {
         challenges = new String[ChallengeEnum.values().length];
         //FIXME move text from ChallengeView to here in place of the description -- need to figure out how to format it.
-        String doubt = "================================================================"
-                      +"                         DOUBT                                  "
-                      +"================================================================"
-                      +"\n Are you here visiting NY? Are you here for a specific reason?" 
-                      +"\n You come across as a good person, are you religious?         " 
-                      +"\n Are you one of those people that only goes to one church?    "
-                      +"\n How do you know you are going to a good one, or even if      "   
-                      +"\n there's such a thing? Are you sure you are making a smart    " 
-                      +"\n choice?                                                      "
-                      +"\n What do you think about experiencing a different faith or    " 
-                      +"\n philosophy that can make you happy?                          "
-                      +"\n==============================================================";//create new challenge
+        String doubt = "======================================================================="
+                      +"\n                         DOUBT                                       "
+                      +"\n====================================================================="
+                      +"\n Are you here visiting NY? Are you here for a specific reason?       " 
+                      +"\n You come across as a good person, are you religious?                " 
+                      +"\n Are you one of those people that only goes to one church?           "
+                      +"\n How do you know you are going to a good one, or even if             "   
+                      +"\n there's such a thing? Are you sure you are making a smart choice?   " 
+                      +"\n What do you think about experiencing a different faith or           " 
+                      +"\n philosophy that can make you happy?                                 "
+                      +"\n=====================================================================";//create new challenge
         challenges[ChallengeEnum.doubt.ordinal()] = doubt;// save challenge in challenge
         
         String iniquity = "======================================================================="
-                         +"                              INIQUITY                                 "
-                         +"=======================================================================" 
+                         +"\n                              INIQUITY                               "
+                         +"\n=====================================================================" 
                          +"\n Hey you look new in town. Are you looking to have some fun?         " 
                          +"\n You know, New York has some of the best looking people in the world!" 
                          +"\n I have two tickets for some really hot show that is a lot of fun.   "
-                         +"\n Come let's have some fun, it will be free! Come on,                 "
-                         +"\n what's the problems?                                                "
-                         +"That's nothing wrong with it.                                          "
+                         +"\n Come let's have some fun, it will be free!                          "
+                         +"\n Come on, what's the problems? That's nothing wrong with it.         "
                          +"\n=====================================================================";
         challenges[ChallengeEnum.iniquity.ordinal()] = iniquity;
         
         String addictions = "========================================================"
-                           +"                     ADDICTIONS                         "
-                           +"========================================================"
+                           +"\n                     ADDICTIONS                       "
+                           +"\n======================================================"
                            +"\n Do you have a light?                                 "
                            +"\n You look a bit stressed. Smoking can helps you relax." 
                            +"\n Do you a smoke? Ok, how about let's get a drink?     "
@@ -83,8 +81,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.addictions.ordinal()] = addictions;
         
         String ignorance = "==========================================================="
-                          +"                      IGNORANCE                            "
-                          +"===========================================================" 
+                          +"\n                      IGNORANCE                          "
+                          +"\n=========================================================" 
                           +"\n Do you know about the TED Talk here in November?        "
                           +"\n It is an invite-only event, but I have some connections." 
                           +"\n Do you want to come with me today to arrange for you to "
@@ -99,8 +97,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.ignorance.ordinal()] = ignorance;
         
         String dishonesty = "==============================================================="
-                           +"                     DISHONESTY                                "
-                           +"==============================================================="
+                           +"\n                     DISHONESTY                              "
+                           +"\n============================================================="
                            +"\n You are not from here are you?                              " 
                            +"\n Would be interested in making some money on some good       "
                            +"\n articles once you return home?                              "
@@ -111,8 +109,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.dishonesty.ordinal()] = dishonesty;
         
         String deception = "================================================================"
-                          +"                       DECEPTION                                "
-                          +"================================================================"
+                          +"\n                       DECEPTION                              "
+                          +"\n=============================================================="
                           +"\n You look like a Mormon, are you?                             "
                           +"\n Do you know that Joseph Smith was proved to be a farse and   "
                           +"\n now they have concrete proof of it?                          " 
@@ -123,8 +121,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.deception.ordinal()] = deception;
         
         String pride = "================================================================="
-                      +"                          PRIDE                                  "
-                      +"================================================================="
+                      +"\n                          PRIDE                                "
+                      +"\n==============================================================="
                       +"\n Are you here in business?                                     " 
                       +"\n You look like someone really important that I've seen on TV.  "
                       +"\n You look really confident, you must be good at what you do.   "
@@ -137,8 +135,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.pride.ordinal()] = pride;
         
         String unemployment = "==================================================================="
-                             +"                         UNEMPLOYMENT                              "
-                             +"==================================================================="
+                             +"\n                         UNEMPLOYMENT                            "
+                             +"\n================================================================="
                              +"\n Are you here in New York looking for a better job?              "
                              +"\n I can connect you with a great company, they even triple pay    "
                              +"\n for you to work on Sundays.                                     "       
@@ -151,8 +149,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.unemployment.ordinal()] = unemployment;
         
         String peer_pressure = "==================================================================="
-                              +"                       PEER PRESSURE                               "
-                              +"==================================================================="
+                              +"\n                       PEER PRESSURE                             "
+                              +"\n================================================================="
                               +"\n Hi, do you have plans while you are in town?                    "
                               +"\n Are you telling me that you are in New York and what you are    "
                               +"\n going to do is to go to some temple?                            "
@@ -164,8 +162,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.peer_pressure.ordinal()] = peer_pressure;
         
         String sickeness = "===================================================================="
-                          +"                             SICKNESS                               "
-                          +"===================================================================="
+                          +"\n                             SICKNESS                             "
+                          +"\n=================================================================="
                           +"\n You look sick, are you feeling well?                             " 
                           +"\n You probably need to cancel all your appointments today.         "
                           +"\n Just take some time for yourself. Do you want me to bring you    "
@@ -177,8 +175,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.sickeness.ordinal()] = sickeness;
         
         String rebelion = "==================================================================="
-                         +"                        REBELION                                   "
-                         +"===================================================================" 
+                         +"\n                        REBELION                                 "
+                         +"\n=================================================================" 
                          +"\n Are you going to the Mormon temple?                             "
                          +"\n Do your leaders make you go there?                              "
                          +"\n I don't think you have any freedom to chose.                    "
@@ -188,8 +186,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.rebellion.ordinal()] = rebelion;
         
         String fear = "============================================================"
-                     +"                         FEAR                               "
-                     +"============================================================" 
+                     +"\n                         FEAR                             "
+                     +"\n==========================================================" 
                      +"\n Are you traveling alone?                                 "
                      +"\n Did you make sure to bring money with you?               "
                      +"\n You need cash in this town.                              "
@@ -200,8 +198,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.fear.ordinal()] = fear;
         
         String greed ="============================================================"
-                      +"                         GREED                             "
-                      +"===========================================================" 
+                      +"\n                         GREED                           "
+                      +"\n=========================================================" 
                       +"\n Hey do you want to make a lot of money fast from a very "
                       +"\n small investiment?                                      "
                       +"\n I know this health product from a reliable company, that"
@@ -215,8 +213,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.greed.ordinal()] = greed;
         
         String loneliness = "==============================================================="
-                           +"                       LONELINESS                              "
-                           +"==============================================================="
+                           +"\n                       LONELINESS                            "
+                           +"\n============================================================="
                            +"\n Are you here for Comic Con happening this week?             "
                            +"\n Are you sure?                                               "
                            +"\n Are you going to be alone during your whole trip?           "
@@ -228,8 +226,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.loneliness.ordinal()] = loneliness;
         
         String betrayal = "=========================================================="
-                         +"                       BETRAYAL                           "
-                         +"==========================================================" 
+                         +"\n                       BETRAYAL                         "
+                         +"\n========================================================" 
                          +"\n You look like someone with a destination in mind.      "
                          +"\n Are you here to participate in a learning experience?  "
                          +"\n Do you really want to learn more about God?            "
@@ -240,8 +238,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.betrayal.ordinal()] = betrayal;
         
         String power = "==========================================================="
-                      +"                         POWER                             "
-                      +"===========================================================" 
+                      +"\n                         POWER                           "
+                      +"\n=========================================================" 
                       +"\n Would you like to learn how to influence a lot of       "
                       +"\n people for a good cause?                                "
                       +"\n Can you join me in this political campaign?             "
@@ -251,8 +249,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.power.ordinal()] = power;
         
         String poverty = "================================================================"
-                        +"                         POVERTY                                "
-                        +"================================================================" 
+                        +"\n                         POVERTY                              "
+                        +"\n==============================================================" 
                         +"\n Have you seen the new program created by the government      "
                         +"\n that will take care of all our financial needs?              "
                         +"\n It is wonderful, you won't need to work for barely anything! "
@@ -261,8 +259,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.poverty.ordinal()] = poverty;
         
         String loss ="=============================================================="
-                     +"                         LOSS                                "
-                     +"=============================================================" 
+                     +"\n                         LOSS                              "
+                     +"\n===========================================================" 
                      +"\n Have you ever grived for someone?                         "
                      +"\n There's a place here in town where you can light candles, "
                      +"\n place flowers, and say a prayer for the souls of the ones "
@@ -274,8 +272,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.loss.ordinal()] = loss;
         
         String fun = "============================================================="
-                    +"                          FUN                                "
-                    +"=============================================================" 
+                    +"\n                          FUN                              "
+                    +"\n===========================================================" 
                     +"\n You will not believe this, but I have an extra great seat "
                     +"\n for a U2 concert happening today here in New York.        "
                     +"\n Do you want go?                                           "
