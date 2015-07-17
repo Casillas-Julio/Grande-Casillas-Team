@@ -23,47 +23,4 @@ public class ChallengeView {
     //     "rebelion", "fear", "greed", "loneliness", "betrayal",
     //     "power", "poverty", "loss","fun"
     
-    
-    //FIXME  - this text needs to move into Challenges.java and this file can be deleted. -- All questions will go together and get one answer for simplicity.
-    private final String doubt1 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n|                  Doubt                         |"
-            + "\n--------------------------------------------------"
-            + "\n Are you here visiting NY?                        "
-            + "\n--------------------------------------------------";
-    
-    private final String doubt2 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n Are you here for a specific reason?              "
-            + "\n--------------------------------------------------";
-    
-    private final String doubt3 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n You come accross as a good person, are you religious?"
-            + "\n--------------------------------------------------";
-    
-    private final String doubt4 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n Are you one of those people that only goes to one church?"
-            + "\n--------------------------------------------------";
-            
-    private final String doubt5 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n How do you know you are going to a good church, or even if there's such a thing?"
-            + "\n--------------------------------------------------";
-    
-    private final String doubt6 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n Are you sure you are making a smart choice?"
-            + "\n--------------------------------------------------";
-    
-    private final String doubt7 = "\n"
-            + "\n--------------------------------------------------"
-            + "\n What do you think about experiencing a different faith or philosophy that can make you happy?"
-            + "\n--------------------------------------------------";
-
-    
-    public void display() {
-        
-    }
 }
