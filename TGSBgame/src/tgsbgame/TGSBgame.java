@@ -30,7 +30,7 @@ public class TGSBgame {
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
     public static Actor actorList = null;
-    
+
     public static Challenges getChallenges() {
         return challenges;
     }
@@ -38,7 +38,7 @@ public class TGSBgame {
     public static void setChallenges(Challenges challenges) {
         TGSBgame.challenges = challenges;
     }
-    
+
     public static Game getCurrentGame() {
         return currentGame;
     }

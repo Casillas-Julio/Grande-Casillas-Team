@@ -112,6 +112,15 @@ public class Challenges implements Serializable{
         this.type = type;
     }
 
+    public int getNumChallenges(){
+        return challenges.length;
+    }
+            
+            
+    public String getChallenge (int whichEntry){
+        return challenges[whichEntry];
+    }
+    
     @Override
     public String toString() {
         return "Challenges{" + "type=" + type + ", ammount=" + ammount + '}';

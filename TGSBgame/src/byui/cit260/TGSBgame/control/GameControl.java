@@ -88,14 +88,13 @@ public class GameControl implements Serializable {
         }
     }
 
-    public static void initializeMap(Map map) {
+    /*public static void initializeMap(Map map) {
         map.setColumnCount(1);
         map.setRowCount(1);
 
-    }
+    }*/
 
-    // returns bonus fruits if any were added
-
+    // returns bonus fruits/points if any were added
     public static int calculateScore(Player player, int fruitsToAdd) {
         int totalScore;
         int bonus;
