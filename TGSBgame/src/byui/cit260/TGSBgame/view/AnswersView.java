@@ -40,12 +40,14 @@ public class AnswersView extends View {
             case 'Y':// Y - Yes Please
                 this.console.println("Yes");
                 totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), -2);
-                System.out.println("I'm sorry you were not able to overcome this temptation and you lose 2 fruits.");
+                System.out.println("I'm sorry you were not able to overcome"
+                               + "\nthis temptation and you lose 2 fruits.");
                 break;
             case 'N': //N - No thanks
                 this.console.println("No");
                 totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
-                System.out.println("Congratulations! You overcame this challenge and won 2 fruits");
+                System.out.println("Congratulations! You overcame this challenge"
+                        + "\nand won 2 fruits");
                 break;
             case 'G': // G - Get help from a friend
                 this.displayGetHelpFromFriend();
@@ -53,12 +55,14 @@ public class AnswersView extends View {
             case 'R': // R - You are right
                 this.console.println("I agree with you");
                 totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), -2);
-                System.out.println("I'm sorry you were not able to overcome this temptation and you lose 2 fruits.");
+                System.out.println("I'm sorry you were not able to overcome"
+                               + "\nthis temptation and you lose 2 fruits.");
                 break;
             case 'W': // W - You are wrong
                 this.console.println("You are wrong");
                 totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
-                System.out.println("Congratulations! You overcame this challenge and won 2 fruits");
+                System.out.println("Congratulations! You overcame this challenge"
+                        + "\nand won 2 fruits");
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");

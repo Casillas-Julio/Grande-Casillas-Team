@@ -13,7 +13,6 @@ import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
-import byui.cit260.TGSBgame.model.Scene;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -24,7 +23,6 @@ import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tgsbgame.TGSBgame;
-
 
 
 /**
@@ -89,7 +87,7 @@ public class GameControl implements Serializable {
     }
 
     // returns bonus fruits/points if any were added
-    public static int calculateTotalScore(Player player, int fruitsToAdd) {
+    public static int calculateTotalScore(Player player, int fruitsToAdd) {//FIXME totalScore is not beein called yet from answerView to be added here
         int totalScore;
         int bonus;
 
