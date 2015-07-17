@@ -37,7 +37,6 @@ public class Location implements Serializable{
     }
     
     Location() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public int getRow() {
@@ -71,7 +70,7 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ",linearLocation=" + linearLocation + '}';
     }
 
     @Override

@@ -38,18 +38,5 @@ public class LocationViewTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of display method, of class LocationView.
-     * @throws java.lang.Exception
-     */
-    @Test
-    public void testDisplay() throws Exception {
-        //this.console.println("display");
-        Map map = null;
-        LocationView instance = new LocationView();
-        instance.display(map);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+       
 }

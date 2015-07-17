@@ -28,7 +28,7 @@ public class GameMenuView extends View{
             + "\n|            Game Menu               |"
             + "\n--------------------------------------"
             + "\nD - Display Map"
-            + "\nM - Move to a map location"
+            + "\nM - Move to a new location"
             + "\nH - Show Help Menu"
             + "\nP - Print Actor List"
             + "\nR - Return to Main Menu"
@@ -87,11 +87,19 @@ public class GameMenuView extends View{
                 break;
             case 'M': {
                 try {
-                    // M - Move to the map location
+                    // M - Move to a new location
                     this.moveToMapLocation();
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                AnswersView answersView = new AnswersView();
+                try {
+                    LocationControl.startLocationControl(0);
+                } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                //display the answer menu
+                answersView.display();
             }
             break;
             case 'H': // H - Show Help Menu
@@ -138,35 +146,14 @@ public class GameMenuView extends View{
 
     private void moveToMapLocation() throws LocationControlException, ChallengesControlException, SceneControlException {
         int spaces;
-        
+
         this.console.println("\nEnter a number of spaces between 1"
                 + " and 3 to move forward.");
-        
-        spaces = getIntNumber();
-        
-        LocationControl.startLocationControl(spaces);
-                        
-        //move to the map location 
-        /* TODO
-        1. Move forward 1, 2, or 3
-        2. Set map location to new value.  Need to make sure don't pass
-           end of row.
-        3. set location to new value using row/column
-        */
-        /*LocationControl.startLocationControl(TGSBgame.getLocation());
 
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();*/
-    }
-     
-     private void startNewGame() {
-        //create a new game
-        GameControl.createNewGame(TGSBgame.getPlayer());
-        
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();        
+        spaces = getIntNumber();
+
+        LocationControl.startLocationControl(spaces);
+
     }
      
     private void displayHelpMenu() {

@@ -6,8 +6,10 @@
 package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
+import byui.cit260.TGSBgame.model.Challenges;
 import java.io.Serializable;
 import java.util.Random;
+import tgsbgame.TGSBgame;
 
 /**
  *
@@ -16,11 +18,6 @@ import java.util.Random;
 public class ChallengesControl implements Serializable{
     
     //class variable
-    private static final String[] challengesList = 
-        {"doubt", "iniquity" ,"addictions", "ignorance", "dishonesty", 
-         "deception", "pride", "unemployment", "peer pressure", "sickeness",
-         "rebelion", "fear", "greed", "loneliness", "betrayal",
-         "power", "poverty", "loss","fun"};
     private static int numLocations;
     private static Random rand; 
 
@@ -31,15 +28,17 @@ public class ChallengesControl implements Serializable{
 
     public static String getChallenge(int location) throws ChallengesControlException{
         int whichEntry;
+        Challenges challenges;
         
-        if ((location < 1) || (location > numLocations)) {
+        if ((location < 0) || (location > numLocations - 1)) {
             throw new ChallengesControlException("Can not move actor to location"
                                             + " because that location is outside "
                                             + " the bounds of the map.");
         }
-        else { 
-            whichEntry = rand.nextInt(challengesList.length);
-            return challengesList[whichEntry];
+        else {
+            challenges = TGSBgame.getChallenges();
+            whichEntry = rand.nextInt(challenges.getNumChallenges());
+            return challenges.getChallenge(whichEntry); 
         }
     }
 }

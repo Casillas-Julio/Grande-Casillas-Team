@@ -45,8 +45,8 @@ public class Challenges implements Serializable{
     // assignment 9 - implement an array and populate the list with appropriate objects
     public Challenges() {
         challenges = new String[ChallengeEnum.values().length];
-        
-        String doubt = "doubt description";//create new challenge
+        //FIXME move text from ChallengeView to here in place of the description -- need to figure out how to format it.
+        String doubt = "Are you here visiting NY? Are you here for a specific reason? You come across as a good person, are you religious? Are you one of those people that only goes to one church?How do you know you are going to a good one, or even if there's such a thing? Are you sure you are making a smart choice?What do you think about experiencing a different faith or philosophy that can make you happy?";//create new challenge
         challenges[ChallengeEnum.doubt.ordinal()] = doubt;// save challenge in challenge
         
         String iniquity = "iniquity description";
@@ -112,6 +112,15 @@ public class Challenges implements Serializable{
         this.type = type;
     }
 
+    public int getNumChallenges(){
+        return challenges.length;
+    }
+            
+            
+    public String getChallenge (int whichEntry){
+        return challenges[whichEntry];
+    }
+    
     @Override
     public String toString() {
         return "Challenges{" + "type=" + type + ", ammount=" + ammount + '}';

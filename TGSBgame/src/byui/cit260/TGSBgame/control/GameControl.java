@@ -7,6 +7,7 @@ package byui.cit260.TGSBgame.control;
 
 import byui.cit260.TGSBgame.exceptions.GameMenuViewException;
 import byui.cit260.TGSBgame.exceptions.GameViewException;
+import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.model.Actor;
 import byui.cit260.TGSBgame.model.Challenges;
 import byui.cit260.TGSBgame.model.Game;
@@ -67,10 +68,6 @@ public class GameControl implements Serializable {
         TGSBgame.setCurrentGame(game);
     }
 
-    public static void assignScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public static void createNewGame(Player player) {
 
         player.setFruits(10);
@@ -84,18 +81,15 @@ public class GameControl implements Serializable {
 
         Map map = MapControl.createMap(); //create nd initialize new map
         game.setMap(map); //save map in game
-
+        try {
+            LocationControl.setLocation(0);
+        } catch (LocationControlException ex) {
+            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
-    public static void initializeMap(Map map) {
-        map.setColumnCount(1);
-        map.setRowCount(1);
-
-    }
-
-    // returns bonus fruits if any were added
-
-    public static int calculateScore(Player player, int fruitsToAdd) {
+    // returns bonus fruits/points if any were added
+    public static int calculateTotalScore(Player player, int fruitsToAdd) {
         int totalScore;
         int bonus;
 

@@ -115,12 +115,12 @@ public class StartProgramView extends View{
     }
 
     public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported/not required"); 
     }
 
     @Override
     public boolean doAction(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported/not required"); 
     }
     
 }

@@ -5,8 +5,14 @@
  */
 package byui.cit260.TGSBgame.view;
 import byui.cit260.TGSBgame.control.GameControl;
+import byui.cit260.TGSBgame.control.LocationControl;
+import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
+import byui.cit260.TGSBgame.exceptions.LocationControlException;
+import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import tgsbgame.TGSBgame;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Dragon's
@@ -60,9 +66,16 @@ public class MainMenuView extends View {
         //create a new game
         GameControl.createNewGame(TGSBgame.getPlayer());
         
-        //display the game menu
+        AnswersView answersView = new AnswersView();
+        try {
+            LocationControl.startLocationControl(0);
+        } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //display the answer menu
+        answersView.display();
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();        
+        gameMenu.display();
     }
     
     private void startExistingGame() {

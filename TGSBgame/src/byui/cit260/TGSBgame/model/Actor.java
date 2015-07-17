@@ -15,12 +15,42 @@ import java.io.Serializable;
 //assignment 9 - implement and populate an enum list
 public enum Actor implements Serializable{
     
-    John_Worth("John Worth is a recent New York resident, and is excited about sharing his discovery of the Big Apple."),
-    Simon_Kwan("Simon Kwan is a Chinese-American New Yorker used to life in the big city and its sub-cultures."),
-    Kevin_Doom("Kevin Doom is a trendy New York who brags about all this city has to offer. Manhathan is his crib."),
-    Mandi_Baxter("Mandi Baxter is a fashionista who is always on top of what's happening in her city."),
-    Harper_Young("Harper Young is a publicist, closely connected with everyone who is important in NY."),
-    Angel_Hernandez("Angel Hernandez knows this city inside-out. From the famous avenues to the darkest alley. He has been in all of them.");
+    John_Worth("\n"
+            + "\n-------------------------------------------------------"
+            + "\n| John Worth is a recent New York resident, and is     "
+            + "\n| excited about sharing his discovery of the Big Apple."
+            + "\n-------------------------------------------------------"),
+            
+    Simon_Kwan("\n"
+            + "\n------------------------------------------------------"
+            + "\n| Simon Kwan is a Chinese-American New Yorker used to "
+            + "\n| life in the big city and its sub-cultures.          "
+            + "\n------------------------------------------------------"),
+    
+    Kevin_Doom("\n"
+            + "\n------------------------------------------------------"
+            + "\n| Kevin Doom is a trendy New York who brags about all "
+            + "\n| this city has to offer. Manhathan is his crib.      "
+            + "\n------------------------------------------------------"),
+    
+    Mandi_Baxter("\n"
+            + "\n------------------------------------------------------"
+            + "\n| Mandi Baxter is a fashionista who is always on top  "
+            + "\n| of what's happening in her city.                    "
+            + "\n------------------------------------------------------"),
+    
+    Harper_Young("\n"
+            + "\n------------------------------------------------------"
+            + "\n| Harper Young is a publicist, closely connected with "
+            + "\n| everyone who is important in NY.                    "
+            + "\n------------------------------------------------------"),
+    
+    Angel_Hernandez("\n"
+            + "\n------------------------------------------------------"
+            + "\n| Angel Hernandez knows this city inside-out. From the"
+            + "\n| famous avenues to the darkest alley. He has been in "
+            + "\n| all of them.                                        "
+            + "\n------------------------------------------------------");   
     
     private final String description;
     
@@ -33,9 +63,9 @@ public enum Actor implements Serializable{
         return this.description;
     }
 
-    public Point getCoordinates() {
+    /*public Point getCoordinates() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
     
     
 }

@@ -22,7 +22,9 @@ public class ChallengeView {
     //     "deception", "pride", "unemployment", "peer pressure", "sickeness",
     //     "rebelion", "fear", "greed", "loneliness", "betrayal",
     //     "power", "poverty", "loss","fun"
-        
+    
+    
+    //FIXME  - this text needs to move into Challenges.java and this file can be deleted. -- All questions will go together and get one answer for simplicity.
     private final String doubt1 = "\n"
             + "\n--------------------------------------------------"
             + "\n|                  Doubt                         |"

@@ -25,9 +25,6 @@ public class LocationControl {
         doLocationAction(locationObj);
     }
 
-    private static Scene[] createScenes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     //class variables
     public static int location;
 
@@ -36,12 +33,23 @@ public class LocationControl {
     }
 
     //returns 0 on success, -1 on failure
+    //function overload of setLocation
+    public static void setLocation(int position) throws LocationControlException {
+
+        if (position < 0 || position > 34) {
+            throw new LocationControlException("Can not move actor to location"
+                    + " because that location is outside "
+                    + " the bounds of the map.");
+        } else {
+            location = position;
+        }
+    }
 
     public static void setLocation(int row, int column) throws LocationControlException {
 
         int newLocation = (5 * row) - (5 - column);
 
-        if (newLocation < 1 || newLocation > 35) {
+        if (newLocation < 0 || newLocation > 34) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
@@ -54,7 +62,7 @@ public class LocationControl {
 
         int newLocation = location + spaces;
 
-        if (newLocation > 35) {
+        if (newLocation > 34) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
@@ -62,23 +70,21 @@ public class LocationControl {
             location = newLocation;
 
         }
-    }    
-    
+    }
+
     private static void doLocationAction(Location location) throws ChallengesControlException, SceneControlException {
         String challengeString;
-        
+
         // show description of scene for this location
-        System.out.println("\ndebug:" + location);  //debug can delete later
         System.out.println(location.getScene());
-        
+
         // get random actor for this location
-        System.out.println("\n" + SceneControl.getActor());
-        System.out.println("This person presents you with the following challenge:");
-        
+        System.out.println(SceneControl.getActor());
+
         // get random challenge for this location
         challengeString = ChallengesControl.getChallenge(location.getLinearLocation());
         System.out.println(challengeString);
-        
+
     }
 
-  }
+}
