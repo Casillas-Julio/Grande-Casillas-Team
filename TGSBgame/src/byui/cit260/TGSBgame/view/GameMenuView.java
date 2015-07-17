@@ -103,6 +103,9 @@ public class GameMenuView extends View{
             case 'H': // H - Show Help Menu
                 this.displayHelpMenu();
                 break;
+            case 'F': // H - Show Help Menu
+                //FIXME display current number of fruits player has
+                break; 
             case 'P': // P - Print Actor list
                 String filePath = getFileName();
                 this.printActorList(filePath);

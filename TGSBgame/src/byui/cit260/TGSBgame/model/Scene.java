@@ -25,8 +25,7 @@ public enum Scene {
             + "\nto who could guide them out of this madness. You  "
             + "\nran to get into one of the AirTrain and is heading"
             + "\nout to your hotel. A person next to you engages in"
-            + "\na conversation."
-            + "\n--------------------------------------------------"),
+            + "\na conversation.                                   "),
     
     Time_Square("\n"
             + "\n----------------------------------------------------"
@@ -42,8 +41,7 @@ public enum Scene {
             + "\nshows other's are waiting for the free entertainment"
             + "\nabout to start, and others are just trying to take  "
             + "\nall in as you do. As you watch people passing by, a "
-            + "\nperson stops by your side and starts a conversation."
-            + "\n----------------------------------------------------"),
+            + "\nperson stops by your side and starts a conversation."),
     
     Central_Park("\n"
             + "\n------------------------------------------------------"
@@ -56,20 +54,18 @@ public enum Scene {
             + "\nscene. There are people everywhere sitting on benches,"
             + "\nin the grass, and in the half-walls by the sidewalks. "
             + "\nAs you are sitting on the wall, a person nearby       "
-            + "\nstrikes a conversation.                               "
-            + "\n----------------------------------------------------"),
+            + "\nstrikes a conversation.                               "),
     
     NY_Subway("\n"
-            + "\n----------------------------------------------------"
-            + "\n| NYC Subway                                       |"
-            + "\n----------------------------------------------------"
-            + "\nYou are about to enter the New York City Subway. It "
+            + "\n----------------------------------------------------  "
+            + "\n| NYC Subway                                         |"
+            + "\n----------------------------------------------------  "
+            + "\nYou are about to enter the New York City Subway. It   "
             + "\nis the largest, by number of stations, and one of the "
             + "\nworld's oldest, most used public transit systems.     "
             + "\nThousands of people travel in them daily. New Yorkers "
             + "\nare not famous for neighbourly conversation. However, "
-            + "\na nearby passenger starts to talk to you.             "
-            + "\n----------------------------------------------------"),
+            + "\na nearby passenger starts to talk to you.             "),
     
     Chinatown("\n"
             + "\n----------------------------------------------------"
@@ -80,11 +76,10 @@ public enum Scene {
             + "\nWestern Hemisphere. It looks, feels and smells      "
             + "\ndifferent. The Chinese culture is present in every  "
             + "\naspect, from the number of people walking on the    "
-            + "\nstreet, to the open market feel of food and products  "
+            + "\nstreet, to the open market feel of food and products"
             + "\nsold on the sidelines. Even the trafic signs are    "
             + "\nwritten in both Chinese and English. It is a foreign"
-            + "\nexperience in the middle of lower Manhathan.        "
-            + "\n----------------------------------------------------"),
+            + "\nexperience in the middle of lower Manhathan.        "),
     
     Little_Italy("\n"
             + "\n------------------------------------------------------"
@@ -97,8 +92,7 @@ public enum Scene {
             + "\nseen organized crime since the early 1900s. Powerful  "
             + "\nmembers of the Italian Mafia operated in Little Italy."
             + "\nBut that is not the case anymore. So when a stranger  "
-            + "\napproches, you don't feel too anxious.                "
-            + "\n------------------------------------------------------"),
+            + "\napproches, you don't feel too anxious.                "),
     
     Metropolitan_Museum_of_Art("\n"
             + "\n-------------------------------------------------------"
@@ -115,8 +109,7 @@ public enum Scene {
             + "\nmaintains extensive holdings of African, Asian,        "
             + "\nOceanic, Byzantine, and Islamic art. After afew minutes"
             + "\nobserving the art, a nearby observer aproches and      "
-            + "\nquietly begins to speak.                               "
-            + "\n-------------------------------------------------------"),
+            + "\nquietly begins to speak.                               "),
     
     Broadway("\n"
             + "\n------------------------------------------------------"
@@ -130,8 +123,7 @@ public enum Scene {
             + "\ninfluences popular culture and helps New York City be "
             + "\nthe cultural capital of the nation. While in line to  "
             + "\nbuy tickets, the person behind you starts talking to  "
-            + "\nyou."
-            + "\n----------------------------------------------------"),
+            + "\nyou.                                                  "),
     
     Lincoln_Center("\n"
             + "\n------------------------------------------------------"
@@ -146,8 +138,7 @@ public enum Scene {
             + "\nalong with managing the center's campus. As the       "
             + "\nworld's largest presenter of performing arts, offering"
             + "\nsome 5,000 programs, initiatives and events as the    "
-            + "\nEmmy Award.                                           "
-            + "\n------------------------------------------------------"),
+            + "\nEmmy Award.                                           "),
     
     Grand_Central_Station("\n"
             + "\n-------------------------------------------------------"
@@ -160,8 +151,7 @@ public enum Scene {
             + "\ncrafted detail, historian David Cannadine described    "
             + "\nit one of the most majestic buildings of the twentieth "
             + "\ncentury. It's the sixth-most-visited tourist attraction"
-            + "\nfor its roughly 21.6 million annual visitors.          "
-            + "\n------------------------------------------------------"),
+            + "\nfor its roughly 21.6 million annual visitors.          "),
     
     Statue_of_Liberty("\n"
             + "\n-------------------------------------------------------"
@@ -171,8 +161,7 @@ public enum Scene {
             + "\nsculpture on Liberty Island in New York Harbor. The    "
             + "\nstatue is an icon of the United States and its freedom,"
             + "\nand was a welcoming sight to immigrants arriving from  "
-            + "\nabroad. Seeing it in person is a memorable experience. "
-            + "\n-------------------------------------------------------"),
+            + "\nabroad. Seeing it in person is a memorable experience. "),
     
     Hudson_River("\n"
             + "\n------------------------------------------------------"
@@ -185,8 +174,7 @@ public enum Scene {
             + "\ntravel, transport, survival and inspiration for       "
             + "\ngenerations. It provides an amazing view. The sun     "
             + "\nseems to rest on the sparkling river, allowing you to "
-            + "\nfully appreciate Manhattan Island.                    "
-            + "\n----------------------------------------------------"),
+            + "\nfully appreciate Manhattan Island.                    "),
     
     Chelsea_Market("\n"
             + "\n------------------------------------------------------"
@@ -200,8 +188,7 @@ public enum Scene {
             + "\nYou're granted easy access to Highline Park. Nature's "
             + "\nplant life calls for attention, splashes of color     "
             + "\nspringing up everywhere you look. At this point, it   "
-            + "\nfeels like your in a world seperate from New York.    "
-            + "\n------------------------------------------------------"),
+            + "\nfeels like your in a world seperate from New York.    "),
     
     Brooklyn_Bridge("\n"
             + "\n-------------------------------------------------------"
@@ -213,8 +200,7 @@ public enum Scene {
             + "\nopportunities and views are presented throughout you're"
             + "\nwalk. Brooklyn bridge is and has been an engineering   "
             + "\nmarvel for ages. Smiling faces, laughter and joy       "
-            + "\nsurround you, and you can't help but take part in that."
-            + "\n-------------------------------------------------------"),
+            + "\nsurround you, and you can't help but take part in that."),
     
     Soho("\n"
             + "\n--------------------------------------------------------"
@@ -227,8 +213,7 @@ public enum Scene {
             + "\ninner-city regeneration, which includes the SoHo-Cast   "
             + "\nIron Historic District. SoHo is known for its           "
             + "\ncommercialization and eclectic mix of shopping          "
-            + "\nboutiques.                                              "
-            + "\n------------------------------------------------------"),
+            + "\nboutiques.                                              "),
     
     Empire_State_Building("\n"
             + "\n------------------------------------------------------"
@@ -243,8 +228,7 @@ public enum Scene {
             + "\nview on the sky deck. There is a lot of history to    "
             + "\nbe absorbed through these, the whole feel of it adding"
             + "\nto the romantic view of NYC. The observation deck is  "
-            + "\nbreathtaking.                                         "
-            + "\n----------------------------------------------------"),
+            + "\nbreathtaking.                                         "),
     
     Rockefeller_Center("\n"
             + "\n------------------------------------------------------"
@@ -257,8 +241,7 @@ public enum Scene {
             + "\nof you. Outside is the famous ice skating rink and    "
             + "\nChristmas tree in the winter. Unusual, unexpected and "
             + "\nalways exciting, Rockefeller Center is home to some of"
-            + "\nNew York City's most spectacular, talked-about events."
-            + "\n------------------------------------------------------"),
+            + "\nNew York City's most spectacular, talked-about events."),
     
     Ellis_Island("\n"
             + "\n------------------------------------------------------"
@@ -270,8 +253,7 @@ public enum Scene {
             + "\n1892 until 1954, the Main Building now houses the     "
             + "\nImmigration Museum. A Wall of Honor rests outside the "
             + "\nmain building, containing a partial list of immigrants"
-            + "\nprocessed on the island.                              "
-            + "\n------------------------------------------------------"),
+            + "\nprocessed on the island.                              "),
     
     New_York_Public_Library("\n"
             + "\n------------------------------------------------------"
@@ -288,8 +270,7 @@ public enum Scene {
             + "\nsince it opened to the public in 1911. Patience and   "
             + "\nFortitude, the world-renowned pair of marble lions    "
             + "\nthat stand proudly before the majestic Beaux-Arts     "
-            + "\nbuilding, await you as you enter the building.        "
-            + "\n----------------------------------------------------"),
+            + "\nbuilding, await you as you enter the building.        "),
     
     Fifth_Avenue("\n"
             + "\n------------------------------------------------------"
@@ -303,8 +284,7 @@ public enum Scene {
             + "\nYork City. If you like window shopping, this is the   "
             + "\nplace you go. If you have money you will like it even "
             + "\nmore. The street is busy with bustling people flowing "
-            + "\nin and out of the stores.                             "
-            + "\n----------------------------------------------------"),
+            + "\nin and out of the stores.                             "),
     
     Gothan_West_Market("\n"
             + "\n----------------------------------------------------"
@@ -317,8 +297,7 @@ public enum Scene {
             + "people going there are seeking for this new eating    "
             + "adventure. A sign in one of the business recently     "
             + "said: When was the last time you did something for    "
-            + "the first time?                                       "
-            + "\n----------------------------------------------------"),
+            + "the first time?                                       "),
     
     Washignton_Square_Park("\n"
             + "\n------------------------------------------------------"
@@ -331,8 +310,7 @@ public enum Scene {
             + "\ngathering spot for avant-garde artists, a battleground"
             + "\nfor chess enthusiasts, as well as a playground for    "
             + "\nchildren and canines. It is always full of life with  "
-            + "\nstreet performers and people lounging.                "
-            + "\n----------------------------------------------------"),
+            + "\nstreet performers and people lounging.                "),
     
     Flatiron_Building("\n"
             + "\n--------------------------------------------------------"
@@ -346,8 +324,7 @@ public enum Scene {
             + "\nPeople go there to appreciate the architecture and      "
             + "\nlunch in the park accros the street. Currently, it is   "
             + "\nan office building containing offices for small and     "
-            + "\nmedium sized companies.                                 "
-            + "\n------------------------------------------------------"),
+            + "\nmedium sized companies.                                 "),
     
     Wall_Street("\n"
             + "\n------------------------------------------------------"
@@ -362,8 +339,7 @@ public enum Scene {
             + "\nStreet exemplifies the image this area came to        "
             + "\nsymbolize. From there you can walk to trinity church, "
             + "\nwhich is a very contrasting image and feel for the    "
-            + "\nwhole area.                                           "
-            + "\n------------------------------------------------------"),
+            + "\nwhole area.                                           "),
     
     Queensbridge_Park_Queens("\n"
             + "\n------------------------------------------------------"
@@ -378,8 +354,7 @@ public enum Scene {
             + "\nthe nearby Queensboro Bridge. From there, there are   "
             + "\nspectacular views of 59th Street bridge, Chrysler     "
             + "\nBuilding, Empire State Building, and more. It provides"
-            + "\na very good place to admire NY from a close distance. "
-            + "\n----------------------------------------------------"),
+            + "\na very good place to admire NY from a close distance. "),
     
     Music_Hall_of_Williamsburg_Brooklyn("\n"
             + "\n-------------------------------------------------------"
@@ -390,8 +365,7 @@ public enum Scene {
             + "\nBrooklyn. The venue has a capacity of 550 people and   "
             + "\nhas shows on most nights of the week.  Indie-rock fans "
             + "\ngroove to live music at this popular triple-tiered     "
-            + "\nclub that offer three bars on location.                "
-            + "\n-------------------------------------------------------"),
+            + "\nclub that offer three bars on location.                "),
             
     
     Carlos_Bakery_New_Jersey("\n"
@@ -402,8 +376,7 @@ public enum Scene {
             + "\nBoss. It is known for its delicious pastries, desserts  "
             + "\nand cakes. Master Baker, Bartolo Jr. “Buddy”, has been   "
             + "\nfeatured in numerous publications,and his cake was voted"
-            + "\nby the Today’s Show viewers as best cake in America.    "
-            + "\n-------------------------------------------------------"),
+            + "\nby the Today’s Show viewers as best cake in America.     "),
     
     Radio_City_Music_Hall("\n"
             + "\n------------------------------------------------------"
@@ -416,8 +389,7 @@ public enum Scene {
             + "\nthere to watch world famous performances and to enjoy "
             + "\nthe beautifuly decorated location. It is famous for   "
             + "\nthe Spectacular with the Rockettes. It is quite an    "
-            + "\nopulent treat to visit.                               "
-            + "\n----------------------------------------------------"),
+            + "\nopulent treat to visit.                               "),
     
     The_Cathedral_Church_of_St_John_the_Divine("\n"
             + "\n-----------------------------------------------------"
@@ -429,8 +401,7 @@ public enum Scene {
             + "today. This immense and historic church is known for   "
             + "its concerts, Sunday service & annual blessing of      "
             + "animals. The adjacent Peace Garden is one of the most  "
-            + "whimsical places in the city.                          "
-            + "\n-----------------------------------------------------"),
+            + "whimsical places in the city.                          "),
     
     United_Nation_Headquarters("\n"
             + "\n------------------------------------------------------"
@@ -444,22 +415,19 @@ public enum Scene {
             + "\ncountries committed to maintaining international      "
             + "\npeace and security, developing friendly relations     "
             + "\namong nations and promoting social progress, better   "
-            + "\nliving standards and human rights.                    "
-            + "\n------------------------------------------------------"),
+            + "\nliving standards and human rights.                    "),
     
     Unisphere_Queens("\n"
-            + "\n-------------------------------------------------------"
-            + "\n| Unisphere Queens                                    |"
-            + "\n-------------------------------------------------------"
-            + "\nThe Unisphere is a 12-story high, spherical stainless  "
-            + "\nsteel representation of the Earth.The unofficial symbol"
-            + "\nof Queens, it exists as one of the few remaining "
-            + "artifacts from the 1964-65 New York World's Fair. Three"
-            + "rings circle the globe, representing the orbits of the "
-            + "first American astronaut, the first Russian cosmonaut  "
-            + "and the first communications satellite to orbit the"
-            + "Earth."
-            + "\n----------------------------------------------------"),
+            + "\n--------------------------------------------------------"
+            + "\n| Unisphere Queens                                     |"
+            + "\n--------------------------------------------------------"
+            + "\nThe Unisphere is a 12-story high, spherical stainless   "
+            + "\nsteel representation of the Earth.The unofficial symbol "
+            + "\nof Queens, it exists as one of the few remaining        "
+            + "artifacts from the 1964-65 New York World's Fair. Three   "
+            + "rings circle the globe, representing the orbits of the    "
+            + "first American astronaut, the first Russian cosmonaut     "
+            + "and the first communications satellite to orbit the Earth."),
     Yankee_Stadium_Bronx("\n"
             + "\n----------------------------------------------------"
             + "\n| Yankee Stadium Bronx                             |"
@@ -470,8 +438,7 @@ public enum Scene {
             + "FC of Major League Soccer. People are impressed with  "
             + "this new structure even with the historical landmarks "
             + "around to compare. It is great place to visit if you  "
-            + "enjoy baseball.                                       "
-            + "\n----------------------------------------------------"),
+            + "enjoy baseball.                                       "),
     
     Nine_Eleven_Museum("\n"
             + "\n------------------------------------------------------"
@@ -484,8 +451,7 @@ public enum Scene {
             + " artifacts associated with the events of 9/11, while its"
             + " mission is to honor the memories of those killed on    "
             + "9/11 and educate future generations. It was created as  "
-            + " a tribute the victims and the families.                "
-            + "\n------------------------------------------------------"),
+            + " a tribute the victims and the families.                "),
     
     High_Line("\n"
             + "\n------------------------------------------------------"
@@ -498,8 +464,7 @@ public enum Scene {
             + "\nfantastically reclaiming the disused piece of         "
             + "\ninfrastructure. The beautiful design is now a park    "
             + "\nwhere you can take in the serenity and some pretty    "
-            + "\namazing city views.                                   "
-            + "\n----------------------------------------------------"),
+            + "\namazing city views.                                   "),
     
     Manhatan_Temple("\n"
             + "\n------------------------------------------------------"
@@ -516,8 +481,7 @@ public enum Scene {
             + "\nCentral Park a walking distance away. As you stand in "
             + "\nthe little plaza in front of the temple to contemplate"
             + "\nits beauty and significance, a pedestrian approaches  "
-            + "\nyou and asks a question.                              "
-            + "\n----------------------------------------------------");
+            + "\nyou and asks a question.                              ");
     
     private final String description;
         
