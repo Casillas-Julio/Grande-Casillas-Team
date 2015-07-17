@@ -12,7 +12,6 @@ import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Actor;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tgsbgame.TGSBgame;
@@ -36,6 +35,27 @@ public class GameMenuView extends View{
             + "\n--------------------------------------");
     }    
     
+//    private static String displayMap(String[] args) {
+//        int[][] map = {
+//            { 0, 1, 2, 3, 4, 5, },
+//            { 1, 0, 0, 0, 0, 0, },
+//            { 2, 0, 0, 0, 0, 0, },
+//            { 3, 0, 0, 0, 0, 0, },
+//            { 4, 0, 0, 0, 0, 0, },
+//            { 5, 0, 0, 0, 0, 0, },
+//            { 6, 0, 0, 0, 0, 0, },
+//            { 7, 0, 0, 0, 0, 0, },
+//            { 8, 0, 0, 0, 0, 0, },
+//            
+//    };
+//
+//    for (int i = 0; i < map.length; i++) {
+//        for (int y = 0; y < map[1].length; y++) {
+//            
+//    }
+//    }
+//        return displayMap[];
+//    }
     private final String displayMap = "\n"
             + "\n--------------------------------------"
             + "\n|                Map                 |"
