@@ -81,7 +81,10 @@ public class TGSBgame {
                     + "\nCause: " + e.getCause()
                     + "\nMessage: " + e.getMessage());
 
-            e.printStackTrace();
+            //e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.toString());
+
         } finally {
             try {
                 if (TGSBgame.inFile != null) {
@@ -99,6 +102,8 @@ public class TGSBgame {
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
+            } catch (Exception e) {
+                System.out.println("Exception: " + e.toString());
             }
         }
 

@@ -15,7 +15,8 @@ public class MessageView {
     
     }
     
-    /*FIXME public void displayMessage(int message) {
+    /*FIXME create function to display message when the game ends winning and losing
+    public void displayMessage(int message) {
         if (bonus > 0) {
             System.out.println("\n*************************************************************"
                     + "\n* Congratulations! You have been successful in reaching     *"

@@ -90,11 +90,11 @@ public class GameMenuView extends View{
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.INFO, null, ex);
                 }
                 AnswersView answersView = new AnswersView();
-                try {
+                /*try {
                     LocationControl.startLocationControl(0);
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
                     Logger.getLogger(MainMenuView.class.getName()).log(Level.INFO, null, ex);
-                }
+                }*/
                 //display the answer menu
                 answersView.display();
             }

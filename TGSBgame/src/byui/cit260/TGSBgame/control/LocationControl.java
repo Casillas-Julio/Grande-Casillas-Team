@@ -24,7 +24,7 @@ public class LocationControl {
         Location locationObj;
 
         moveToNextLocation(spaces);
-        locationObj = MapControl.getLocationFromMap(spaces);
+        locationObj = MapControl.getLocationFromMap(location);
         doLocationAction(locationObj);
     }
 

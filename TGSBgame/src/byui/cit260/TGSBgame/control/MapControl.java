@@ -66,10 +66,10 @@ public class MapControl {
         locations[4][4].setScene(Scene.Queensbridge_Park_Queens);
         locations[5][0].setScene(Scene.Music_Hall_of_Williamsburg_Brooklyn);
         locations[5][1].setScene(Scene.Carlos_Bakery_New_Jersey);
-        locations[6][0].setScene(Scene.Radio_City_Music_Hall);
         locations[5][2].setScene(Scene.The_Cathedral_Church_of_St_John_the_Divine);
         locations[5][3].setScene(Scene.United_Nation_Headquarters);
         locations[5][4].setScene(Scene.Unisphere_Queens);
+        locations[6][0].setScene(Scene.Radio_City_Music_Hall);
         locations[6][1].setScene(Scene.Yankee_Stadium_Bronx);
         locations[6][2].setScene(Scene.Nine_Eleven_Museum);
         locations[6][3].setScene(Scene.High_Line);

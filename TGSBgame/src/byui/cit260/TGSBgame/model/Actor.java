@@ -5,7 +5,6 @@
  */
 package byui.cit260.TGSBgame.model;
 
-import java.awt.Point;
 import java.io.Serializable;
 
 /**
