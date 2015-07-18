@@ -31,7 +31,7 @@ public class AnswersView extends View {
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
-        int totalScore;
+        int bonusPoints = 0;
 
         value = value.toUpperCase();
         char choice = value.charAt(0);
@@ -39,13 +39,13 @@ public class AnswersView extends View {
         switch (choice) {
             case 'Y':// Y - Yes Please
                 this.console.println("Yes");
-                totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), -2);
+                bonusPoints = GameControl.calculateTotalScore(TGSBgame.getPlayer(), -2);
                 System.out.println("I'm sorry you were not able to overcome"
                                + "\nthis temptation and you lose 2 fruits.");
                 break;
             case 'N': //N - No thanks
                 this.console.println("No");
-                totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
+                bonusPoints = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
                 System.out.println("Congratulations! You overcame this challenge"
                         + "\nand won 2 fruits");
                 break;
@@ -54,20 +54,26 @@ public class AnswersView extends View {
                 break;
             case 'R': // R - You are right
                 this.console.println("I agree with you");
-                totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), -2);
+                bonusPoints = GameControl.calculateTotalScore(TGSBgame.getPlayer(), -2);
                 System.out.println("I'm sorry you were not able to overcome"
                                + "\nthis temptation and you lose 2 fruits.");
                 break;
             case 'W': // W - You are wrong
                 this.console.println("You are wrong");
-                totalScore = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
+                bonusPoints = GameControl.calculateTotalScore(TGSBgame.getPlayer(), 2);
                 System.out.println("Congratulations! You overcame this challenge"
                         + "\nand won 2 fruits");
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again!");
                 break;
+        }
 
+        if (bonusPoints > 0) {
+            System.out.println("\n**************************************************"
+                    + "\n* For your obedience and correct choices, you   *"
+                    + "\n* received " + bonusPoints + " bonus fruits of spiritual strength.*"
+                    + "\n*************************************************");
         }
         return true;
     }

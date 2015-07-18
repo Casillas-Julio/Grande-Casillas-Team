@@ -51,5 +51,58 @@ public class GameMenuViewTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of <error> method, of class GameMenuView.
+     */
+    @Test
+    public void test<error>() {
+        System.out.println("<error>");
+        GameMenuView instance = new GameMenuView();
+        instance.<error>();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getIntNumber method, of class GameMenuView.
+     */
+    @Test
+    public void testGetIntNumber() {
+        System.out.println("getIntNumber");
+        GameMenuView instance = new GameMenuView();
+        int expResult = 0;
+        int result = instance.getIntNumber();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getFileName method, of class GameMenuView.
+     */
+    @Test
+    public void testGetFileName() {
+        System.out.println("getFileName");
+        GameMenuView instance = new GameMenuView();
+        String expResult = "";
+        String result = instance.getFileName();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of printActorList method, of class GameMenuView.
+     */
+    @Test
+    public void testPrintActorList() {
+        System.out.println("printActorList");
+        String outputLocation = "";
+        GameMenuView instance = new GameMenuView();
+        instance.printActorList(outputLocation);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

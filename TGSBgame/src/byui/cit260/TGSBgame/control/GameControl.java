@@ -97,7 +97,7 @@ public class GameControl implements Serializable {
         return bonus;
     }
 
-    public static int calculateBonus(Player player) {
+    private static int calculateBonus(Player player) {
         int score = player.getFruits();
         int bonus = 0;
         //changed to increment the bonus on each level of points
@@ -135,6 +135,10 @@ public class GameControl implements Serializable {
         } catch (IOException e) {
             throw new GameMenuViewException(e.getMessage());
         }
+    }
+
+    public GameControl(GameControl totalScore) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

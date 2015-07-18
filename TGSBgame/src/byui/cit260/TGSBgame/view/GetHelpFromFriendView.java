@@ -122,9 +122,10 @@ public class GetHelpFromFriendView extends View {
             int helpFruits;
 
             helpFruits = GameControl.helpFruits(TGSBgame.getPlayer());
-            this.console.println("You earned 2 extra fruits for getting"
-                    + "\nhelp from a friend in times of trial "
-                    + "\nand temptation!");
+            
+            this.console.println("You earned " + helpFruits
+                    + " extra fruits for getting help from a friend in times of trial and temptation!");
+     
         }
 
         return true;

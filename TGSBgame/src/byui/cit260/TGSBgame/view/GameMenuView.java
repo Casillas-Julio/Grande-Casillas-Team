@@ -9,17 +9,20 @@ import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Actor;
+import byui.cit260.TGSBgame.model.Player;
+import byui.cit260.TGSBgame.view.AnswersView;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import tgsbgame.TGSBgame;
 
 /**
  *
  * @author Dragon
  */
 public class GameMenuView extends View{
-    
+ 
     public GameMenuView() {
         super("\n"
             + "\n--------------------------------------"
@@ -32,6 +35,7 @@ public class GameMenuView extends View{
             + "\nP - Print Actor List"
             + "\nR - Return to Main Menu"
             + "\n--------------------------------------");
+   
     }    
     
 //    private static String displayMap(String[] args) {
@@ -71,10 +75,14 @@ public class GameMenuView extends View{
             + "\n                                      "
             + "\n--------------------------------------";
     
+
+    ;
     @Override
     public boolean doAction(Object obj) {
 
         String value = (String) obj;
+        
+        Player player = TGSBgame.getPlayer();
 
         value = value.toUpperCase();
         char choice = value.charAt(0);
@@ -105,7 +113,8 @@ public class GameMenuView extends View{
                 this.displayHelpMenu();
                 break;
             case 'F': // H - Show number of fruits
-                //FIXME display current number of fruits player has
+                this.console.println("The numbers of fruits you have is: " + 
+                                      player.getFruits());
                 break; 
             case 'P': // P - Print Actor list
                 String filePath = getFileName();
