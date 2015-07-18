@@ -19,7 +19,7 @@ public class LocationControl {
 
     public static void startLocationControl(int spaces) throws LocationControlException, ChallengesControlException, SceneControlException {
         Location locationObj;
-        
+
         moveToNextLocation(spaces);
         locationObj = MapControl.getLocationFromMap(spaces);
         doLocationAction(locationObj);
@@ -57,7 +57,7 @@ public class LocationControl {
             location = newLocation;
         }
     }
- 
+
     private static void moveToNextLocation(int spaces) throws LocationControlException {
 
         int newLocation = location + spaces;

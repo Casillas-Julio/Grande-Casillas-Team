@@ -19,11 +19,11 @@ public class AnswersView extends View {
                 + "\n--------------------------------------"
                 + "\n|            Answers Menu            |"
                 + "\n--------------------------------------"
-                + "\nY - Yes"
-                + "\nN - No"
-                + "\nG - Get Help from friend"
-                + "\nR - I agree with you."
-                + "\nW - You are Wrong!"
+                + "\nY - Yes                               "
+                + "\nN - No                                "
+                + "\nG - Get Help from friend              "
+                + "\nR - I agree with you.                 "
+                + "\nW - You are Wrong!                    "
                 + "\n--------------------------------------");
     }
 

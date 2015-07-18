@@ -16,26 +16,25 @@ import byui.cit260.TGSBgame.model.Scene;
 
 //assignment 9 - implement map
 public class MapControl {
-    
+
     private static Map map;
-    
+
     public static Map createMap() {
         //create the map
         map = new Map(7, 5);
-                
+
         // Setup challenges for map
         ChallengesControl.ChallengesControlSetup(7 * 5);
-        
+
         // Setup actors for map
         SceneControl.SceneControlSetup();
-        
+
         //assign scenes to locations
         assignScenesToLocations();
 
         return map;
     }
-    
-          
+
     private static void assignScenesToLocations() {
         Location[][] locations = map.getLocations();
 
@@ -77,7 +76,7 @@ public class MapControl {
         //end point
         locations[6][4].setScene(Scene.Manhatan_Temple);
     }
-    
+
     public static Location getLocationFromMap(int linear_location) {
         int row;
         int column;

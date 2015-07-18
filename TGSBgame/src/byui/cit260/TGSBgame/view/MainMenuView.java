@@ -23,11 +23,11 @@ public class MainMenuView extends View {
         super("\n--------------------------------------"
             + "\n| Main Menu                          |"
             + "\n--------------------------------------"               
-            + "\nN - Start Game"
-            + "\nG - Start Existing Game"
-            + "\nH - Show Help Menu"
-            + "\nS - Save Game"
-            + "\nE - Exit Game"
+            + "\nN - Start Game                        "
+            + "\nG - Start Existing Game               "
+            + "\nH - Show Help Menu                    "
+            + "\nS - Save Game                         "
+            + "\nE - Exit Game                         "
             + "\n--------------------------------------");
     }
     

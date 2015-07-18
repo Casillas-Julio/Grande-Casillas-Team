@@ -21,7 +21,6 @@ public class SceneControl {
         rand = new Random(System.currentTimeMillis());
     }
 
-    
     public static String getActor() throws SceneControlException {
         int whichEntry;
 

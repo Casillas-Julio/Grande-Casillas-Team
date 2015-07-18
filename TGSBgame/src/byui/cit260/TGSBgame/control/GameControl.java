@@ -124,7 +124,7 @@ public class GameControl implements Serializable {
         player.setFruits(totalScore);
         return bonusHelpFruits;
     }
-    
+
     public static void writeActorList(Actor actorList, String filePath)
             throws GameMenuViewException {
 

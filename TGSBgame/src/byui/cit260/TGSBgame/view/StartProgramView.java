@@ -49,16 +49,13 @@ public class StartProgramView extends View{
     }
 
     private void displayBanner() {
-        System.out.println("\n************************************************");
-        
-        System.out.println("*                                              *"
+        System.out.println("\n************************************************"
                          + "\n* This is THE GREAT AND SPACIOUS BUILDING game.*"
                          + "\n* This game is an example of what we face in   *"
                          + "\n* life. In this trip to New York, where your   *"
                          + "\n* goal is to reach the temple, and renew your  *"
-                         + "\n* convenants with the Lord.                    *"
-        );  
-        System.out.println("*                                              *"
+                         + "\n* convenants with the Lord.                    *"  
+                         + "\n*                                              *"
                          + "\n* You want to stay in the narrow path, and you *"
                          + "\n* constantly strive to hold the Iron rod.      *"
                          + "\n* During this mortal life we face many         *"
@@ -69,14 +66,9 @@ public class StartProgramView extends View{
                          + "\n* to eternal life. We hope that your choices   *"
                          + "\n* will continue to lead you towards the Tree   *"
                          + "\n* of Life, and that you will be happy forever. *"
-        );
-    
-        System.out.println("*                                              *"
-                         + "\n* Enjoy you trip to New York. Good Luck.       *"
                          + "\n*                                              *"
-        );
-        System.out.println("************************************************"
-        );
+                         + "\n* Enjoy you trip to New York. Good Luck.       *"
+                         + "\n************************************************");
         }
 
     private String getPlayerName() throws IOException, ProgramControlException {

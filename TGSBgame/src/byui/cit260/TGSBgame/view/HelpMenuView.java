@@ -25,12 +25,12 @@ public class HelpMenuView extends View{
             + "\n--------------------------------------"
             + "\n| Help Menu                          |"
             + "\n--------------------------------------"
-            + "\nO - Overview of game"
-            + "\nM - Explain how moves are made"
-            + "\nG - Explain map/locations"
-            + "\nF - Explain fruits/attributes"
-            + "\nC - Explain challenges"
-            + "\nR - Return to Game Menu"
+            + "\nO - Overview of game                  "
+            + "\nM - Explain how moves are made        "
+            + "\nG - Explain map/locations             "
+            + "\nF - Explain fruits/attributes         "
+            + "\nC - Explain challenges                "
+            + "\nR - Return to Game Menu               "
             + "\n--------------------------------------");
     }
 
@@ -47,7 +47,7 @@ public class HelpMenuView extends View{
             + "\ndistance from the Savior. The player   "
             + "\nneeds to have at least one fruit to be "
             + "\nable to enter the last location and win"
-            + "\nthe game."
+            + "\nthe game.                              "
             + "\n---------------------------------------";
 
     private final String MOVES = "\n"
@@ -70,8 +70,8 @@ public class HelpMenuView extends View{
             + "\nSpacious Building game takes place is "
             + "\nrepresented by many cites in New York,"
             + "\nin a 7x5 grid. The grid contains 35   "
-            + "\nlocations and in each area the player  "
-            + "\nwill face a new challenge."
+            + "\nlocations and in each area the player "
+            + "\nwill face a new challenge.            "
             + "\n--------------------------------------";
     
     private final String FRUITS = "\n"
@@ -97,7 +97,6 @@ public class HelpMenuView extends View{
             + "\nhe/she will get the 2 fruits associated"
             + "\nwith the challenge, if he/she loses,   "
             + "\nhe/she loses the same amount of fruits."
-            + "\n"
             + "\n---------------------------------------";
     
     @Override

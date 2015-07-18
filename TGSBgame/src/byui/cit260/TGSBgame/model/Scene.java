@@ -12,20 +12,18 @@ package byui.cit260.TGSBgame.model;
 public enum Scene {
     
     JFK_Airport("\n"
-            + "\n--------------------------------------------------"
-            + "\n| JFK Airport                                    |"
-            + "\n--------------------------------------------------"
-            + "\nYou have arrived at the John F Kennedy Airport    "
-            + "\n(JFK) is the busiest of New York's three airport. "
-            + "\nthree airports There are millions of passengers   "
-            + "\nheading to or arriving from domestic and interna- "
-            + "\ntional destinations every year here. Today is a   "
-            + "\nbeautiful day, and there are many people passing  "
-            + "\nby, some in a hurry and some looking for someone  "
-            + "\nto who could guide them out of this madness. You  "
-            + "\nran to get into one of the AirTrain and is heading"
-            + "\nout to your hotel. A person next to you engages in"
-            + "\na conversation.                                   "),
+            + "\n------------------------------------------------------------"
+            + "\n| JFK Airport                                              |"
+            + "\n------------------------------------------------------------"
+            + "\nYou have arrived at the John F Kennedy Airport (JFK) is the "
+            + "\nbusiest of New York's three airport. There are millions of  "
+            + "\npassengers heading to or arriving from domestic and interna-"
+            + "\ntional destinations every year here. Today is a beautiful   "
+            + "\nday, and there are many people passing by, some in a hurry  "
+            + "\nand some looking for someone to who could guide them out of "
+            + "\nthis madness. You ran to get into one of the AirTrain and is"
+            + "\nheading out to your hotel. A person next to you engages in  "
+            + "\na conversation.                                             "),
     
     Time_Square("\n"
             + "\n----------------------------------------------------"

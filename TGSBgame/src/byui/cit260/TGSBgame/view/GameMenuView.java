@@ -28,6 +28,7 @@ public class GameMenuView extends View{
             + "\nD - Display Map"
             + "\nM - Move to a new location"
             + "\nH - Show Help Menu"
+            + "\nF - Show number of fruits"
             + "\nP - Print Actor List"
             + "\nR - Return to Main Menu"
             + "\n--------------------------------------");
@@ -103,7 +104,7 @@ public class GameMenuView extends View{
             case 'H': // H - Show Help Menu
                 this.displayHelpMenu();
                 break;
-            case 'F': // H - Show Help Menu
+            case 'F': // H - Show number of fruits
                 //FIXME display current number of fruits player has
                 break; 
             case 'P': // P - Print Actor list

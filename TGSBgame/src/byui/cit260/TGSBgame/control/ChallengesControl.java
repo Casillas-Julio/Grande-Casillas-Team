@@ -15,30 +15,29 @@ import tgsbgame.TGSBgame;
  *
  * @author Adriana
  */
-public class ChallengesControl implements Serializable{
-    
+public class ChallengesControl implements Serializable {
+
     //class variable
     private static int numLocations;
-    private static Random rand; 
+    private static Random rand;
 
     public static void ChallengesControlSetup(int numberLocations) {
         rand = new Random(System.currentTimeMillis());
         numLocations = numberLocations;
     }
 
-    public static String getChallenge(int location) throws ChallengesControlException{
+    public static String getChallenge(int location) throws ChallengesControlException {
         int whichEntry;
         Challenges challenges;
-        
+
         if ((location < 0) || (location > numLocations - 1)) {
             throw new ChallengesControlException("Can not move actor to location"
-                                            + " because that location is outside "
-                                            + " the bounds of the map.");
-        }
-        else {
+                    + " because that location is outside "
+                    + " the bounds of the map.");
+        } else {
             challenges = TGSBgame.getChallenges();
             whichEntry = rand.nextInt(challenges.getNumChallenges());
-            return challenges.getChallenge(whichEntry); 
+            return challenges.getChallenge(whichEntry);
         }
     }
 }
