@@ -27,36 +27,26 @@ public enum Scene {
             + "\n------------------------------------------------------------------------------------------------------------------------"
             + "\n Times Square displays of lights and digital signs is impressive even during the daytime. It is a major commercial      "
             + "\n intersection and neighborhood in Midtown Manhattan, New York City, at the junction of Broadway and Seventh Avenue.     "
-            + "\n There are people everywhere, some enjoying the day eating ouside,    "
-            + "\nothers are in line to by tickes for tonight's       "
-            + "\nshows other's are waiting for the free entertainment"
-            + "\nabout to start, and others are just trying to take  "
-            + "\nall in as you do. As you watch people passing by, a "
-            + "\nperson stops by your side and starts a conversation."),
+            + "\n There are people everywhere, some enjoying the day eating ouside, others are in line to by tickes for tonight's shows  "
+            + "\n shows other's are waiting for the free entertainment about to start, and others are just trying to take all in as you  "
+            + "\n do. As you watch people passing by, a person stops by your side and starts a conversation.                             "),
     
     Central_Park("\n"
-            + "\n------------------------------------------------------"
-            + "\n| Central Park                                       |"
-            + "\n------------------------------------------------------"
-            + "\nYou find yourself walking into Central Park, the      "
-            + "\nfamous urban park in the central part of Manhattan. In"
-            + "\nthis beautiful, sunny, warm day, the park offers a    "
-            + "\ncool and quite place to sit and enjoy the beautiful   "
-            + "\nscene. There are people everywhere sitting on benches,"
-            + "\nin the grass, and in the half-walls by the sidewalks. "
-            + "\nAs you are sitting on the wall, a person nearby       "
-            + "\nstrikes a conversation.                               "),
+            + "\n------------------------------------------------------------------------------------------------------------------------"
+            + "\n| Central Park                                                                                                         |"
+            + "\n------------------------------------------------------------------------------------------------------------------------"
+            + "\n You find yourself walking into Central Park, the famous urban park in the central part of Manhattan. In this beautiful,"
+            + "\n sunny, warm day, the park offers a cool and quite place to sit and enjoy the beautiful scene. There are people         "
+            + "\n everywhere sitting on benches, in the grass, and in the half-walls by the sidewalks. As you are sitting on the wall, a "
+            + "\n person nearby strikes a conversation.                                                                                  "),
     
     NY_Subway("\n"
-            + "\n----------------------------------------------------  "
-            + "\n| NYC Subway                                         |"
-            + "\n----------------------------------------------------  "
-            + "\nYou are about to enter the New York City Subway. It   "
-            + "\nis the largest, by number of stations, and one of the "
-            + "\nworld's oldest, most used public transit systems.     "
-            + "\nThousands of people travel in them daily. New Yorkers "
-            + "\nare not famous for neighbourly conversation. However, "
-            + "\na nearby passenger starts to talk to you.             "),
+            + "\n------------------------------------------------------------------------------------------------------------------------"
+            + "\n| NYC Subway                                                                                                           |"
+            + "\n------------------------------------------------------------------------------------------------------------------------"
+            + "\n You are about to enter the New York City Subway. It  is the largest, by number of stations, and one of the world's .   "
+            + "\n oldest, most used public transit systems Thousands of people travel in them daily. New Yorkers are not famous for      "
+            + "\n neighbourly conversation. However, a nearby passenger starts to talk to you.                                           "),
     
     Chinatown("\n"
             + "\n----------------------------------------------------"
