@@ -37,7 +37,7 @@ public class LocationControl {
 
     //returns 0 on success, -1 on failure
     //function overload of setLocation
-    public static void setLocation(int position) throws LocationControlException {
+    public static void setLocation(int position) throws LocationControlException{
         Game game = TGSBgame.getCurrentGame();
         Map map = game.getMap();
         int limit = map.getColumnCount() * map.getRowCount();

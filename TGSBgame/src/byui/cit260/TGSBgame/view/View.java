@@ -62,7 +62,7 @@ public abstract class View implements ViewInterface {
                 // get value entered from keyboard
                 value = this.keyboard.readLine();
             } catch (IOException ex) {
-                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(View.class.getName()).log(Level.INFO, null, ex);
             }
             value = value.trim();
 

@@ -54,7 +54,7 @@ public class ProgramControlTest {
             result = ProgramControl.createPlayer(name);
             assertEquals(expResult, result);
         } catch (ProgramControlException ex) {
-            Logger.getLogger(ProgramControlTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProgramControlTest.class.getName()).log(Level.INFO, null, ex);
         }
         
         // TODO review the generated test code and remove the default call to fail.

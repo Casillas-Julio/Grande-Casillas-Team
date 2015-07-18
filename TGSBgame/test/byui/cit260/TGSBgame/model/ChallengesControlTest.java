@@ -55,7 +55,7 @@ public class ChallengesControlTest {
             result = instance.getChallenge(location);
             assertEquals(expResult, result);
         } catch (ChallengesControlException ex) {
-            Logger.getLogger(ChallengesControlTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ChallengesControlTest.class.getName()).log(Level.INFO, null, ex);
         }
         
         // TODO review the generated test code and remove the default call to fail.

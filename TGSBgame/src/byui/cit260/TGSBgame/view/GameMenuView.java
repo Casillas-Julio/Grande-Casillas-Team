@@ -87,13 +87,13 @@ public class GameMenuView extends View{
                     // M - Move to a new location
                     this.moveToMapLocation();
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
-                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.INFO, null, ex);
                 }
                 AnswersView answersView = new AnswersView();
                 try {
                     LocationControl.startLocationControl(0);
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
-                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.INFO, null, ex);
                 }
                 //display the answer menu
                 answersView.display();

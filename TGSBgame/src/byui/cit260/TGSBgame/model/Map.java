@@ -90,14 +90,14 @@ public class Map implements Serializable {
             try {
                 throw new MapException("Number of row is invalid");
             } catch (MapException ex) {
-                Logger.getLogger(Map.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Map.class.getName()).log(Level.INFO, null, ex);
             }
         }
         if (this.noOfColumns != other.noOfColumns) {
             try {
                 throw new MapException ("Number of columns are invalid");
             } catch (MapException ex) {
-                Logger.getLogger(Map.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Map.class.getName()).log(Level.INFO, null, ex);
             }
         }
         return true;

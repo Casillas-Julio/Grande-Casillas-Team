@@ -59,7 +59,7 @@ public class GameControl implements Serializable {
         } catch (FileNotFoundException fnfe) {
             throw new GameViewException(fnfe.getMessage());
         } catch (IOException ex) {
-            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GameControl.class.getName()).log(Level.INFO, null, ex);
         }
 
         //close the output file
@@ -82,7 +82,7 @@ public class GameControl implements Serializable {
         try {
             LocationControl.setLocation(0);
         } catch (LocationControlException ex) {
-            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GameControl.class.getName()).log(Level.INFO, null, ex);
         }
     }
 

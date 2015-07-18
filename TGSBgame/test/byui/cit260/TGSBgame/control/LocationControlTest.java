@@ -54,9 +54,9 @@ public class LocationControlTest {
         try {
             LocationControl.startLocationControl(5);
         } catch (LocationControlException ex) {
-            Logger.getLogger(LocationControlTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LocationControlTest.class.getName()).log(Level.INFO, null, ex);
         } catch (ChallengesControlException ex) {
-            Logger.getLogger(LocationControlTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LocationControlTest.class.getName()).log(Level.INFO, null, ex);
         }
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

@@ -70,7 +70,7 @@ public class MainMenuView extends View {
         try {
             LocationControl.startLocationControl(0);
         } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
-            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.INFO, null, ex);
         }
         //display the answer menu
         answersView.display();

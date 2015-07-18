@@ -173,8 +173,8 @@ public class Challenges implements Serializable{
                          +"\n Are you here to participate in a learning experience?  "
                          +"\n Do you really want to learn more about God?            "
                          +"\n There's a group that meets every week in Brooklyn,     "
-                         +"and we learn profound truths about God and ourselves.     "
-                         +"Will you come with me this Thursday?                      ";
+                         +"\n and we learn profound truths about God and ourselves.  "
+                         +"\n Will you come with me this Thursday?                   ";
         challenges[ChallengeEnum.betrayal.ordinal()] = betrayal;
         
         String power = " Would you like to learn how to influence a lot of       "
