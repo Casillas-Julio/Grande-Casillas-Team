@@ -8,8 +8,11 @@ package byui.cit260.TGSBgame.control;
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.exceptions.SceneControlException;
+import byui.cit260.TGSBgame.model.Game;
 import byui.cit260.TGSBgame.model.Location;
+import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Scene;
+import tgsbgame.TGSBgame;
 
 /**
  *
@@ -35,8 +38,12 @@ public class LocationControl {
     //returns 0 on success, -1 on failure
     //function overload of setLocation
     public static void setLocation(int position) throws LocationControlException {
+        Game game = TGSBgame.getCurrentGame();
+        Map map = game.getMap();
+        int limit = map.getColumnCount() * map.getRowCount();
 
-        if (position < 0 || position > 34) {
+
+        if (position < 0 || position >= limit) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
@@ -44,25 +51,13 @@ public class LocationControl {
             location = position;
         }
     }
-
-    public static void setLocation(int row, int column) throws LocationControlException {
-
-        int newLocation = (5 * row) - (5 - column);
-
-        if (newLocation < 0 || newLocation > 34) {
-            throw new LocationControlException("Can not move actor to location"
-                    + " because that location is outside "
-                    + " the bounds of the map.");
-        } else {
-            location = newLocation;
-        }
-    }
-
     private static void moveToNextLocation(int spaces) throws LocationControlException {
-
+        Game game = TGSBgame.getCurrentGame();
+        Map map = game.getMap();
+        int limit = map.getColumnCount() * map.getRowCount();
         int newLocation = location + spaces;
 
-        if (newLocation > 34) {
+        if (newLocation >= limit) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
