@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.TGSBgame.control;
+package byui.cit260.TGSBgame.view;
 
-import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class SceneControlTest {
+public class HelpMenuViewTest {
     
-    public SceneControlTest() {
+    public HelpMenuViewTest() {
     }
     
     @BeforeClass
@@ -39,26 +38,16 @@ public class SceneControlTest {
     }
 
     /**
-     * Test of getActor method, of class SceneControl.
+     * Test of doAction method, of class HelpMenuView.
      */
     @Test
-    public void testGetActor() throws SceneControlException {
-        //this.console.println("getActor");
-        SceneControl instance = new SceneControl();
-        String expResult = "";
-        String result = instance.getActor();
+    public void testDoAction() {
+        System.out.println("doAction");
+        Object obj = null;
+        HelpMenuView instance = new HelpMenuView();
+        boolean expResult = false;
+        boolean result = instance.doAction(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of SceneControlSetup method, of class SceneControl.
-     */
-    @Test
-    public void testSceneControlSetup() {
-        System.out.println("SceneControlSetup");
-        SceneControl.SceneControlSetup();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

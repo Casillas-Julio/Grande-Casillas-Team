@@ -40,51 +40,51 @@ public class GetHelpFromFriendView extends View {
             + "\n--------------------------------------"
             + "\n| Holy Ghost                         |"
             + "\n--------------------------------------"
-            + "\nMany voices in the world compete for  "
-            + "\nyour attention, and they can easily   "
-            + "\ndrown out spiritual impressions if you"
-            + "\nare not careful."
+            + "\n Many voices in the world compete for  "
+            + "\n your attention, and they can easily   "
+            + "\n drown out spiritual impressions if you"
+            + "\n are not careful."
             + "\n--------------------------------------";
     
     private final String LEADERS = "\n"
             + "\n---------------------------------------"
             + "\n| Leaders                             |"
             + "\n---------------------------------------"
-            + "\nThings will work out. Keep trying.     "
-            + "\nBe believing. Don't get discouraged.   "
-            + "\nThings will work out. Gordon B Hinckley"
+            + "\n Things will work out. Keep trying.     "
+            + "\n Be believing. Don't get discouraged.   "
+            + "\n Things will work out. Gordon B Hinckley"
             + "\n--------------------------------------";
     
     private final String FAMILY = "\n"
             + "\n----------------------------------------"
             + "\n| Family Members                       |"
             + "\n----------------------------------------"
-            + "\nRemember what Elder Dallin H. Oaks said:"
-            + "\n“We have to forego some good things in  "
-            + "\norder to choose others that are better  "
-            + "\nor best because they develop faith in   "
-            + "\nTHE Lord Jesus Christ and strengthen    "
-            + "\nour families.”                          "
+            + "\n Remember what Elder Dallin H. Oaks said:"
+            + "\n “We have to forego some good things in  "
+            + "\n order to choose others that are better  "
+            + "\n or best because they develop faith in   "
+            + "\n THE Lord Jesus Christ and strengthen    "
+            + "\n our families.”                          "
             + "\n----------------------------------------";
     
     private final String FRIENDS = "\n"
             + "\n----------------------------------------"
             + "\n| Friends                              |"
             + "\n----------------------------------------"
-            + "\nYou can be strong and continue to choose"
-            + "\nthe right if you remember the teachings "
-            + "\nof Jesus Christ and seek the guidance   "
-            + "\nfrom the Holy Ghost.                    "
+            + "\n You can be strong and continue to choose"
+            + "\n the right if you remember the teachings "
+            + "\n of Jesus Christ and seek the guidance   "
+            + "\n from the Holy Ghost.                    "
             + "\n----------------------------------------";
     
     private final String PRAYER = "\n"
             + "\n------------------------------------------"
             + "\n| Prayer                                 |"
             + "\n------------------------------------------"
-            + "\nYou should pray in accord with the will   "
-            + "\nof Heavenly Father. He wants to test you, "
-            + "\nto strengthen you, and to help you achieve"
-            + "\nyour full potential.                      "
+            + "\n You should pray in accord with the will   "
+            + "\n of Heavenly Father. He wants to test you, "
+            + "\n to strengthen you, and to help you achieve"
+            + "\n your full potential.                      "
             + "\n------------------------------------------";
 
     @Override
@@ -123,8 +123,8 @@ public class GetHelpFromFriendView extends View {
 
             helpFruits = GameControl.helpFruits(TGSBgame.getPlayer());
             
-            this.console.println("You earned " + helpFruits
-                    + " extra fruits for getting help from a friend in times of trial and temptation!");
+            this.console.println("\nYou earned " + helpFruits + " extra fruits for getting"
+                    + "\n help from a friend in times of trial and temptation!");
      
         }
 

@@ -19,6 +19,12 @@ import tgsbgame.TGSBgame;
  * @author Adriana
  */
 public class LocationControl {
+    //class variables
+    public static int location;
+
+    public static int getLocation() {
+        return location;
+    }
 
     public static void startLocationControl(int spaces) throws LocationControlException, ChallengesControlException, SceneControlException {
         Location locationObj;
@@ -28,22 +34,13 @@ public class LocationControl {
         doLocationAction(locationObj);
     }
 
-    //class variables
-    public static int location;
-
-    public static int getLocation() {
-        return location;
-    }
-
     //returns 0 on success, -1 on failure
     //function overload of setLocation
     public static void setLocation(int position) throws LocationControlException{
         Game game = TGSBgame.getCurrentGame();
         Map map = game.getMap();
-        int limit = map.getColumnCount() * map.getRowCount();
-
-
-        if (position < 0 || position >= limit) {
+        
+        if (position < 0 || position >= map.getMapSize()) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");
@@ -54,10 +51,9 @@ public class LocationControl {
     private static void moveToNextLocation(int spaces) throws LocationControlException {
         Game game = TGSBgame.getCurrentGame();
         Map map = game.getMap();
-        int limit = map.getColumnCount() * map.getRowCount();
         int newLocation = location + spaces;
 
-        if (newLocation >= limit) {
+        if (newLocation >= map.getMapSize()) {
             throw new LocationControlException("Can not move actor to location"
                     + " because that location is outside "
                     + " the bounds of the map.");

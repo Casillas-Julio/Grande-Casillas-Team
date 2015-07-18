@@ -5,6 +5,7 @@
  */
 package byui.cit260.TGSBgame.view;
 
+import byui.cit260.TGSBgame.model.Player;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class GameMenuViewTest {
+public class StartProgramViewTest {
     
-    public GameMenuViewTest() {
+    public StartProgramViewTest() {
     }
     
     @BeforeClass
@@ -38,56 +39,53 @@ public class GameMenuViewTest {
     }
 
     /**
-     * Test of doAction method, of class GameMenuView.
+     * Test of startProgram method, of class StartProgramView.
+     */
+    @Test
+    public void testStartProgram() throws Exception {
+        System.out.println("startProgram");
+        StartProgramView instance = new StartProgramView();
+        instance.startProgram();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of displayWelcomeMessage method, of class StartProgramView.
+     */
+    @Test
+    public void testDisplayWelcomeMessage() {
+        System.out.println("displayWelcomeMessage");
+        Player player = null;
+        StartProgramView instance = new StartProgramView();
+        instance.displayWelcomeMessage(player);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of display method, of class StartProgramView.
+     */
+    @Test
+    public void testDisplay() {
+        System.out.println("display");
+        StartProgramView instance = new StartProgramView();
+        instance.display();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of doAction method, of class StartProgramView.
      */
     @Test
     public void testDoAction() {
-        //this.console.println("doAction");
+        System.out.println("doAction");
         Object obj = null;
-        GameMenuView instance = new GameMenuView();
+        StartProgramView instance = new StartProgramView();
         boolean expResult = false;
         boolean result = instance.doAction(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-/**
-     * Test of getIntNumber method, of class GameMenuView.
-     */
-    @Test
-    public void testGetIntNumber() {
-        System.out.println("getIntNumber");
-        GameMenuView instance = new GameMenuView();
-        int expResult = 0;
-        int result = instance.getIntNumber();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getFileName method, of class GameMenuView.
-     */
-    @Test
-    public void testGetFileName() {
-        System.out.println("getFileName");
-        GameMenuView instance = new GameMenuView();
-        String expResult = "";
-        String result = instance.getFileName();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of printActorList method, of class GameMenuView.
-     */
-    @Test
-    public void testPrintActorList() {
-        System.out.println("printActorList");
-        String outputLocation = "";
-        GameMenuView instance = new GameMenuView();
-        instance.printActorList(outputLocation);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

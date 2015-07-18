@@ -106,5 +106,34 @@ public class ChallengesTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getNumChallenges method, of class Challenges.
+     */
+    @Test
+    public void testGetNumChallenges() {
+        System.out.println("getNumChallenges");
+        Challenges instance = new Challenges();
+        int expResult = 0;
+        int result = instance.getNumChallenges();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getChallenge method, of class Challenges.
+     */
+    @Test
+    public void testGetChallenge() {
+        System.out.println("getChallenge");
+        int whichEntry = 0;
+        Challenges instance = new Challenges();
+        String expResult = "";
+        String result = instance.getChallenge(whichEntry);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

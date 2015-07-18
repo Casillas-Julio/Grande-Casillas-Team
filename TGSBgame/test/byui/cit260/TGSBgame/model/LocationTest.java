@@ -188,4 +188,31 @@ public class LocationTest {
         fail("The test case is a prototype.");
     }
 
+    /**
+     * Test of getLinearLocation method, of class Location.
+     */
+    @Test
+    public void testGetLinearLocation() {
+        System.out.println("getLinearLocation");
+        Location instance = new Location();
+        int expResult = 0;
+        int result = instance.getLinearLocation();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setLinearLocation method, of class Location.
+     */
+    @Test
+    public void testSetLinearLocation() {
+        System.out.println("setLinearLocation");
+        int linearLocation = 0;
+        Location instance = new Location();
+        instance.setLinearLocation(linearLocation);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
 }

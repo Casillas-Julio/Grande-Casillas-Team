@@ -133,5 +133,49 @@ public class MapTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getMapSize method, of class Map.
+     */
+    @Test
+    public void testGetMapSize() {
+        System.out.println("getMapSize");
+        Map instance = new Map();
+        int expResult = 0;
+        int result = instance.getMapSize();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getLocation method, of class Map.
+     */
+    @Test
+    public void testGetLocation() {
+        System.out.println("getLocation");
+        int row = 0;
+        int column = 0;
+        Map instance = new Map();
+        Location expResult = null;
+        Location result = instance.getLocation(row, column);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of hashCode method, of class Map.
+     */
+    @Test
+    public void testHashCode() {
+        System.out.println("hashCode");
+        Map instance = new Map();
+        int expResult = 0;
+        int result = instance.hashCode();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

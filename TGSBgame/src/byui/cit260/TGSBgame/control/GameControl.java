@@ -140,5 +140,44 @@ public class GameControl implements Serializable {
     public GameControl(GameControl totalScore) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public static boolean endOfGame(Player player, int location){
+        Game game = TGSBgame.getCurrentGame();
+        Map map = game.getMap();
+       
+        if (player.getFruits() == 0) {
+            System.out.println("\n************************************************************************************"
+                    + "\n* Unfortunately you lost this battle, but victory can still be yours. Elder Ballard*"
+                    + "\n* said: And for those of you who have fallen prey to any kind of [lure], there is  *"
+                    + "\n* hope because God loves all of His children and because the Atonement of the Lord *"
+                    + "\n* Jesus Christ makes all things possible. The Lord is our Shepherd, and we shall   *"
+                    + "\n* not want as we trust in the power of the Atonement, as the Apostle Paul          *"
+                    + "\n* proclaimed, “I can do all things through Christ which strengtheneth me”(Phi.4:13) *"
+                    + "\n* M. Russell Ballard- O That Cunning Plan of the Evil One, 2010.                   *"
+                    + "\n*                                                                                  *"
+                    + "\n* Try again and make better decisions!                                             *"
+                    + "\n************************************************************************************");
+            return true;
+        }
+        else if (location == (map.getMapSize() - 1)) {
+            // this means you reach the end of the game
+            System.out.println("\n**************************************************************************************"
+                    + "\n* Congratulations! You have successfully reached the Temple. Elder Ballard said: Our*"
+                    + "\n* love for our Father in Heaven and the Lord Jesus Christ needs to be reflected in  *"
+                    + "\n* our daily choices and actions. They have promised peace, joy, and happiness to    *"
+                    + "\n* those who keep Their commandments. Brothers and sisters, may we all be aware of   *"
+                    + "\n* the [lures] being presented to us by the counterfeit fisher of men, Lucifer. May  *"
+                    + "\n* we have the wisdom and spiritual insight to discern and refuse his many dangerous *"
+                    + "\n* offerings.M. Russell Ballard- O That Cunning Plan of the Evil One, 2010.          *"
+                    + "\n*  By following these teachings you are well in your way to one day receive eternal *"
+                    + "\n* life. Just as Lehi under the tree of life the fruits of such life will make you   *"
+                    + "\n* happy. “Remember, remember that it is upon the rock of our Redeemer,who is Christ, *"
+                    + "\n* the Son of God, that ye must build your foundation … , a foundation whereon if men*"
+                    + "\n*  if men build they cannot fall.” Helaman 5:12.                                     *"
+                    + "\n*************************************************************************************");
+            return true;
+        }
+        return false;
+    }
 
 }

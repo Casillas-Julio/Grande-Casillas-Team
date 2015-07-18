@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.TGSBgame.view;
+import byui.cit260.TGSBgame.control.GameControl;
 import byui.cit260.TGSBgame.control.LocationControl;
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
@@ -84,19 +85,21 @@ public class GameMenuView extends View{
                 break;
             case 'M': {
                 try {
+                    boolean gameOver;
+
                     // M - Move to a new location
                     this.moveToMapLocation();
+                    AnswersView answersView = new AnswersView();
+                    //display the answer menu
+                    answersView.display();
+                    gameOver = GameControl.endOfGame(player, LocationControl.getLocation());
+                    if (gameOver == true) {
+                        return true;//R - Return to the Main Menu
+                    }
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
-                    Logger.getLogger(GameMenuView.class.getName()).log(Level.INFO, null, ex);
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.INFO,
+                            "Choose display map to see where you are!", ex);
                 }
-                AnswersView answersView = new AnswersView();
-                /*try {
-                    LocationControl.startLocationControl(0);
-                } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
-                    Logger.getLogger(MainMenuView.class.getName()).log(Level.INFO, null, ex);
-                }*/
-                //display the answer menu
-                answersView.display();
             }
             break;
             case 'H': // H - Show Help Menu

@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.TGSBgame.control;
+package byui.cit260.TGSBgame.model;
 
-import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Adriana
  */
-public class SceneControlTest {
+public class SceneTest {
     
-    public SceneControlTest() {
+    public SceneTest() {
     }
     
     @BeforeClass
@@ -39,26 +38,42 @@ public class SceneControlTest {
     }
 
     /**
-     * Test of getActor method, of class SceneControl.
+     * Test of values method, of class Scene.
      */
     @Test
-    public void testGetActor() throws SceneControlException {
-        //this.console.println("getActor");
-        SceneControl instance = new SceneControl();
-        String expResult = "";
-        String result = instance.getActor();
+    public void testValues() {
+        System.out.println("values");
+        Scene[] expResult = null;
+        Scene[] result = Scene.values();
+        assertArrayEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of valueOf method, of class Scene.
+     */
+    @Test
+    public void testValueOf() {
+        System.out.println("valueOf");
+        String name = "";
+        Scene expResult = null;
+        Scene result = Scene.valueOf(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of SceneControlSetup method, of class SceneControl.
+     * Test of toString method, of class Scene.
      */
     @Test
-    public void testSceneControlSetup() {
-        System.out.println("SceneControlSetup");
-        SceneControl.SceneControlSetup();
+    public void testToString() {
+        System.out.println("toString");
+        Scene instance = null;
+        String expResult = "";
+        String result = instance.toString();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

@@ -42,6 +42,9 @@ public class Map implements Serializable {
         this.noOfColumns = noOfColumns;
     }
 
+    public int getMapSize (){
+        return noOfRows * noOfColumns;
+    }
     public Map() {    
     }
     

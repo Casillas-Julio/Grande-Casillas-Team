@@ -103,7 +103,7 @@ public class Challenges implements Serializable{
                       +"\n important and infuential people, do you want to come with me? "
                       +"\n Come on, you look rich, powerful, and that you can accomplish "
                       +"\n anything you put your mind to it. Why not?                    "
-                      +"You deserve the best this city has to offer.                     ";
+                      +"\n You deserve the best this city has to offer.                     ";
         challenges[ChallengeEnum.pride.ordinal()] = pride;
         
         String unemployment = " Are you here in New York looking for a better job?              "
@@ -181,13 +181,13 @@ public class Challenges implements Serializable{
                       +"\n people for a good cause?                                "
                       +"\n Can you join me in this political campaign?             "
                       +"\n We need a great representative in you area, and you     "
-                      +"\nlook like you may be just the right person               ";
+                      +"\n look like you may be just the right person              ";
         challenges[ChallengeEnum.power.ordinal()] = power;
         
         String poverty = " Have you seen the new program created by the government      "
                         +"\n that will take care of all our financial needs?              "
                         +"\n It is wonderful, you won't need to work for barely anything! "
-                        +"\nYou will have housing, food, and many more                    ";
+                        +"\n You will have housing, food, and many more                   ";
         challenges[ChallengeEnum.poverty.ordinal()] = poverty;
         
         String loss =" Have you ever grived for someone?                         "

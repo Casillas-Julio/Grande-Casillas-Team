@@ -81,7 +81,7 @@ public class TGSBgame {
                     + "\nCause: " + e.getCause()
                     + "\nMessage: " + e.getMessage());
 
-            //e.printStackTrace();
+            e.printStackTrace();
         } catch (Exception e) {
             System.out.println("Exception: " + e.toString());
 
