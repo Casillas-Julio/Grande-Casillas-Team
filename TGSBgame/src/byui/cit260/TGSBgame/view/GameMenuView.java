@@ -9,6 +9,8 @@ import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import byui.cit260.TGSBgame.exceptions.LocationControlException;
 import byui.cit260.TGSBgame.exceptions.SceneControlException;
 import byui.cit260.TGSBgame.model.Actor;
+import byui.cit260.TGSBgame.model.Game;
+import byui.cit260.TGSBgame.model.Map;
 import byui.cit260.TGSBgame.model.Player;
 import byui.cit260.TGSBgame.view.AnswersView;
 import java.io.IOException;
@@ -59,7 +61,7 @@ public class GameMenuView extends View{
 //    }
 //        return displayMap[];
 //    }
-    private final String displayMap = "\n"
+    private final String displayMapString = "\n"
             + "\n--------------------------------------"
             + "\n|                Map                 |"
             + "\n--------------------------------------"
@@ -77,6 +79,34 @@ public class GameMenuView extends View{
     
 
     ;
+    
+    private void displayMap(){
+        Game game = TGSBgame.getCurrentGame();
+        Map map = game.getMap();
+        int location = LocationControl.getLocation();
+        int mapLocation;
+        
+        System.out.println( "\n"
+            + "\n----------------------------------"
+            + "\n|            Map                 |"
+            + "\n----------------------------------"
+            + "\n        1    2    3    4    5     ");
+        for (int i = 0; i < map.getRowCount(); i++) {
+            System.out.print("\n   " + (i + 1) + "  ");
+            for (int j = 0; j < map.getColumnCount(); j++) {
+                mapLocation = map.getColumnCount() * i + j;
+                if (mapLocation == location) {
+                    System.out.print("  X  ");
+                    
+                }
+                else {
+                    System.out.print("  -  ");
+                }
+            }
+ //           System.out.println();
+        }
+    }
+    
     @Override
     public boolean doAction(Object obj) {
 
@@ -90,7 +120,7 @@ public class GameMenuView extends View{
         switch (choice) {
 
             case 'D': // D - Display Map
-                this.console.println(displayMap);
+                displayMap();
                 break;
             case 'M': {
                 try {
