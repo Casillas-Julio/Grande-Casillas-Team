@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.TGSBgame.model;
+package byui.cit260.TGSBgame.control;
 
-import byui.cit260.TGSBgame.control.ChallengesControl;
 import byui.cit260.TGSBgame.exceptions.ChallengesControlException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

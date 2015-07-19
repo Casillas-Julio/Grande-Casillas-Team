@@ -17,8 +17,7 @@ import org.junit.runners.Suite;
  * @author Adriana
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({byui.cit260.TGSBgame.model.ChallengesControlTest.class,
-    byui.cit260.TGSBgame.model.PlayerTest.class, byui.cit260.TGSBgame.model.LocationTest.class, 
+@Suite.SuiteClasses({byui.cit260.TGSBgame.model.PlayerTest.class, byui.cit260.TGSBgame.model.LocationTest.class, 
     byui.cit260.TGSBgame.model.ActorTest.class, byui.cit260.TGSBgame.model.GameControlTest.class })
 
 public class ModelSuite {
