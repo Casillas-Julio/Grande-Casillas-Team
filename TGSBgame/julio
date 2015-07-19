@@ -4,9 +4,34 @@
 
 Number    Name                Description         
 ------    ----                -----------         
-1         John_Worth          John Worth is a recent New York resident, and is excited about sharing his discovery of the Big Apple.
-2         Simon_Kwan          Simon Kwan is a Chinese-American New Yorker used to life in the big city and its sub-cultures.      
-3         Kevin_Doom          Kevin Doom is a trendy New York who brags about all this city has to offer. Manhathan is his crib.  
-4         Mandi_Baxter        Mandi Baxter is a fashionista who is always on top of what's happening in her city.                 
-5         Harper_Young        Harper Young is a publicist, closely connected with everyone who is important in NY.                
-6         Angel_Hernandez     Angel Hernandez knows this city inside-out. From the famous avenues to the darkest alley. He has been in all of them.
+1         John_Worth          
+-------------------------------------------------------
+| John Worth is a recent New York resident, and is     
+| excited about sharing his discovery of the Big Apple.
+-------------------------------------------------------
+2         Simon_Kwan          
+------------------------------------------------------
+| Simon Kwan is a Chinese-American New Yorker used to 
+| life in the big city and its sub-cultures.          
+------------------------------------------------------
+3         Kevin_Doom          
+------------------------------------------------------
+| Kevin Doom is a trendy New York who brags about all 
+| this city has to offer. Manhathan is his crib.      
+------------------------------------------------------
+4         Mandi_Baxter        
+------------------------------------------------------
+| Mandi Baxter is a fashionista who is always on top  
+| of what's happening in her city.                    
+------------------------------------------------------
+5         Harper_Young        
+------------------------------------------------------
+| Harper Young is a publicist, closely connected with 
+| everyone who is important in NY.                    
+------------------------------------------------------
+6         Angel_Hernandez     
+------------------------------------------------------
+| Angel Hernandez knows this city inside-out. From the
+| famous avenues to the darkest alley. He has been in 
+| all of them.                                        
+------------------------------------------------------
