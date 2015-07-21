@@ -161,9 +161,8 @@ public class Challenges implements Serializable{
         challenges[ChallengeEnum.greed.ordinal()] = greed;
         
         String loneliness = " Are you here for Comic Con happening this week?             "
-                           +"\n Are you sure?                                               "
-                           +"\n Are you going to be alone during your whole trip?           "
-                           +"\n when you can make lots of new friends?                      "
+                           +"\n Are you sure?  Are you going to be alone during your whole  "
+                           +"\n trip when you can make lots of new friends?                 "
                            +"\n That is the best convention to make friends from all over   "
                            +"\n the place. Come with me, I'm sure you can go to this other  "
                            +"\n place any other day.                                        ";
