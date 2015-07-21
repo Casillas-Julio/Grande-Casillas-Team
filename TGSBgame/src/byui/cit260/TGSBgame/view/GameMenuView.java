@@ -97,8 +97,7 @@ public class GameMenuView extends View{
                         return true;//R - Return to the Main Menu
                     }
                 } catch (LocationControlException | ChallengesControlException | SceneControlException ex) {
-                    Logger.getLogger(GameMenuView.class.getName()).log(Level.INFO,
-                            "Choose display map to see where you are!", ex);
+                    /*Logger.getLogger(GameMenuView.class.getName()).log(Level.INFO,*/ System.out.println("****Choose display map to see where you are!****");
                 }
             }
             break;
