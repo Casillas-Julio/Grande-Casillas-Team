@@ -85,7 +85,7 @@ public class GameControl implements Serializable {
             Logger.getLogger(GameControl.class.getName()).log(Level.INFO, null, ex);
         }
     }
-
+    //Lesson 5 individual assignment - calculation of 3 values.
     // returns bonus fruits/points if any were added
     public static int calculateTotalScore(Player player, int fruitsToAdd) {//FIXME totalScore is not beein called yet from answerView to be added here
         int totalScore;
@@ -96,7 +96,7 @@ public class GameControl implements Serializable {
         player.setFruits(totalScore);
         return bonus;
     }
-
+    //Lesson 5 individual assignment - calculation of 3 values.
     private static int calculateBonus(Player player) {
         int score = player.getFruits();
         int bonus = 0;
@@ -115,7 +115,7 @@ public class GameControl implements Serializable {
         }
         return bonus;
     }
-
+    //Lesson 5 individual assignment 
     public static int helpFruits(Player player) {
         int totalScore;
         final int bonusHelpFruits = 2;

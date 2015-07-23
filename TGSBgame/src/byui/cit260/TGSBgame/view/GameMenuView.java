@@ -165,8 +165,8 @@ public class GameMenuView extends View{
     }
     
     public String getFileName(){
-        System.out.println("\n\n Enter the file path for the report "
-                            + "to be saved");
+        System.out.println("\n\n Enter the file name for the report "
+                            + "to be saved - save as a txt file");
         String filePath = this.getInput();
         return filePath;
                  
